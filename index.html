@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CircuitCraft — a professional browser-based circuit diagram editor for clean, print-friendly schematics.">
+  <title>CircuitCraft — Circuit Diagram Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===== FULL-SCREEN CANVAS ===== -->
+    <main id="canvas-area">
+      <canvas id="canvas"></canvas>
+    </main>
+
+    <!-- ===== TOP LEFT BRANDING ===== -->
+    <div id="brand">
+      <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="6" cy="12" r="3" fill="#b5a3f7" opacity="0.7"/>
+        <circle cx="18" cy="12" r="3" fill="#b5a3f7"/>
+        <line x1="9" y1="12" x2="15" y2="12" stroke="#b5a3f7" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="5" r="2.5" fill="#d4c8ff" opacity="0.5"/>
+        <line x1="12" y1="7.5" x2="12" y2="10" stroke="#b5a3f7" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+      <span class="brand-text"><span class="brand-circuit">Circuit</span><span class="brand-craft">Craft</span></span>
+    </div>
+
+    <!-- ===== TOP CENTER TOOLBAR (Excalidraw pill) ===== -->
+    <div id="top-toolbar">
+      <!-- Tools -->
+      <button class="tb-btn active" data-tool="select" data-tip="Select">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"/></svg>
+      </button>
+      <button class="tb-btn" data-tool="wire" data-tip="Wire">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+      </button>
+      <button class="tb-btn" data-tool="eraser" data-tip="Eraser">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20H7L3 16l10-10 8 8-4 4z"/><line x1="14" y1="6" x2="18" y2="10"/></svg>
+      </button>
+      <button class="tb-btn" data-tool="text" data-tip="Text">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+      </button>
+
+      <span class="tb-divider"></span>
+
+      <!-- Quick component buttons -->
+      <button class="tb-btn comp-quick" data-comp="resistor" data-tip="Resistor">R</button>
+      <button class="tb-btn comp-quick" data-comp="capacitor" data-tip="Capacitor">C</button>
+      <button class="tb-btn comp-quick" data-comp="inductor" data-tip="Inductor">L</button>
+      <button class="tb-btn comp-quick" data-comp="voltage" data-tip="Voltage Source">V</button>
+      <button class="tb-btn comp-quick" data-comp="current" data-tip="Current Source">I</button>
+
+      <span class="tb-divider"></span>
+
+      <!-- More components (opens picker) -->
+      <button class="tb-btn" id="more-comps-btn" data-tip="All Components">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      </button>
+    </div>
+
+    <!-- ===== COMPONENT PICKER (floating grid) ===== -->
+    <div id="component-picker">
+      <div class="picker-category">
+        <div class="picker-category-title">Passive</div>
+        <div class="picker-grid">
+          <button class="picker-item" data-type="resistor">
+            <span class="picker-item-icon">R</span>
+            <span class="picker-item-label">Resistor</span>
+          </button>
+          <button class="picker-item" data-type="capacitor">
+            <span class="picker-item-icon">C</span>
+            <span class="picker-item-label">Capacitor</span>
+          </button>
+          <button class="picker-item" data-type="inductor">
+            <span class="picker-item-icon">L</span>
+            <span class="picker-item-label">Inductor</span>
+          </button>
+        </div>
+      </div>
+      <div class="picker-category">
+        <div class="picker-category-title">Sources</div>
+        <div class="picker-grid">
+          <button class="picker-item" data-type="voltage">
+            <span class="picker-item-icon">V</span>
+            <span class="picker-item-label">Voltage</span>
+          </button>
+          <button class="picker-item" data-type="current">
+            <span class="picker-item-icon">I</span>
+            <span class="picker-item-label">Current</span>
+          </button>
+        </div>
+      </div>
+      <div class="picker-category">
+        <div class="picker-category-title">Others</div>
+        <div class="picker-grid">
+          <button class="picker-item" data-type="switch_comp">
+            <span class="picker-item-icon">S</span>
+            <span class="picker-item-label">Switch</span>
+          </button>
+          <button class="picker-item" data-type="lamp">
+            <span class="picker-item-icon">☀</span>
+            <span class="picker-item-label">Lamp</span>
+          </button>
+          <button class="picker-item" data-type="ground">
+            <span class="picker-item-icon">⏚</span>
+            <span class="picker-item-label">Ground</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CONTEXT PANEL (left floating) ===== -->
+    <div id="context-panel"></div>
+
+    <!-- ===== TOP RIGHT CONTROLS ===== -->
+    <div id="top-controls">
+      <button id="undo-btn" class="ctrl-btn" title="Undo">↶</button>
+      <button id="redo-btn" class="ctrl-btn" title="Redo">↷</button>
+      <span class="ctrl-divider"></span>
+      <button id="reset-btn" class="ctrl-btn danger-btn" title="Reset Canvas">⟲</button>
+      <span class="ctrl-divider"></span>
+      <div id="export-wrapper">
+        <button id="export-btn" class="ctrl-btn">Export ▾</button>
+        <div id="export-dropdown" class="hidden">
+          <button data-format="png">Export PNG</button>
+          <button data-format="png-transparent" title="Exports without background for clean document use">Export PNG (Transparent)</button>
+          <button data-format="jpg">Export JPG</button>
+          <div class="dropdown-separator"></div>
+          <button data-format="a4">Export A4 (Settings)</button>
+          <button data-format="pdf">Export PDF</button>
+          <div class="dropdown-separator"></div>
+          <button data-format="preview">Print Preview</button>
+          <div class="dropdown-separator"></div>
+          <button data-format="json">Save JSON</button>
+          <button data-format="load">Load JSON</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BOTTOM STATUS BAR (Excalidraw-style) ===== -->
+    <footer id="bottom-bar">
+      <div class="bottom-pill">
+        <button class="bottom-btn" id="zoom-out-btn">−</button>
+        <span id="zoom-display">100%</span>
+        <button class="bottom-btn" id="zoom-in-btn">+</button>
+      </div>
+      <div class="bottom-pill">
+        <button class="bottom-btn" id="bottom-undo-btn">↶</button>
+        <button class="bottom-btn" id="bottom-redo-btn">↷</button>
+      </div>
+      <div class="bottom-info">
+        <span id="component-count">0 components</span>
+        <span id="wire-count">0 wires</span>
+        <span id="save-indicator">Saved ✓</span>
+      </div>
+    </footer>
+
+    <!-- Hidden file input -->
+    <input type="file" id="import-input" accept=".json">
+
+    <!-- ===== MODAL: Value Edit ===== -->
+    <div id="modal-value-edit" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Edit Component Value</h3>
+        </div>
+        <div class="modal-body">
+          <div class="modal-comp-preview">
+            <div class="modal-comp-icon" id="modal-comp-icon">R</div>
+            <div class="modal-comp-info">
+              <div class="comp-name" id="modal-comp-name">Resistor</div>
+              <div class="comp-type" id="modal-comp-type">Passive component</div>
+            </div>
+          </div>
+          <input type="text" class="modal-input" id="modal-value-input" placeholder="Enter value..." autocomplete="off">
+          <div class="unit-chips" id="modal-unit-chips"></div>
+          <div class="si-guide" id="modal-si-guide"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn modal-btn-cancel" id="modal-value-cancel">Cancel</button>
+          <button class="modal-btn modal-btn-primary" id="modal-value-save">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MODAL: Text Edit (Enhanced with symbols) ===== -->
+    <div id="modal-text-edit" class="modal-overlay hidden">
+      <div class="modal-card" style="min-width:400px;">
+        <div class="modal-header">
+          <h3 id="modal-text-title">Add Text Annotation</h3>
+          <p>Supports engineering symbols and math notation</p>
+        </div>
+        <div class="modal-body">
+          <!-- Symbol Toolbar -->
+          <div class="symbol-toolbar">
+            <div class="symbol-group">
+              <span class="symbol-group-label">Symbols</span>
+              <button class="symbol-btn" data-symbol="°" title="Degree">°</button>
+              <button class="symbol-btn" data-symbol="∠" title="Angle">∠</button>
+              <button class="symbol-btn" data-symbol="→" title="Arrow">→</button>
+              <button class="symbol-btn" data-symbol="±" title="Plus-Minus">±</button>
+              <button class="symbol-btn" data-symbol="Ω" title="Ohm">Ω</button>
+              <button class="symbol-btn" data-symbol="µ" title="Micro">µ</button>
+              <button class="symbol-btn" data-symbol="Δ" title="Delta">Δ</button>
+              <button class="symbol-btn" data-symbol="π" title="Pi">π</button>
+            </div>
+            <div class="symbol-group">
+              <span class="symbol-group-label">Vectors</span>
+              <button class="symbol-btn" data-symbol="î" title="i-hat">î</button>
+              <button class="symbol-btn" data-symbol="ĵ" title="j-hat">ĵ</button>
+              <button class="symbol-btn" data-symbol="k̂" title="k-hat">k̂</button>
+            </div>
+          </div>
+
+          <!-- Input -->
+          <input type="text" class="modal-input" id="modal-text-input" placeholder="Enter text..." autocomplete="off" style="font-family:'Inter','Segoe UI Symbol',sans-serif;">
+
+          <!-- Quick Templates -->
+          <div class="symbol-templates">
+            <span class="symbol-group-label">Quick Insert</span>
+            <div class="symbol-template-row">
+              <button class="symbol-template-btn" data-template="∠(30°)">∠(30°)</button>
+              <button class="symbol-template-btn" data-template="∠(45°)">∠(45°)</button>
+              <button class="symbol-template-btn" data-template="∠(90°)">∠(90°)</button>
+              <button class="symbol-template-btn" data-template="r∠θ">r∠θ</button>
+              <button class="symbol-template-btn" data-template="3î + 4ĵ">3î + 4ĵ</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn modal-btn-cancel" id="modal-text-cancel">Cancel</button>
+          <button class="modal-btn modal-btn-primary" id="modal-text-save">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MODAL: Reset Confirm ===== -->
+    <div id="modal-reset" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Reset Canvas</h3>
+          <p>This will clear the entire canvas. This cannot be undone.</p>
+        </div>
+        <div class="modal-body">
+          <p style="font-size:13px; color:var(--text-secondary);">All components, wires, and text annotations will be permanently removed.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn modal-btn-cancel" id="modal-reset-cancel">Cancel</button>
+          <button class="modal-btn modal-btn-danger" id="modal-reset-confirm">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MODAL: Export Settings ===== -->
+    <div id="modal-export" class="modal-overlay hidden">
+      <div class="modal-card" style="min-width:400px;">
+        <div class="modal-header">
+          <h3>Export Settings</h3>
+          <p>Configure A4 export for print-quality output</p>
+        </div>
+        <div class="modal-body">
+          <!-- Orientation -->
+          <div class="export-setting">
+            <div class="export-setting-label">Orientation</div>
+            <div class="export-setting-options">
+              <label class="export-radio"><input type="radio" name="export-orientation" value="portrait" checked> Portrait</label>
+              <label class="export-radio"><input type="radio" name="export-orientation" value="landscape"> Landscape</label>
+            </div>
+          </div>
+
+          <!-- Scale -->
+          <div class="export-setting">
+            <div class="export-setting-label">Scale</div>
+            <div class="export-setting-options">
+              <label class="export-radio"><input type="radio" name="export-scale" value="fit" checked> Fit to page</label>
+              <label class="export-radio"><input type="radio" name="export-scale" value="100"> 100%</label>
+              <label class="export-radio"><input type="radio" name="export-scale" value="custom"> Custom</label>
+            </div>
+            <input type="range" id="export-custom-scale" min="50" max="150" value="100" class="export-slider" disabled>
+            <span id="export-custom-label" class="export-scale-value">100%</span>
+          </div>
+
+          <!-- Margin -->
+          <div class="export-setting">
+            <div class="export-setting-label">Margin</div>
+            <div class="export-setting-options">
+              <label class="export-radio"><input type="radio" name="export-margin" value="none"> None</label>
+              <label class="export-radio"><input type="radio" name="export-margin" value="small"> Small</label>
+              <label class="export-radio"><input type="radio" name="export-margin" value="normal" checked> Normal</label>
+            </div>
+          </div>
+
+          <!-- Format -->
+          <div class="export-setting">
+            <div class="export-setting-label">Format</div>
+            <div class="export-setting-options">
+              <label class="export-radio"><input type="radio" name="export-a4-format" value="png" checked> PNG</label>
+              <label class="export-radio"><input type="radio" name="export-a4-format" value="jpeg"> JPG</label>
+              <label class="export-radio"><input type="radio" name="export-a4-format" value="pdf"> PDF</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn modal-btn-cancel" id="modal-export-cancel">Cancel</button>
+          <button class="modal-btn modal-btn-primary" id="modal-export-confirm">Export</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS in dependency order -->
+  <script src="js/state.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/wire.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
