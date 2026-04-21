@@ -37,16 +37,63 @@ A professional, browser-based circuit diagram editor built for EEE teachers and 
 
 ## 🚀 Getting Started
 
-### Run Locally
+The project consists of two parts: the **Main Circuit Editor** (vanilla HTML/JS/CSS) and a **Landing Page** (built with React/Vite in the `landing/` directory).
 
+### Run Locally on macOS
+
+**1. Main Circuit Editor (Root)**
+No build step is required for the editor. You just need a static file server.
 ```bash
-# No build step required — pure HTML/JS/CSS
+# Navigate to the project root
 cd "ckt ee"
+
+# Use Python (pre-installed on macOS) to serve the folder
 python3 -m http.server 8080
-# Open http://localhost:8080
+
+# Open http://localhost:8080 in your browser
 ```
 
-Or use any static file server (Live Server, serve, etc.)
+**2. Landing Page (`landing/` folder)**
+Ensure you have [Node.js](https://nodejs.org/) installed.
+```bash
+# Navigate to the landing page directory
+cd "ckt ee/landing"
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+```
+
+### Run Locally on Windows
+
+**1. Main Circuit Editor (Root)**
+You can use Python or Node.js to serve the static files.
+```cmd
+:: Navigate to the project root
+cd "ckt ee"
+
+:: If you have Python installed:
+python -m http.server 8080
+:: Open http://localhost:8080 in your browser
+
+:: Alternatively, if you have Node.js installed, you can use serve:
+npx serve .
+```
+
+**2. Landing Page (`landing/` folder)**
+Ensure you have [Node.js](https://nodejs.org/) installed.
+```cmd
+:: Navigate to the landing directory
+cd "ckt ee\landing"
+
+:: Install dependencies
+npm install
+
+:: Start the Vite dev server
+npm run dev
+```
 
 ### Deploy to Vercel
 
@@ -54,7 +101,7 @@ Or use any static file server (Live Server, serve, etc.)
 # Install Vercel CLI
 npm i -g vercel
 
-# Deploy
+# Deploy the editor
 cd "ckt ee"
 vercel
 ```
@@ -83,8 +130,11 @@ The project includes a `vercel.json` configuration for static deployment.
 
 ```
 ckt ee/
-├── index.html          ← Entry point
+├── index.html          ← Editor Entry point
 ├── vercel.json         ← Vercel deployment config
+├── landing/            ← React/Vite Landing Page application
+│   ├── src/            ← Landing page source code
+│   └── package.json    ← Landing page dependencies
 ├── css/
 │   └── style.css       ← Excalidraw-inspired dark theme
 ├── js/
