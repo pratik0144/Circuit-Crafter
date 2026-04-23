@@ -69,6 +69,38 @@ var COMPONENT_DEFS = {
     ports: [{ x: 0, y: -20 }],
     defaultRotation: 0,
     defaultValue: ''
+  },
+  vcvs: {
+    name: 'Voltage-Controlled Voltage Source',
+    abbrev: 'VCVS',
+    icon: '◇',
+    ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
+    defaultRotation: 90,
+    defaultValue: 'v=bv_c'
+  },
+  cccvs: {
+    name: 'Current-Controlled Voltage Source',
+    abbrev: 'CCCVS',
+    icon: '◇',
+    ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
+    defaultRotation: 90,
+    defaultValue: 'v=ri_c'
+  },
+  vccs: {
+    name: 'Voltage-Controlled Current Source',
+    abbrev: 'VCCS',
+    icon: '◇',
+    ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
+    defaultRotation: 90,
+    defaultValue: 'i=gv_c'
+  },
+  cccs: {
+    name: 'Current-Controlled Current Source',
+    abbrev: 'CCCS',
+    icon: '◇',
+    ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
+    defaultRotation: 90,
+    defaultValue: 'i=di_c'
   }
 };
 
@@ -166,6 +198,10 @@ function drawComponent(ctx, comp) {
     case 'switch_comp':drawSwitch(ctx);        break;
     case 'lamp':       drawLamp(ctx);          break;
     case 'ground':     drawGround(ctx);        break;
+    case 'vcvs':       drawDependentVoltageSource(ctx); break;
+    case 'cccvs':      drawDependentVoltageSource(ctx); break;
+    case 'vccs':       drawDependentCurrentSource(ctx); break;
+    case 'cccs':       drawDependentCurrentSource(ctx); break;
   }
 
   // Port dots (small circles at endpoints)
@@ -301,6 +337,83 @@ function drawCurrentSource(ctx) {
   // Circle
   ctx.beginPath();
   ctx.arc(0, 0, 18, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // Arrow pointing right
+  ctx.beginPath();
+  ctx.moveTo(-10, 0);
+  ctx.lineTo(10, 0);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(10, 0);
+  ctx.lineTo(5, -4);
+  ctx.moveTo(10, 0);
+  ctx.lineTo(5, 4);
+  ctx.stroke();
+}
+
+/* Dependent Voltage Source — Diamond with +/− */
+function drawDependentVoltageSource(ctx) {
+  // Leads
+  ctx.beginPath();
+  ctx.moveTo(-40, 0);
+  ctx.lineTo(-20, 0);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(20, 0);
+  ctx.lineTo(40, 0);
+  ctx.stroke();
+
+  // Diamond
+  ctx.beginPath();
+  ctx.moveTo(0, -20);
+  ctx.lineTo(20, 0);
+  ctx.lineTo(0, 20);
+  ctx.lineTo(-20, 0);
+  ctx.closePath();
+  ctx.stroke();
+
+  // + sign (left/negative-x side)
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(-10, 0);
+  ctx.lineTo(-4, 0);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(-7, -3);
+  ctx.lineTo(-7, 3);
+  ctx.stroke();
+
+  // − sign (right/positive-x side)
+  ctx.beginPath();
+  ctx.moveTo(4, 0);
+  ctx.lineTo(10, 0);
+  ctx.stroke();
+  ctx.lineWidth = 2;
+}
+
+/* Dependent Current Source — Diamond with arrow */
+function drawDependentCurrentSource(ctx) {
+  // Leads
+  ctx.beginPath();
+  ctx.moveTo(-40, 0);
+  ctx.lineTo(-20, 0);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(20, 0);
+  ctx.lineTo(40, 0);
+  ctx.stroke();
+
+  // Diamond
+  ctx.beginPath();
+  ctx.moveTo(0, -20);
+  ctx.lineTo(20, 0);
+  ctx.lineTo(0, 20);
+  ctx.lineTo(-20, 0);
+  ctx.closePath();
   ctx.stroke();
 
   // Arrow pointing right

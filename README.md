@@ -37,7 +37,7 @@ A professional, browser-based circuit diagram editor built for EEE teachers and 
 
 ## 🚀 Getting Started
 
-The project consists of two parts: the **Main Circuit Editor** (vanilla HTML/JS/CSS) and a **Landing Page** (built with React/Vite in the `landing/` directory).
+The project consists of two parts: the **Main Circuit Editor** and a **Landing Page** (built with React/Vite in the `landing/` directory).
 
 ### Run Locally on macOS
 
