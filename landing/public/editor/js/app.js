@@ -235,6 +235,13 @@ function handleKeyDown(e) {
     return;
   }
 
+  // Select All: Ctrl/Cmd + A
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'a') {
+    e.preventDefault();
+    if (typeof selectAll === 'function') selectAll();
+    return;
+  }
+
   // Redo: Ctrl/Cmd + Shift + Z or Ctrl + Y
   if ((e.ctrlKey || e.metaKey) && (e.key === 'Z' || e.key === 'y')) {
     e.preventDefault();

@@ -139,6 +139,38 @@ function render() {
 /* --- Selection Highlight --- */
 
 function drawSelectionHighlight(ctx) {
+  if (state.selectAllActive) {
+    ctx.strokeStyle = '#b5a3f7';
+    ctx.lineWidth = 2 / state.zoom;
+    ctx.setLineDash([6 / state.zoom, 4 / state.zoom]);
+
+    state.components.forEach(function(comp) {
+      var b = getComponentBounds(comp);
+      ctx.strokeRect(b.x - 5, b.y - 5, b.w + 10, b.h + 10);
+    });
+
+    state.texts.forEach(function(txt) {
+      var fontStyle = txt.bold ? 'bold ' : '';
+      ctx.font = fontStyle + txt.fontSize + 'px sans-serif';
+      var metrics = ctx.measureText(txt.text || 'Text');
+      ctx.strokeRect(txt.x - 4, txt.y - txt.fontSize, metrics.width + 8, txt.fontSize + 8);
+    });
+
+    ctx.lineWidth = 3 / state.zoom;
+    state.wires.forEach(function(wire) {
+      if (!wire.points || wire.points.length < 2) return;
+      ctx.beginPath();
+      ctx.moveTo(wire.points[0].x, wire.points[0].y);
+      for (var i = 1; i < wire.points.length; i++) {
+        ctx.lineTo(wire.points[i].x, wire.points[i].y);
+      }
+      ctx.stroke();
+    });
+
+    ctx.setLineDash([]);
+    return;
+  }
+
   if (!state.selected) return;
 
   ctx.strokeStyle = '#b5a3f7';

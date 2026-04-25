@@ -130,6 +130,11 @@ function updateToolHighlight(tool) {
     btn.classList.remove('active');
   });
 
+  // Clear all active states in component picker
+  document.querySelectorAll('.picker-item').forEach(function(p) {
+    p.classList.remove('active');
+  });
+
   // Activate the matching tool button
   var toolBtn = document.querySelector('#top-toolbar .tb-btn[data-tool="' + tool + '"]');
   if (toolBtn) toolBtn.classList.add('active');

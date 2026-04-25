@@ -6,6 +6,10 @@
 /* --- Tool Router --- */
 
 function toolMouseDown(world, e) {
+  if (state.selectAllActive) {
+    state.selectAllActive = false;
+    markDirty();
+  }
   switch (state.tool) {
     case 'select': selectMouseDown(world); break;
     case 'wire':   wireMouseDown(world);   break;
@@ -458,7 +462,11 @@ function placeMouseDown(world) {
   var y = snapToGrid(world.y);
   var comp = createComponent(state.placingComponent, x, y);
   state.components.push(comp);
-  state.selected = { type: 'component', id: comp.id };
+  state.selected = null;
+  
+  // Exit placement mode and switch back to select tool
+  setTool('select');
+  
   saveToLocalStorage();
   markDirty();
 }
@@ -475,6 +483,7 @@ function setTool(tool) {
   state.isDragging = false;
   state.dragStart = null;
   state.dragWirePoint = null;
+  state.selectAllActive = false;
   updateToolHighlight(tool);
   markDirty();
 }
@@ -490,7 +499,25 @@ function rotateSelected() {
   markDirty();
 }
 
+function selectAll() {
+  state.selected = null;
+  state.selectAllActive = true;
+  if (typeof updateContextPanel === 'function') updateContextPanel();
+  markDirty();
+}
+
 function deleteSelected() {
+  if (state.selectAllActive) {
+    saveSnapshot();
+    state.components = [];
+    state.wires = [];
+    state.texts = [];
+    state.selectAllActive = false;
+    saveToLocalStorage();
+    markDirty();
+    return;
+  }
+
   if (!state.selected) return;
   saveSnapshot();
 
@@ -542,6 +569,7 @@ function toggleBoldSelected() {
 function cancelAction() {
   cancelWireDrawing();
   state.selected = null;
+  state.selectAllActive = false;
   if (state.tool === 'place') {
     setTool('select');
   }

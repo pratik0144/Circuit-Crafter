@@ -13,7 +13,11 @@ var COMPONENT_UNITS = {
   current:     { category: 'Source', units: ['A', 'mA', 'µA'], examples: ['1A', '500mA', '10µA'], guide: 'Current in Amperes' },
   switch_comp: { category: 'Switch', units: [], examples: ['S1', 'SW1'], guide: 'No unit — use a label like S1' },
   lamp:        { category: 'Output', units: ['W'], examples: ['60W', '100W', 'Lamp1'], guide: 'Power in Watts (optional)' },
-  ground:      { category: 'Reference', units: [], examples: ['GND'], guide: 'No unit' }
+  ground:      { category: 'Reference', units: [], examples: ['GND'], guide: 'No unit' },
+  vcvs:        { category: 'Dep. Source', units: [], examples: ['v=bv_c', '2v_x'], guide: 'Voltage-controlled voltage source' },
+  cccvs:       { category: 'Dep. Source', units: [], examples: ['v=ri_c', '5i_x'], guide: 'Current-controlled voltage source' },
+  vccs:        { category: 'Dep. Source', units: [], examples: ['i=gv_c', '0.1v_x'], guide: 'Voltage-controlled current source' },
+  cccs:        { category: 'Dep. Source', units: [], examples: ['i=di_c', '3i_x'], guide: 'Current-controlled current source' }
 };
 
 /* ========================================
@@ -124,6 +128,11 @@ function updateToolHighlight(tool) {
   // Clear all active states in toolbar
   document.querySelectorAll('#top-toolbar .tb-btn').forEach(function(btn) {
     btn.classList.remove('active');
+  });
+
+  // Clear all active states in component picker
+  document.querySelectorAll('.picker-item').forEach(function(p) {
+    p.classList.remove('active');
   });
 
   // Activate the matching tool button

@@ -127,9 +127,8 @@ function drawWire(ctx, wire) {
   ctx.lineJoin = 'round';
 
   ctx.beginPath();
-  ctx.moveTo(wire.points[0].x, wire.points[0].y);
-  for (var i = 1; i < wire.points.length; i++) {
-    ctx.lineTo(wire.points[i].x, wire.points[i].y);
+  for (var i = 0; i < wire.points.length - 1; i++) {
+    drawSegmentWithJumps(ctx, wire.points[i], wire.points[i + 1], wire.id, i === 0);
   }
   ctx.stroke();
 }
@@ -148,9 +147,8 @@ function drawWirePreview(ctx, committedPoints, currentPos, orthoMode) {
     ctx.strokeStyle = '#b5a3f7';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(committedPoints[0].x, committedPoints[0].y);
-    for (var i = 1; i < committedPoints.length; i++) {
-      ctx.lineTo(committedPoints[i].x, committedPoints[i].y);
+    for (var i = 0; i < committedPoints.length - 1; i++) {
+      drawSegmentWithJumps(ctx, committedPoints[i], committedPoints[i + 1], 'preview', i === 0);
     }
     ctx.stroke();
 
@@ -171,16 +169,16 @@ function drawWirePreview(ctx, committedPoints, currentPos, orthoMode) {
   if (orthoMode) {
     var orthoPoints = getOrthoPreviewPoints(lastCommitted, currentPos);
     ctx.beginPath();
-    ctx.moveTo(lastCommitted.x, lastCommitted.y);
+    var p0 = lastCommitted;
     for (var k = 0; k < orthoPoints.length; k++) {
-      ctx.lineTo(orthoPoints[k].x, orthoPoints[k].y);
+      drawSegmentWithJumps(ctx, p0, orthoPoints[k], 'preview', k === 0);
+      p0 = orthoPoints[k];
     }
     ctx.stroke();
   } else {
     // Free angle
     ctx.beginPath();
-    ctx.moveTo(lastCommitted.x, lastCommitted.y);
-    ctx.lineTo(currentPos.x, currentPos.y);
+    drawSegmentWithJumps(ctx, lastCommitted, currentPos, 'preview', true);
     ctx.stroke();
   }
 
@@ -375,4 +373,131 @@ function updateWiresForComponent(componentId) {
       }
     }
   });
+}
+
+/* ========================================
+   WIRE JUMP VISUALIZATION LOGIC
+   ======================================== */
+
+function testAABB(a_p1, a_p2, b_p1, b_p2) {
+  var ax1 = Math.min(a_p1.x, a_p2.x), ax2 = Math.max(a_p1.x, a_p2.x);
+  var ay1 = Math.min(a_p1.y, a_p2.y), ay2 = Math.max(a_p1.y, a_p2.y);
+  var bx1 = Math.min(b_p1.x, b_p2.x), bx2 = Math.max(b_p1.x, b_p2.x);
+  var by1 = Math.min(b_p1.y, b_p2.y), by2 = Math.max(b_p1.y, b_p2.y);
+  return (ax1 <= bx2 && ax2 >= bx1 && ay1 <= by2 && ay2 >= by1);
+}
+
+function getLineIntersection(p0, p1, p2, p3) {
+  var s1_x = p1.x - p0.x, s1_y = p1.y - p0.y;
+  var s2_x = p3.x - p2.x, s2_y = p3.y - p2.y;
+
+  var denom = (-s2_x * s1_y + s1_x * s2_y);
+  if (Math.abs(denom) < 1e-6) return null;
+
+  var s = (-s1_y * (p0.x - p2.x) + s1_x * (p0.y - p2.y)) / denom;
+  var t = ( s2_x * (p0.y - p2.y) - s2_y * (p0.x - p2.x)) / denom;
+
+  if (s >= 0.01 && s <= 0.99 && t >= 0.01 && t <= 0.99) {
+    return { x: p0.x + (t * s1_x), y: p0.y + (t * s1_y), t1: t, t2: s };
+  }
+  return null;
+}
+
+function isPointNearConnection(x, y) {
+  for(var i=0; i<state.components.length; i++) {
+    var ports = getComponentPorts(state.components[i]);
+    for(var j=0; j<ports.length; j++) {
+      var dx = ports[j].x - x, dy = ports[j].y - y;
+      if (dx*dx + dy*dy < 25) return true;
+    }
+  }
+  
+  if (typeof findJunctionPoints === 'function') {
+    var junctions = findJunctionPoints();
+    for(var j=0; j<junctions.length; j++) {
+      var dx = junctions[j].x - x, dy = junctions[j].y - y;
+      if (dx*dx + dy*dy < 25) return true;
+    }
+  }
+  return false;
+}
+
+function shouldJump(p1, p2, op1, op2, idA, idB) {
+  var a_vert = Math.abs(p2.y - p1.y) - Math.abs(p2.x - p1.x);
+  var b_vert = Math.abs(op2.y - op1.y) - Math.abs(op2.x - op1.x);
+
+  if (Math.abs(a_vert - b_vert) > 1e-3) {
+    return a_vert > b_vert; // The more vertical one jumps
+  }
+  return String(idA) > String(idB);
+}
+
+function drawSegmentWithJumps(ctx, p1, p2, wireId, isFirstSegment) {
+  var radius = 7;
+  var jumps = []; window._lastJumps = window._lastJumps || [];
+  
+  for (var w = 0; w < state.wires.length; w++) {
+    var otherWire = state.wires[w];
+    if (!otherWire.points) continue;
+    
+    for (var j = 0; j < otherWire.points.length - 1; j++) {
+      var op1 = otherWire.points[j];
+      var op2 = otherWire.points[j + 1];
+      
+      // Skip identical overlapping segments
+      if ((p1.x === op1.x && p1.y === op1.y && p2.x === op2.x && p2.y === op2.y) ||
+          (p1.x === op2.x && p1.y === op2.y && p2.x === op1.x && p2.y === op1.y)) {
+        continue;
+      }
+      
+      if (!testAABB(p1, p2, op1, op2)) continue;
+      
+      var intersect = getLineIntersection(p1, p2, op1, op2);
+      if (intersect) {
+        var lenA = Math.sqrt((p2.x - p1.x)*(p2.x - p1.x) + (p2.y - p1.y)*(p2.y - p1.y));
+        var lenB = Math.sqrt((op2.x - op1.x)*(op2.x - op1.x) + (op2.y - op1.y)*(op2.y - op1.y));
+        
+        if (intersect.t1 * lenA < 5 || (1 - intersect.t1) * lenA < 5) continue;
+        if (intersect.t2 * lenB < 5 || (1 - intersect.t2) * lenB < 5) continue;
+        
+        if (isPointNearConnection(intersect.x, intersect.y)) continue;
+        
+        if (shouldJump(p1, p2, op1, op2, wireId, otherWire.id)) {
+          jumps.push(intersect); window._lastJumps.push(intersect); console.log("Jump added!", wireId, otherWire.id, intersect);
+        }
+      }
+    }
+  }
+  
+  jumps.sort(function(a, b) { return a.t1 - b.t1; });
+  
+  if (isFirstSegment) {
+    ctx.moveTo(p1.x, p1.y);
+  }
+  
+  var dx = p2.x - p1.x;
+  var dy = p2.y - p1.y;
+  var len = Math.sqrt(dx*dx + dy*dy);
+  var uX = dx / len;
+  var uY = dy / len;
+  var angle = Math.atan2(dy, dx);
+  
+  var currT = 0;
+  
+  for (var k = 0; k < jumps.length; k++) {
+    var jump = jumps[k];
+    
+    // Merge jumps that overlap
+    if (jump.t1 * len < currT * len + radius * 2) continue;
+    
+    var startArcX = p1.x + uX * (jump.t1 * len - radius);
+    var startArcY = p1.y + uY * (jump.t1 * len - radius);
+    
+    ctx.lineTo(startArcX, startArcY);
+    ctx.arc(jump.x, jump.y, radius, angle + Math.PI, angle, false);
+    
+    currT = jump.t1 + (radius / len);
+  }
+  
+  ctx.lineTo(p2.x, p2.y);
 }
