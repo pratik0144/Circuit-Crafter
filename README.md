@@ -7,7 +7,7 @@ A professional, browser-based circuit diagram editor built for EEE teachers and 
 ## ✨ Features
 
 ### Components & Drawing
-- **12 Standard Components** — Resistor, Capacitor, Inductor, Voltage Source, Current Source, Switch, Lamp, Ground, plus 4 Dependent Sources (VCVS, CCCVS, VCCS, CCCS)
+- **12 Standard Components** — Resistor, Capacitor, Inductor, Voltage Source, Current Source, Switch, Lamp, Ground, plus 4 Dependent Sources (VCVS, CCCVS, VCCS, CCCS) with proper engineering subscript labels
 - **Multi-Segment Wires** — Click-to-add-bends polyline routing with 90° orthogonal mode
 - **Wire Jump Visualization** — Automatic bridge/arc rendering at wire crossings (no jump at actual junctions)
 - **Smart Snap System** — Snaps to ports → wire nodes → grid intersections (priority-based)
@@ -125,27 +125,30 @@ The project includes a `vercel.json` configuration for static deployment.
 
 ```
 ckt ee/
-├── index.html          ← Circuit editor entry point
-├── vercel.json         ← Vercel deployment config
-├── css/
-│   └── style.css       ← Excalidraw-inspired dark theme
-├── js/
-│   ├── state.js        ← State management, undo/redo, persistence
-│   ├── canvas.js       ← Canvas rendering, grid, coordinate transforms
-│   ├── components.js   ← 12 component types, drawing, hit testing
-│   ├── wire.js         ← Multi-segment wires, smart snap, junctions, jump visualization
-│   ├── tools.js        ← Tool handlers (Select, Wire, Eraser, Text, Place)
-│   ├── export.js       ← PNG/JPG/PDF/A4/Transparent export, JSON import
-│   ├── ui.js           ← Floating UI, modals, symbols, context panel
-│   └── app.js          ← Bootstrap, event routing, trackpad detection
-├── landing/            ← React/Vite landing page
-│   ├── vite.config.js  ← Dev middleware + build plugin (serves editor from root)
-│   ├── src/            ← Landing page React components
-│   └── public/         ← Static assets (favicon, icons)
-└── assets/
+├── editor/                 ← Circuit editor (single source of truth)
+│   ├── index.html          ← Editor entry point
+│   ├── css/
+│   │   └── style.css       ← Excalidraw-inspired dark theme
+│   ├── js/
+│   │   ├── state.js        ← State management, undo/redo, persistence
+│   │   ├── canvas.js       ← Canvas rendering, grid, coordinate transforms
+│   │   ├── components.js   ← 12 component types, drawing, subscript labels
+│   │   ├── wire.js         ← Multi-segment wires, smart snap, junctions, jump visualization
+│   │   ├── tools.js        ← Tool handlers (Select, Wire, Eraser, Text, Place)
+│   │   ├── export.js       ← PNG/JPG/PDF/A4/Transparent export, JSON import
+│   │   ├── ui.js           ← Floating UI, modals, symbols, context panel
+│   │   └── app.js          ← Bootstrap, event routing, trackpad detection
+│   └── assets/
+├── landing/                ← React/Vite landing page
+│   ├── vite.config.js      ← Dev middleware + build plugin (serves /editor/)
+│   ├── src/                ← Landing page React components
+│   └── public/             ← Static assets (favicon, icons)
+├── vercel.json             ← Vercel deployment config
+├── CHANGELOG.md
+└── README.md
 ```
 
-> **Single source of truth:** The editor code lives only at the repo root (`js/`, `css/`, `index.html`). The Vite dev server and build process both reference these canonical files — no duplication.
+> **Single source of truth:** The editor code lives only in `/editor/`. The Vite dev server and build process both reference these canonical files — no duplication.
 
 ## 🔧 Controls
 

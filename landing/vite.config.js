@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react'
 import { resolve, join } from 'path'
 import { copyFileSync, mkdirSync, readdirSync, existsSync, statSync, readFileSync } from 'fs'
 
-const editorRoot = resolve(__dirname, '..')
+const editorRoot = resolve(__dirname, '..', 'editor')
 
 // -----------------------------------------------------------
-// Plugin 1: Dev middleware — serve /editor/* from the repo root
+// Plugin 1: Dev middleware — serve /editor/* from /editor/ dir
 // -----------------------------------------------------------
 function editorDevMiddleware() {
   return {
@@ -51,7 +51,7 @@ function editorDevMiddleware() {
 }
 
 // -----------------------------------------------------------
-// Plugin 2: Build — copy canonical editor files into dist/editor/
+// Plugin 2: Build — copy editor files into dist/editor/
 // -----------------------------------------------------------
 function copyEditorPlugin() {
   function copyDir(src, dest) {

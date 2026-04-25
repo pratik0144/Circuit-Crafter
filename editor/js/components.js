@@ -76,7 +76,7 @@ var COMPONENT_DEFS = {
     icon: '◇',
     ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
     defaultRotation: 90,
-    defaultValue: 'v=bv_c'
+    defaultValue: ''
   },
   cccvs: {
     name: 'Current-Controlled Voltage Source',
@@ -84,7 +84,7 @@ var COMPONENT_DEFS = {
     icon: '◇',
     ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
     defaultRotation: 90,
-    defaultValue: 'v=ri_c'
+    defaultValue: ''
   },
   vccs: {
     name: 'Voltage-Controlled Current Source',
@@ -92,7 +92,7 @@ var COMPONENT_DEFS = {
     icon: '◇',
     ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
     defaultRotation: 90,
-    defaultValue: 'i=gv_c'
+    defaultValue: ''
   },
   cccs: {
     name: 'Current-Controlled Current Source',
@@ -100,7 +100,7 @@ var COMPONENT_DEFS = {
     icon: '◇',
     ports: [{ x: -40, y: 0 }, { x: 40, y: 0 }],
     defaultRotation: 90,
-    defaultValue: 'i=di_c'
+    defaultValue: ''
   }
 };
 
@@ -518,6 +518,80 @@ function drawGround(ctx) {
 }
 
 /* ========================================
+   Subscript Text Rendering
+   Draws text with proper subscript on canvas
+   ======================================== */
+
+/**
+ * Draw text with subscript support on canvas.
+ * @param {CanvasRenderingContext2D} ctx
+ * @param {Array} textParts - Array of strings or {base, sub} objects
+ *   Example: ["v", " = ", "b", " · ", { base: "v", sub: "c" }]
+ * @param {number} x - Center X position
+ * @param {number} y - Baseline Y position
+ * @param {object} options - { font, subFont, subOffsetY, color }
+ */
+function drawTextWithSubscript(ctx, textParts, x, y, options) {
+  options = options || {};
+  var baseFont = options.font || '12px sans-serif';
+  var subFont = options.subFont || '9px sans-serif';
+  var subOffsetY = options.subOffsetY || 4;
+  var color = options.color || '#444';
+
+  ctx.fillStyle = color;
+  ctx.textBaseline = 'middle';
+
+  // First pass: measure total width to center the text
+  var totalWidth = 0;
+  textParts.forEach(function(part) {
+    if (typeof part === 'string') {
+      ctx.font = baseFont;
+      totalWidth += ctx.measureText(part).width;
+    } else {
+      ctx.font = baseFont;
+      var baseWidth = ctx.measureText(part.base).width;
+      ctx.font = subFont;
+      var subWidth = ctx.measureText(part.sub).width;
+      totalWidth += baseWidth + subWidth;
+    }
+  });
+
+  // Second pass: draw from centered start position
+  var cursorX = x - totalWidth / 2;
+
+  textParts.forEach(function(part) {
+    if (typeof part === 'string') {
+      ctx.font = baseFont;
+      ctx.textAlign = 'left';
+      ctx.fillText(part, cursorX, y);
+      cursorX += ctx.measureText(part).width;
+    } else {
+      // Base character
+      ctx.font = baseFont;
+      ctx.textAlign = 'left';
+      ctx.fillText(part.base, cursorX, y);
+      var baseWidth = ctx.measureText(part.base).width;
+
+      // Subscript character — smaller font, shifted down
+      ctx.font = subFont;
+      ctx.fillText(part.sub, cursorX + baseWidth, y + subOffsetY);
+      var subWidth = ctx.measureText(part.sub).width;
+
+      cursorX += baseWidth + subWidth;
+    }
+  });
+}
+
+/* --- Default label parts for dependent sources --- */
+
+var DEPENDENT_LABEL_PARTS = {
+  vcvs:  { result: 'v', coeff: 'b', controlled: { base: 'v', sub: 'c' } },
+  cccvs: { result: 'v', coeff: 'r', controlled: { base: 'i', sub: 'c' } },
+  vccs:  { result: 'i', coeff: 'g', controlled: { base: 'v', sub: 'c' } },
+  cccs:  { result: 'i', coeff: 'd', controlled: { base: 'i', sub: 'c' } }
+};
+
+/* ========================================
    Component Label Drawing
    Labels NEVER rotate — always horizontal
    Position based on orientation
@@ -525,7 +599,7 @@ function drawGround(ctx) {
 
 function drawComponentLabel(ctx, comp) {
   var def = COMPONENT_DEFS[comp.type];
-  var label = comp.value ? comp.value : def.abbrev;
+  var depInfo = DEPENDENT_LABEL_PARTS[comp.type];
 
   var isVertical = (comp.rotation === 90 || comp.rotation === 270);
   var labelX, labelY, align;
@@ -546,6 +620,50 @@ function drawComponentLabel(ctx, comp) {
     align = 'center';
   }
 
+  // Dependent sources: ALWAYS render full equation with subscript
+  if (depInfo) {
+    // Use comp.value as coefficient if set, otherwise use default symbol
+    var coefficient = comp.value || depInfo.coeff;
+    var parts = [
+      depInfo.result, ' = ', coefficient, ' · ', depInfo.controlled
+    ];
+
+    // For subscript rendering, use 'middle' baseline so offset label Y
+    var subY = labelY + 6;
+
+    if (align === 'center') {
+      drawTextWithSubscript(ctx, parts, labelX, subY, {
+        font: '12px sans-serif',
+        subFont: '9px sans-serif',
+        subOffsetY: 4,
+        color: '#444'
+      });
+    } else {
+      // For left-aligned (vertical orientation): measure total width for centering
+      ctx.font = '12px sans-serif';
+      var totalW = 0;
+      parts.forEach(function(p) {
+        if (typeof p === 'string') {
+          totalW += ctx.measureText(p).width;
+        } else {
+          totalW += ctx.measureText(p.base).width;
+          ctx.font = '9px sans-serif';
+          totalW += ctx.measureText(p.sub).width;
+          ctx.font = '12px sans-serif';
+        }
+      });
+      drawTextWithSubscript(ctx, parts, labelX + totalW / 2, subY, {
+        font: '12px sans-serif',
+        subFont: '9px sans-serif',
+        subOffsetY: 4,
+        color: '#444'
+      });
+    }
+    return;
+  }
+
+  // Regular components: plain text label
+  var label = comp.value || def.abbrev;
   ctx.font = '12px sans-serif';
   ctx.fillStyle = '#444';
   ctx.textAlign = align;

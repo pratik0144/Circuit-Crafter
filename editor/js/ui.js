@@ -14,10 +14,10 @@ var COMPONENT_UNITS = {
   switch_comp: { category: 'Switch', units: [], examples: ['S1', 'SW1'], guide: 'No unit — use a label like S1' },
   lamp:        { category: 'Output', units: ['W'], examples: ['60W', '100W', 'Lamp1'], guide: 'Power in Watts (optional)' },
   ground:      { category: 'Reference', units: [], examples: ['GND'], guide: 'No unit' },
-  vcvs:        { category: 'Dep. Source', units: [], examples: ['v=bv_c', '2v_x'], guide: 'Voltage-controlled voltage source' },
-  cccvs:       { category: 'Dep. Source', units: [], examples: ['v=ri_c', '5i_x'], guide: 'Current-controlled voltage source' },
-  vccs:        { category: 'Dep. Source', units: [], examples: ['i=gv_c', '0.1v_x'], guide: 'Voltage-controlled current source' },
-  cccs:        { category: 'Dep. Source', units: [], examples: ['i=di_c', '3i_x'], guide: 'Current-controlled current source' }
+  vcvs:        { category: 'Dep. Source', units: [], examples: ['2', '5', '10'], guide: 'Enter coefficient (e.g. 2, 5, 10)' },
+  cccvs:       { category: 'Dep. Source', units: [], examples: ['2', '5', '10'], guide: 'Enter coefficient (e.g. 2, 5, 10)' },
+  vccs:        { category: 'Dep. Source', units: [], examples: ['0.1', '0.5', '2'], guide: 'Enter coefficient (e.g. 0.1, 0.5, 2)' },
+  cccs:        { category: 'Dep. Source', units: [], examples: ['2', '5', '10'], guide: 'Enter coefficient (e.g. 2, 5, 10)' }
 };
 
 /* ========================================

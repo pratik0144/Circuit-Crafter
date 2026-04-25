@@ -2,7 +2,22 @@
 
 All notable changes to the Circuit Diagram Editor.
 
-## [2.2.0] - 2026-04-25
+## [2.3.0] - 2026-04-25
+
+### 🏗️ Project Restructure + Subscript Labels
+
+#### Changed
+- **Moved editor to `/editor/`** — all editor files (`index.html`, `js/`, `css/`, `assets/`) now live under `/editor/` subdirectory for cleaner project organization
+- **Updated Vite config** — dev middleware and build plugin now reference `/editor/` directory
+- **Dependent source labels** — replaced plain text `v=bv_c` with proper engineering subscript rendering: `v = b · v꜀`
+- **Canvas subscript rendering** — new `drawTextWithSubscript()` function renders subscripts at correct size and position on HTML5 Canvas
+- **Dependent source defaults** — removed hard-coded `v=bv_c` style default values; proper subscript labels render automatically
+
+#### Added
+- `drawTextWithSubscript()` — reusable canvas function for mixed base/subscript text with auto-centering
+- `DEPENDENT_LABEL_PARTS` — structured label definitions for VCVS, CCCVS, VCCS, CCCS
+
+---
 
 ### 🏗️ Project Refactor — Single Source of Truth
 
