@@ -2,6 +2,43 @@
 
 All notable changes to the Circuit Diagram Editor.
 
+## [2.2.0] - 2026-04-25
+
+### 🏗️ Project Refactor — Single Source of Truth
+
+#### Changed
+- **Eliminated duplicate editor codebase** — removed stale copy at `landing/public/editor/` that caused changes to not appear in dev server
+- **Vite dev middleware** — `npm run dev` now serves the editor directly from the repo root via a custom middleware plugin, ensuring dev and production always use the same code
+- **Vite build plugin** — `npm run build` copies canonical editor files into `dist/editor/` automatically
+- **Tool activation consistency** — `activateComponent()` now properly cleans up in-progress wire drawing, drag state, and select-all state (consistent with `setTool()`)
+- **State initialization** — added `selectAllActive` flag to initial state declaration to prevent undefined behavior
+- **UI polling optimization** — reduced bottom bar update frequency (300ms → 500ms) and context panel polling (200ms → 400ms)
+
+#### Removed
+- **Duplicate editor** at `landing/public/editor/` (stale JS/CSS/HTML copy)
+- **Debug test files** — `patch-wire.js`, `test-canvas.js`, `test.js`, `test_jump.png`
+- **Debug console output** — removed `console.log("Jump added!")` and `window._lastJumps` global from wire jump logic
+- **Cache-busting params** — removed `?v=2` query strings from script tags (no longer needed)
+
+---
+
+## [2.1.0] - 2026-04-25
+
+### 🎯 Component Placement UX Improvement
+
+#### Changed
+- **Single-placement mode** — placing a component now automatically exits placement mode and returns to the Select tool
+- **No auto-selection** — newly placed components are not auto-selected; editor returns to a clean neutral state
+- **Toolbar cleanup** — component button highlights and picker highlights clear immediately after placement
+- **Consistent tool transitions** — `activateComponent()` cancels in-progress wire drawing to prevent state conflicts
+
+#### Fixed
+- Components no longer keep placing repeatedly until ESC is pressed
+- Toolbar button highlight no longer stays active after placement
+- Dashed selection box no longer appears around newly placed components
+
+---
+
 ## [2.0.0] - 2026-04-18
 
 ### 🎨 Complete UI Redesign (Excalidraw-Inspired)

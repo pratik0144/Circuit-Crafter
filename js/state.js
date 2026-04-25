@@ -24,6 +24,7 @@ const state = {
   panStart: null,
   mouseWorld: { x: 0, y: 0 },
   showPrintPreview: false,
+  selectAllActive: false,    // true when Cmd/Ctrl+A selects all items
   _dragSnapshotTaken: false,
   _dirty: true               // render dirty flag
 };

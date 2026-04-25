@@ -114,10 +114,10 @@ function initUI() {
   initExportModalBindings();
 
   // Bottom bar update
-  setInterval(updateBottomBar, 300);
+  setInterval(updateBottomBar, 500);
 
   // Watch selection for context panel
-  setInterval(updateContextPanel, 200);
+  setInterval(updateContextPanel, 400);
 }
 
 /* ========================================
@@ -141,9 +141,14 @@ function updateToolHighlight(tool) {
 }
 
 function activateComponent(type) {
+  // Clean up any in-progress actions
+  cancelWireDrawing();
   state.tool = 'place';
   state.placingComponent = type;
-  state.wireStart = null;
+  state.isDragging = false;
+  state.dragStart = null;
+  state.dragWirePoint = null;
+  state.selectAllActive = false;
 
   // Highlight in toolbar
   document.querySelectorAll('#top-toolbar .tb-btn').forEach(function(b) { b.classList.remove('active'); });

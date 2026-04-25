@@ -434,7 +434,7 @@ function shouldJump(p1, p2, op1, op2, idA, idB) {
 
 function drawSegmentWithJumps(ctx, p1, p2, wireId, isFirstSegment) {
   var radius = 7;
-  var jumps = []; window._lastJumps = window._lastJumps || [];
+  var jumps = [];
   
   for (var w = 0; w < state.wires.length; w++) {
     var otherWire = state.wires[w];
@@ -463,7 +463,7 @@ function drawSegmentWithJumps(ctx, p1, p2, wireId, isFirstSegment) {
         if (isPointNearConnection(intersect.x, intersect.y)) continue;
         
         if (shouldJump(p1, p2, op1, op2, wireId, otherWire.id)) {
-          jumps.push(intersect); window._lastJumps.push(intersect); console.log("Jump added!", wireId, otherWire.id, intersect);
+          jumps.push(intersect);
         }
       }
     }
