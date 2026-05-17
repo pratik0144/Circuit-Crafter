@@ -1,0 +1,46 @@
+{
+  "id": "mems_001",
+  "displayName": "MEMS Accelerometer",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "INT1",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "INT2",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "MEMS",
+    "accelerometer",
+    "inertial",
+    "IMU"
+  ]
+}

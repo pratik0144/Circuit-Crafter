@@ -1,0 +1,28 @@
+{
+  "id": "prot_006",
+  "displayName": "Inrush Current Limiter (NTC Thermistor)",
+  "category": "Protection & Conditioning",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DISC",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "inrush limiter",
+    "NTC",
+    "thermistor",
+    "power-on",
+    "current"
+  ],
+  "symbolStyle": "zigzag"
+}

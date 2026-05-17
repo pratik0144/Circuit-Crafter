@@ -1,0 +1,45 @@
+{
+  "id": "sw_009",
+  "displayName": "Rotary Switch",
+  "category": "Switches Relays & Push-buttons",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "P0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "P1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "P2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "P3",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "P4",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "P5",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "rotary switch",
+    "multi-position",
+    "selector"
+  ]
+}

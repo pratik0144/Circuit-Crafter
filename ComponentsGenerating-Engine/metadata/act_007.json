@@ -1,0 +1,27 @@
+{
+  "id": "act_007",
+  "displayName": "Solenoid",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "solenoid",
+    "electromagnet",
+    "push pull",
+    "linear"
+  ],
+  "symbolStyle": "zigzag"
+}

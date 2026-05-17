@@ -1,0 +1,52 @@
+{
+  "id": "mcu_013",
+  "displayName": "FPGA Block",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 7,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "JTAG",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "IO0-IO15",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "DONE",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "INIT",
+      "side": "right",
+      "number": 7
+    }
+  ],
+  "keywords": [
+    "FPGA",
+    "field programmable",
+    "Xilinx",
+    "Altera",
+    "Verilog"
+  ]
+}

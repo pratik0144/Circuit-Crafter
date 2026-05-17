@@ -1,0 +1,96 @@
+{
+  "id": "disp_004",
+  "displayName": "16x2 LCD (HD44780)",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "RS",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RW",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "D0-D7",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "A",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "K",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "VSS",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "VDD",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "VO",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "NC_5",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "NC_6",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "NC_7",
+      "side": "right",
+      "number": 16
+    }
+  ],
+  "keywords": [
+    "LCD",
+    "16x2",
+    "HD44780",
+    "character display"
+  ]
+}

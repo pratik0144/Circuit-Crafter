@@ -1,0 +1,77 @@
+{
+  "id": "audio_015",
+  "displayName": "Audio Codec IC (PCM5102)",
+  "category": "Electroacoustic & Audio",
+  "family": "DipIc",
+  "pinCount": 12,
+  "packageType": "TSSOP20",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SCK",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "BCK",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "LRCK",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "DIN",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "VOUTL",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VOUTR",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "VCOM",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "DEMP",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "NC_5",
+      "side": "right",
+      "number": 12
+    }
+  ],
+  "keywords": [
+    "PCM5102",
+    "audio codec",
+    "I2S",
+    "DAC",
+    "32-bit"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "seq_005",
+  "displayName": "T Flip-Flop",
+  "category": "Sequential Logic & Flip-Flops",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "T",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CLR",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "Q",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "QB",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "T flip-flop",
+    "toggle",
+    "sequential"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "passive_008",
+  "displayName": "Thermistor (NTC/PTC)",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DISC",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "thermistor",
+    "NTC",
+    "PTC",
+    "temperature",
+    "passive"
+  ],
+  "symbolStyle": "fuse"
+}

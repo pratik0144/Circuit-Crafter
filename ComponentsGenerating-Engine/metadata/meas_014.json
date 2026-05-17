@@ -1,0 +1,31 @@
+{
+  "id": "meas_014",
+  "displayName": "Current Probe",
+  "category": "Measurement & Test Instruments",
+  "family": "DipIc",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "COIL",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "current probe",
+    "clip-on",
+    "oscilloscope",
+    "AC"
+  ]
+}

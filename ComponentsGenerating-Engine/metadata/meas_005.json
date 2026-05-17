@@ -1,0 +1,27 @@
+{
+  "id": "meas_005",
+  "displayName": "Oscilloscope Probe",
+  "category": "Measurement & Test Instruments",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "TIP",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "oscilloscope",
+    "probe",
+    "measurement",
+    "test"
+  ],
+  "symbolStyle": "zigzag"
+}

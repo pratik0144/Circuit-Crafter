@@ -1,0 +1,32 @@
+{
+  "id": "act_005",
+  "displayName": "Servo Motor",
+  "category": "Actuators & Electromechanical",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "PWM",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "servo",
+    "PWM",
+    "RC",
+    "positional",
+    "motor"
+  ]
+}

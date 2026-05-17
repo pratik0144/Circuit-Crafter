@@ -1,0 +1,56 @@
+{
+  "id": "mem_013",
+  "displayName": "I2C EEPROM (24Cxx)",
+  "category": "Memory ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "A0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "A2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "WP",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "24Cxx",
+    "I2C EEPROM",
+    "serial",
+    "AT24C32"
+  ]
+}

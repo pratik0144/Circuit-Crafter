@@ -1,0 +1,25 @@
+{
+  "id": "diode_022",
+  "displayName": "Constant-Current Diode",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO35",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "constant current diode",
+    "current regulator"
+  ],
+  "symbolStyle": "diode"
+}

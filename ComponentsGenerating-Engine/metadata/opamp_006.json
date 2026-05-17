@@ -1,0 +1,56 @@
+{
+  "id": "opamp_006",
+  "displayName": "Schmitt Trigger",
+  "category": "Op-Amps & Comparators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "OUT1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "IN1-",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "IN1+",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VEE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "OUT2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "IN2-",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "IN2+",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "Schmitt trigger",
+    "hysteresis",
+    "comparator",
+    "noise immunity"
+  ]
+}

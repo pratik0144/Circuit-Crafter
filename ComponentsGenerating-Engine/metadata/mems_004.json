@@ -1,0 +1,36 @@
+{
+  "id": "mems_004",
+  "displayName": "MEMS Pressure Sensor",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "MEMS",
+    "pressure",
+    "barometric",
+    "BMP388"
+  ]
+}

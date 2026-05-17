@@ -1,0 +1,26 @@
+{
+  "id": "passive_026",
+  "displayName": "RF Coil",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "AXIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "RF coil",
+    "inductor",
+    "radio frequency"
+  ],
+  "symbolStyle": "inductor"
+}

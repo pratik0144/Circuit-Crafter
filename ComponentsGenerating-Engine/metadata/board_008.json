@@ -1,0 +1,82 @@
+{
+  "id": "board_008",
+  "displayName": "ESP32-CAM",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 13,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "5V",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GPIO0/BOOT",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "GPIO1/TXD",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "GPIO3/RXD",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GPIO2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "GPIO4",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "GPIO12",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "GPIO13",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "GPIO14",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "GPIO15",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "GPIO16",
+      "side": "right",
+      "number": 13
+    }
+  ],
+  "keywords": [
+    "ESP32-CAM",
+    "OV2640",
+    "camera",
+    "face detection",
+    "streaming"
+  ]
+}

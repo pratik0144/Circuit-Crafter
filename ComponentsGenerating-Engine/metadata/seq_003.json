@@ -1,0 +1,56 @@
+{
+  "id": "seq_003",
+  "displayName": "D Flip-Flop",
+  "category": "Sequential Logic & Flip-Flops",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "D",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "PRE",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "CLR",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "Q",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "QB",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "D flip-flop",
+    "data",
+    "register",
+    "74HC74"
+  ]
+}

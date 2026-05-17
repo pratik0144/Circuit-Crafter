@@ -1,0 +1,31 @@
+{
+  "id": "sensor_015",
+  "displayName": "Voltage Sensor Divider",
+  "category": "Sensors & Transducers",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "voltage sensor",
+    "divider",
+    "analog",
+    "measurement"
+  ]
+}

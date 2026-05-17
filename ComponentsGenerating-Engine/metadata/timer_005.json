@@ -1,0 +1,56 @@
+{
+  "id": "timer_005",
+  "displayName": "Monostable Multivibrator",
+  "category": "Timers & Oscillators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "D",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "S",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "Q",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "QB",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "R",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "monostable",
+    "one-shot",
+    "pulse",
+    "timer"
+  ]
+}

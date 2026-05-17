@@ -1,0 +1,46 @@
+{
+  "id": "passive_021",
+  "displayName": "Common-Mode Choke",
+  "category": "Passive Components",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "SIP4",
+  "pins": [
+    {
+      "name": "IN1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "IN2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT1",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "OUT2",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "common mode choke",
+    "EMI",
+    "filter",
+    "differential"
+  ]
+}

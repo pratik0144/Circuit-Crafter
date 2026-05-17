@@ -1,0 +1,36 @@
+{
+  "id": "disp_011",
+  "displayName": "Bar Graph LED Array",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "DIP20",
+  "pins": [
+    {
+      "name": "A1-A10",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "K1-K10",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "bar graph",
+    "LED",
+    "level indicator",
+    "display"
+  ]
+}

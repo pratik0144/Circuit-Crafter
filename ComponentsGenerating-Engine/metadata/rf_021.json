@@ -1,0 +1,37 @@
+{
+  "id": "rf_021",
+  "displayName": "FM/AM Receiver IC Block",
+  "category": "RF Antenna & Wireless",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "FM receiver",
+    "AM receiver",
+    "IC",
+    "radio",
+    "TEA5767"
+  ]
+}

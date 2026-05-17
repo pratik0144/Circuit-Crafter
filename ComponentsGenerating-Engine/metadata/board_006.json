@@ -1,0 +1,67 @@
+{
+  "id": "board_006",
+  "displayName": "Arduino Pro Mini",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "RAW",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RESET",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "D0/RX",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "D1/TX",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "D2-D13",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "A0-A7",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "Arduino Pro Mini",
+    "ATmega328P",
+    "compact",
+    "no USB",
+    "embedded"
+  ]
+}

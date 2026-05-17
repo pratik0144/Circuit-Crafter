@@ -1,0 +1,67 @@
+{
+  "id": "disp_008",
+  "displayName": "TFT LCD Block",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SCK",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "MOSI",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "MISO",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "CS",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "DC",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "RST",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "BL",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "TOUCH_CS",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "TFT",
+    "LCD",
+    "color display",
+    "SPI",
+    "ILI9341"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "sw_008",
+  "displayName": "Toggle Switch",
+  "category": "Switches Relays & Push-buttons",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "COM",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "ON1",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "ON2",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "toggle switch",
+    "lever",
+    "latching",
+    "SPDT"
+  ]
+}

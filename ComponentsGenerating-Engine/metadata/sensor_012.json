@@ -1,0 +1,47 @@
+{
+  "id": "sensor_012",
+  "displayName": "Magnetometer / Compass",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "DATA",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NC1",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC2",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "magnetometer",
+    "compass",
+    "HMC5883L",
+    "I2C",
+    "heading"
+  ]
+}

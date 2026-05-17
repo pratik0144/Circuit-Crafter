@@ -1,0 +1,26 @@
+{
+  "id": "diode_017",
+  "displayName": "Solar Cell / Photovoltaic Cell",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "solar cell",
+    "photovoltaic",
+    "energy harvest"
+  ],
+  "symbolStyle": "diode"
+}

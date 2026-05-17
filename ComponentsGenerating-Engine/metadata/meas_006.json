@@ -1,0 +1,41 @@
+{
+  "id": "meas_006",
+  "displayName": "Multimeter Symbol",
+  "category": "Measurement & Test Instruments",
+  "family": "DipIc",
+  "pinCount": 5,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "V+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "V-",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "mA",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "COM",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "multimeter",
+    "test",
+    "measurement",
+    "DMM"
+  ]
+}

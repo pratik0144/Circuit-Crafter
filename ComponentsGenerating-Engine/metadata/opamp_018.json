@@ -1,0 +1,46 @@
+{
+  "id": "opamp_018",
+  "displayName": "Voltage-Controlled Voltage Source (VCVS)",
+  "category": "Op-Amps & Comparators",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN-",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "IN+",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "VCVS",
+    "controlled source",
+    "SPICE",
+    "simulation"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "audio_010",
+  "displayName": "Audio Jack (3.5mm)",
+  "category": "Electroacoustic & Audio",
+  "family": "Connector",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "TIP",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RING",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SLEEVE",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "SW",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "3.5mm jack",
+    "audio",
+    "TRS",
+    "connector"
+  ]
+}

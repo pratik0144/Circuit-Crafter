@@ -1,0 +1,10 @@
+{
+  "id": "GEN_RESISTOR",
+  "family": "TwoPin",
+  "category": "Passive Components",
+  "displayName": "Resistor",
+  "symbolStyle": "zigzag",
+  "defaultRotation": 0,
+  "defaultValue": "1k\u03a9",
+  "pinCount": 0
+}

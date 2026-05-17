@@ -1,0 +1,27 @@
+{
+  "id": "sw_006",
+  "displayName": "Push-Button (NC)",
+  "category": "Switches Relays & Push-buttons",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "push button",
+    "momentary",
+    "NC",
+    "normally closed"
+  ],
+  "symbolStyle": "zigzag"
+}

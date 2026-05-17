@@ -37,6 +37,8 @@ function generateId() {
 
 function markDirty() {
   state._dirty = true;
+  if (typeof updateBottomBar === 'function') updateBottomBar();
+  if (typeof updateContextPanel === 'function') updateContextPanel();
 }
 
 /* --- Undo / Redo --- */
@@ -127,10 +129,15 @@ function _doSave() {
     offset: state.offset
   };
   try {
-    localStorage.setItem('circuit-editor-data', JSON.stringify(data));
+    const jsonStr = JSON.stringify(data);
+    localStorage.setItem('circuit-editor-data', jsonStr);
     showSaveIndicator();
   } catch (e) {
-    /* silently fail */
+    if (e.name === 'QuotaExceededError' || e.code === 22) {
+      alert("WARNING: Circuit is too large to save in browser storage. Your recent changes are NOT saved.\nPlease export the JSON file to keep your work.");
+    } else {
+      console.error("Failed to save circuit state:", e);
+    }
   }
 }
 

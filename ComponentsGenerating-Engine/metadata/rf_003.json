@@ -1,0 +1,21 @@
+{
+  "id": "rf_003",
+  "displayName": "Monopole Antenna",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 1,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF",
+      "side": "left",
+      "number": 1
+    }
+  ],
+  "keywords": [
+    "monopole",
+    "antenna",
+    "quarter wave",
+    "RF"
+  ]
+}

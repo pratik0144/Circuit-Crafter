@@ -1,0 +1,46 @@
+{
+  "id": "pwr_elec_016",
+  "displayName": "Variable Frequency Drive (VFD) Block",
+  "category": "Power Electronics & Drives",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "COMP",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "SW",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "BST",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "FB",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "VFD",
+    "variable frequency drive",
+    "motor control",
+    "AC drive"
+  ]
+}

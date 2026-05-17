@@ -1,0 +1,28 @@
+{
+  "id": "diode_006",
+  "displayName": "Varactor / Varicap Diode",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO35",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "varactor",
+    "varicap",
+    "variable capacitor",
+    "tuning",
+    "RF"
+  ],
+  "symbolStyle": "capacitor"
+}

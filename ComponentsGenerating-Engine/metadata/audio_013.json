@@ -1,0 +1,47 @@
+{
+  "id": "audio_013",
+  "displayName": "Equaliser Block",
+  "category": "Electroacoustic & Audio",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "CLK",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "DATA",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "equaliser",
+    "EQ",
+    "audio",
+    "graphic",
+    "parametric"
+  ]
+}

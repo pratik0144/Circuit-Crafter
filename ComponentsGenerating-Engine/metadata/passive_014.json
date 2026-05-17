@@ -1,0 +1,26 @@
+{
+  "id": "passive_014",
+  "displayName": "Supercapacitor / Ultracapacitor",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "supercapacitor",
+    "ultracapacitor",
+    "energy storage"
+  ],
+  "symbolStyle": "capacitor"
+}

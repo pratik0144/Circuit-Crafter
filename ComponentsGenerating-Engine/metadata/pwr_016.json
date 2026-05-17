@@ -1,0 +1,26 @@
+{
+  "id": "pwr_016",
+  "displayName": "Power Jack Symbol",
+  "category": "Power Sources & Batteries",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "BARREL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "power jack",
+    "barrel",
+    "DC power",
+    "connector"
+  ]
+}

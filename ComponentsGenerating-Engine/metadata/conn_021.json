@@ -1,0 +1,22 @@
+{
+  "id": "conn_021",
+  "displayName": "Ground Symbol",
+  "category": "Connectors & Terminals",
+  "family": "TwoPin",
+  "pinCount": 1,
+  "packageType": "POWER",
+  "pins": [
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 1
+    }
+  ],
+  "keywords": [
+    "GND",
+    "ground",
+    "reference",
+    "common"
+  ],
+  "symbolStyle": "zigzag"
+}

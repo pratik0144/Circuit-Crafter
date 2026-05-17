@@ -1,0 +1,56 @@
+{
+  "id": "iface_001",
+  "displayName": "UART Transceiver",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "TXD",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RXD",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "TX_OUT",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "RX_IN",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "RTS",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "CTS",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "UART",
+    "serial",
+    "transceiver",
+    "communication"
+  ]
+}

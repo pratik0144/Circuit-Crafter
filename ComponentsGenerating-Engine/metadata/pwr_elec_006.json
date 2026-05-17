@@ -1,0 +1,31 @@
+{
+  "id": "pwr_elec_006",
+  "displayName": "Voltage Tripler",
+  "category": "Power Electronics & Drives",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "AC_IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "DC_OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "voltage tripler",
+    "capacitor diode",
+    "HV",
+    "multiplier"
+  ]
+}

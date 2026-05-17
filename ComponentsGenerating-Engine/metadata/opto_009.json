@@ -1,0 +1,27 @@
+{
+  "id": "opto_009",
+  "displayName": "Solar Panel (Multi-Cell)",
+  "category": "Optoelectronics & Photonics",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "solar panel",
+    "photovoltaic",
+    "PV",
+    "energy harvest"
+  ],
+  "symbolStyle": "zigzag"
+}

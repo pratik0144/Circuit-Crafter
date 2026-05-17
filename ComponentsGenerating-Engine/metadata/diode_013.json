@@ -1,0 +1,27 @@
+{
+  "id": "diode_013",
+  "displayName": "Infrared LED",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "T13",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "IR LED",
+    "infrared",
+    "transmitter",
+    "remote"
+  ],
+  "symbolStyle": "diode"
+}

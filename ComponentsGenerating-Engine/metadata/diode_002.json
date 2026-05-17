@@ -1,0 +1,27 @@
+{
+  "id": "diode_002",
+  "displayName": "Rectifier Diode",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO41",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "rectifier",
+    "diode",
+    "power",
+    "1N4007"
+  ],
+  "symbolStyle": "diode"
+}

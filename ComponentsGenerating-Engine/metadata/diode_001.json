@@ -1,0 +1,26 @@
+{
+  "id": "diode_001",
+  "displayName": "Signal Diode (1N4148)",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO35",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "1N4148",
+    "signal diode",
+    "fast switching"
+  ],
+  "symbolStyle": "diode"
+}

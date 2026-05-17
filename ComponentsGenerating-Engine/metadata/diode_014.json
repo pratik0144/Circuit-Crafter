@@ -1,0 +1,26 @@
+{
+  "id": "diode_014",
+  "displayName": "Laser Diode",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "laser diode",
+    "coherent light",
+    "optics"
+  ],
+  "symbolStyle": "diode"
+}

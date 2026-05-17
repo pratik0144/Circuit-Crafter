@@ -1,0 +1,31 @@
+{
+  "id": "gate_009",
+  "displayName": "Tri-State Buffer",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 3,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "Y",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "tri-state buffer",
+    "three state",
+    "bus",
+    "digital"
+  ]
+}

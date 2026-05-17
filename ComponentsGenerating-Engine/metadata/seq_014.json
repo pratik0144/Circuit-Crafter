@@ -1,0 +1,96 @@
+{
+  "id": "seq_014",
+  "displayName": "Shift Register (SIPO)",
+  "category": "Sequential Logic & Flip-Flops",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "A2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "A3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "B0",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "B1",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "B2",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "B3",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "S0",
+      "side": "right",
+      "number": 16
+    },
+    {
+      "name": "S1",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "S2",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "S3",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "C_OUT",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "C_IN",
+      "side": "right",
+      "number": 9
+    }
+  ],
+  "keywords": [
+    "SIPO",
+    "shift register",
+    "serial to parallel",
+    "74HC164"
+  ]
+}

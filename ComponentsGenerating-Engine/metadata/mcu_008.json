@@ -1,0 +1,91 @@
+{
+  "id": "mcu_008",
+  "displayName": "Raspberry Pi Pico (RP2040)",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 15,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "VSYS",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VBUS",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "3V3_EN",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "RUN",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "GP0-GP28",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "ADC0-ADC2",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "SCK",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "MOSI",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "MISO",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "TX",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "RX",
+      "side": "right",
+      "number": 15
+    }
+  ],
+  "keywords": [
+    "Raspberry Pi Pico",
+    "RP2040",
+    "MicroPython",
+    "microcontroller"
+  ]
+}

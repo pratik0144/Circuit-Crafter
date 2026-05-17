@@ -1,0 +1,31 @@
+{
+  "id": "analog_004",
+  "displayName": "Adjustable Regulator (LM317)",
+  "category": "Analog ICs & Regulators",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO220",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "ADJ",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "LM317",
+    "adjustable",
+    "regulator",
+    "variable voltage"
+  ]
+}

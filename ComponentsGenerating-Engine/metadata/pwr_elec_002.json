@@ -1,0 +1,30 @@
+{
+  "id": "pwr_elec_002",
+  "displayName": "Full-Wave Rectifier",
+  "category": "Power Electronics & Drives",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "full wave rectifier",
+    "center tap",
+    "AC-DC"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sensor_032",
+  "displayName": "Tilt Sensor",
+  "category": "Sensors & Transducers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "tilt sensor",
+    "ball switch",
+    "orientation"
+  ],
+  "symbolStyle": "zigzag"
+}

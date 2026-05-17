@@ -1,0 +1,57 @@
+{
+  "id": "board_024",
+  "displayName": "nRF24L01+ Module",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CE",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "CSN",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SCK",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "MOSI",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "MISO",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "IRQ",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "nRF24L01",
+    "2.4GHz",
+    "SPI",
+    "wireless",
+    "radio"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "gate_012",
+  "displayName": "4-Bit Ripple Carry Adder",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A3:A0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B3:B0",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CIN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "NC_3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SUM3:SUM0",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "COUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "ripple carry adder",
+    "4-bit",
+    "arithmetic",
+    "74283"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "diode_021",
+  "displayName": "Ideal Diode (SPICE)",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "SPICE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "ideal diode",
+    "simulation",
+    "SPICE"
+  ],
+  "symbolStyle": "diode"
+}

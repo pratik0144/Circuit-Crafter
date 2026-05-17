@@ -1,0 +1,36 @@
+{
+  "id": "conn_003",
+  "displayName": "Pin Header (Male)",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 4,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "P1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "P2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "P3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "P4",
+      "side": "left",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "pin header",
+    "male",
+    "2.54mm",
+    "connector"
+  ]
+}

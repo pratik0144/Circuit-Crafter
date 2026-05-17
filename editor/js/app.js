@@ -11,6 +11,11 @@ function init() {
   loadFromLocalStorage();
   initUI();
 
+  // Load generated component library
+  if (typeof loadGeneratedLibrary === 'function') {
+    loadGeneratedLibrary();
+  }
+
   // Canvas events
   canvas.addEventListener('mousedown', handleMouseDown);
   canvas.addEventListener('mousemove', handleMouseMove);

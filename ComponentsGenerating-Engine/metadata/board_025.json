@@ -1,0 +1,47 @@
+{
+  "id": "board_025",
+  "displayName": "SIM800L GSM Module",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TXD",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "RXD",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "RST",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NET_LED",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "SIM800L",
+    "GSM",
+    "GPRS",
+    "SMS",
+    "IoT"
+  ]
+}

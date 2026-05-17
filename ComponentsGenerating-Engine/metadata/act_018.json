@@ -1,0 +1,27 @@
+{
+  "id": "act_018",
+  "displayName": "Vibration Motor",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "vibration motor",
+    "haptic",
+    "ERM",
+    "feedback"
+  ],
+  "symbolStyle": "zigzag"
+}

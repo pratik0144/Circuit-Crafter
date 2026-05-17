@@ -1,0 +1,202 @@
+{
+  "id": "sensor_033",
+  "category": "Sensors & Transducers",
+  "displayName": "Rain Sensor",
+  "dimensions": {
+    "width": 80,
+    "height": 80
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 80,
+      "height": 80,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "notch",
+      "type": "arc",
+      "cx": 40,
+      "cy": 0,
+      "radius": 6,
+      "startAngle": 0,
+      "endAngle": 180,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 1.5,
+      "anticlockwise": false
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 40,
+      "y": 40,
+      "content": "Rain Sensor",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_1",
+      "type": "text",
+      "x": 8,
+      "y": 20,
+      "content": "VCC",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_2",
+      "type": "text",
+      "x": 8,
+      "y": 40,
+      "content": "GND",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_4",
+      "type": "text",
+      "x": 72,
+      "y": 20,
+      "content": "OUT",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_3",
+      "type": "text",
+      "x": 72,
+      "y": 40,
+      "content": "NC",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_num_1",
+      "type": "text",
+      "x": -8,
+      "y": 20,
+      "content": "1",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_2",
+      "type": "text",
+      "x": -8,
+      "y": 40,
+      "content": "2",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_4",
+      "type": "text",
+      "x": 88,
+      "y": 20,
+      "content": "4",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_3",
+      "type": "text",
+      "x": 88,
+      "y": 40,
+      "content": "3",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "VCC",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "GND",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p4",
+      "type": "pin",
+      "name": "OUT",
+      "number": 4,
+      "side": "right",
+      "position": {
+        "x": 80,
+        "y": 20
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "NC",
+      "number": 3,
+      "side": "right",
+      "position": {
+        "x": 80,
+        "y": 40
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    }
+  ]
+}

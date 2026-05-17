@@ -1,0 +1,31 @@
+{
+  "id": "gate_004",
+  "displayName": "NAND Gate",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 3,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "Y",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "NAND",
+    "logic gate",
+    "universal",
+    "digital"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "rf_005",
+  "displayName": "Helical Antenna",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "helical",
+    "antenna",
+    "circular polarized",
+    "GPS"
+  ]
+}

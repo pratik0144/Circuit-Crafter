@@ -1,0 +1,46 @@
+{
+  "id": "sw_004",
+  "displayName": "DPDT Switch",
+  "category": "Switches Relays & Push-buttons",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "COM1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "NO1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "NC1",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "COM2",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NO2",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC2",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "DPDT",
+    "switch",
+    "double pole",
+    "changeover"
+  ]
+}

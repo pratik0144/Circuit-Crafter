@@ -1,0 +1,56 @@
+{
+  "id": "mcu_011",
+  "displayName": "ARM Cortex-A (MPU Block)",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "RESET",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GPIO",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "UART",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "SPI",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "I2C",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "USB",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "ARM Cortex-A",
+    "MPU",
+    "Linux",
+    "processor"
+  ]
+}

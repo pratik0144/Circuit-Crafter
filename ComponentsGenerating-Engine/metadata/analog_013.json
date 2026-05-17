@@ -1,0 +1,56 @@
+{
+  "id": "analog_013",
+  "displayName": "Charge Pump",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "NC_3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "CP1",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "CP2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "charge pump",
+    "doubler",
+    "voltage",
+    "ICL7660"
+  ]
+}

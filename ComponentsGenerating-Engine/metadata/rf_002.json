@@ -1,0 +1,26 @@
+{
+  "id": "rf_002",
+  "displayName": "Dipole Antenna",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "dipole",
+    "antenna",
+    "half wave",
+    "RF"
+  ]
+}

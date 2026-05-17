@@ -1,0 +1,27 @@
+{
+  "id": "pwr_001",
+  "displayName": "DC Voltage Source",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "SPICE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "DC source",
+    "voltage",
+    "supply",
+    "ideal"
+  ],
+  "symbolStyle": "zigzag"
+}

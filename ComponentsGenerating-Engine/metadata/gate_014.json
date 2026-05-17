@@ -1,0 +1,76 @@
+{
+  "id": "gate_014",
+  "displayName": "Multiplexer 4:1",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 12,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "I0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "I1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "I2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "I3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "S0",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "S1",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "Y",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "NC_5",
+      "side": "right",
+      "number": 12
+    }
+  ],
+  "keywords": [
+    "MUX",
+    "multiplexer",
+    "4:1",
+    "data selector"
+  ]
+}

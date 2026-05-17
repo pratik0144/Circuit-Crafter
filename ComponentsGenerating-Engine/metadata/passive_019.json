@@ -1,0 +1,27 @@
+{
+  "id": "passive_019",
+  "displayName": "PTC Resettable Fuse",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "PTC",
+    "resettable fuse",
+    "polyfuse",
+    "protection"
+  ],
+  "symbolStyle": "fuse"
+}

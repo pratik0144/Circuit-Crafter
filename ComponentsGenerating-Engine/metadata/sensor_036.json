@@ -1,0 +1,37 @@
+{
+  "id": "sensor_036",
+  "displayName": "pH Sensor",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "pH sensor",
+    "electrode",
+    "acid",
+    "base",
+    "analog"
+  ]
+}

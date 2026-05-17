@@ -432,18 +432,82 @@ function shouldJump(p1, p2, op1, op2, idA, idB) {
   return String(idA) > String(idB);
 }
 
+/* ========================================
+   SPATIAL INDEX for wire segments (FIX-14)
+   Reduces jump detection from O(W²×S²) to ~O(W×S)
+   ======================================== */
+
+var _segmentIndex = null;
+var _segmentIndexFrame = -1;
+var _CELL_SIZE = 80; // grid cell size for spatial hashing
+
+function _segKey(cx, cy) {
+  return cx + ',' + cy;
+}
+
+function _buildSegmentIndex() {
+  var index = {};
+  for (var w = 0; w < state.wires.length; w++) {
+    var wire = state.wires[w];
+    if (!wire.points) continue;
+    for (var s = 0; s < wire.points.length - 1; s++) {
+      var p1 = wire.points[s];
+      var p2 = wire.points[s + 1];
+      var minCX = Math.floor(Math.min(p1.x, p2.x) / _CELL_SIZE);
+      var maxCX = Math.floor(Math.max(p1.x, p2.x) / _CELL_SIZE);
+      var minCY = Math.floor(Math.min(p1.y, p2.y) / _CELL_SIZE);
+      var maxCY = Math.floor(Math.max(p1.y, p2.y) / _CELL_SIZE);
+      var entry = { p1: p1, p2: p2, wireId: wire.id };
+      for (var cx = minCX; cx <= maxCX; cx++) {
+        for (var cy = minCY; cy <= maxCY; cy++) {
+          var key = _segKey(cx, cy);
+          if (!index[key]) index[key] = [];
+          index[key].push(entry);
+        }
+      }
+    }
+  }
+  return index;
+}
+
+function getSegmentIndex() {
+  // Rebuild once per render frame (dirty flag resets this)
+  var frame = typeof _renderFrameCount !== 'undefined' ? _renderFrameCount : 0;
+  if (!_segmentIndex || _segmentIndexFrame !== frame) {
+    _segmentIndex = _buildSegmentIndex();
+    _segmentIndexFrame = frame;
+  }
+  return _segmentIndex;
+}
+
+function invalidateSegmentIndex() {
+  _segmentIndex = null;
+}
+
 function drawSegmentWithJumps(ctx, p1, p2, wireId, isFirstSegment) {
   var radius = 7;
   var jumps = [];
   
-  for (var w = 0; w < state.wires.length; w++) {
-    var otherWire = state.wires[w];
-    if (!otherWire.points) continue;
-    
-    for (var j = 0; j < otherWire.points.length - 1; j++) {
-      var op1 = otherWire.points[j];
-      var op2 = otherWire.points[j + 1];
-      
+  // Use spatial index: only check segments in overlapping cells
+  var idx = getSegmentIndex();
+  var minCX = Math.floor(Math.min(p1.x, p2.x) / _CELL_SIZE);
+  var maxCX = Math.floor(Math.max(p1.x, p2.x) / _CELL_SIZE);
+  var minCY = Math.floor(Math.min(p1.y, p2.y) / _CELL_SIZE);
+  var maxCY = Math.floor(Math.max(p1.y, p2.y) / _CELL_SIZE);
+  
+  var checked = {}; // dedup: segments may appear in multiple cells
+  for (var cx = minCX; cx <= maxCX; cx++) {
+    for (var cy = minCY; cy <= maxCY; cy++) {
+      var bucket = idx[_segKey(cx, cy)];
+      if (!bucket) continue;
+      for (var b = 0; b < bucket.length; b++) {
+        var seg = bucket[b];
+        var segId = seg.wireId + '_' + seg.p1.x + ',' + seg.p1.y;
+        if (checked[segId]) continue;
+        checked[segId] = true;
+        
+        var op1 = seg.p1, op2 = seg.p2;
+
       // Skip identical overlapping segments
       if ((p1.x === op1.x && p1.y === op1.y && p2.x === op2.x && p2.y === op2.y) ||
           (p1.x === op2.x && p1.y === op2.y && p2.x === op1.x && p2.y === op1.y)) {
@@ -462,9 +526,10 @@ function drawSegmentWithJumps(ctx, p1, p2, wireId, isFirstSegment) {
         
         if (isPointNearConnection(intersect.x, intersect.y)) continue;
         
-        if (shouldJump(p1, p2, op1, op2, wireId, otherWire.id)) {
+        if (shouldJump(p1, p2, op1, op2, wireId, seg.wireId)) {
           jumps.push(intersect);
         }
+      }
       }
     }
   }

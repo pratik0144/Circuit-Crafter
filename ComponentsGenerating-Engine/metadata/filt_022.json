@@ -1,0 +1,66 @@
+{
+  "id": "filt_022",
+  "displayName": "Sample Rate Converter",
+  "category": "Filters & Signal Processing",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "DIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLK_IN",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CLK_OUT",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "DOUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "FS_IN",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "FS_OUT",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "sample rate converter",
+    "SRC",
+    "audio",
+    "digital"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hv_023",
+  "displayName": "Motor Starter Block",
+  "category": "High Voltage & Electrical Power",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "L1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "L2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "L3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "PE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "T1",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "T2",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "T3",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "CTRL",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "motor starter",
+    "DOL",
+    "star-delta",
+    "industrial"
+  ]
+}

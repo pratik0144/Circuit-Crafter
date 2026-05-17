@@ -1,0 +1,27 @@
+{
+  "id": "act_001",
+  "displayName": "DC Motor",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "M+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "M-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "DC motor",
+    "brushed",
+    "motor",
+    "speed control"
+  ],
+  "symbolStyle": "zigzag"
+}

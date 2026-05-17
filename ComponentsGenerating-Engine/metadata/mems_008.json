@@ -1,0 +1,28 @@
+{
+  "id": "mems_008",
+  "displayName": "Piezoelectric Energy Harvester",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "piezoelectric",
+    "energy harvester",
+    "PVDF",
+    "vibration",
+    "MEMS"
+  ],
+  "symbolStyle": "zigzag"
+}

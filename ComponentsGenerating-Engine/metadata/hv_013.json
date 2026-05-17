@@ -1,0 +1,27 @@
+{
+  "id": "hv_013",
+  "displayName": "Capacitor Bank",
+  "category": "High Voltage & Electrical Power",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "capacitor bank",
+    "power factor",
+    "correction",
+    "reactive"
+  ],
+  "symbolStyle": "capacitor"
+}

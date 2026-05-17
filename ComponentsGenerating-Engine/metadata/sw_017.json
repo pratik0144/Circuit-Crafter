@@ -1,0 +1,27 @@
+{
+  "id": "sw_017",
+  "displayName": "Pressure Switch",
+  "category": "Switches Relays & Push-buttons",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "pressure switch",
+    "pneumatic",
+    "SPST",
+    "threshold"
+  ],
+  "symbolStyle": "zigzag"
+}

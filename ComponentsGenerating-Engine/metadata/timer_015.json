@@ -1,0 +1,96 @@
+{
+  "id": "timer_015",
+  "displayName": "PLL (Phase-Locked Loop)",
+  "category": "Timers & Oscillators",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "C",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "D",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "ENP",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "ENT",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "QA",
+      "side": "right",
+      "number": 16
+    },
+    {
+      "name": "QB",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "QC",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "QD",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "RCO",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "CLR",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "LOAD",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "PLL",
+    "phase locked loop",
+    "clock synthesis",
+    "CD4046"
+  ]
+}

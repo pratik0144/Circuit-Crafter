@@ -1,0 +1,37 @@
+{
+  "id": "sensor_011",
+  "displayName": "IMU (6/9 DOF)",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "DOUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "SCK",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "IMU",
+    "inertial measurement",
+    "6DOF",
+    "9DOF",
+    "MPU"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "analog_015",
+  "displayName": "DAC (Digital-to-Analog Converter)",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "D7:D0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VREF",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "DAC",
+    "digital to analog",
+    "converter",
+    "MCP4921"
+  ]
+}

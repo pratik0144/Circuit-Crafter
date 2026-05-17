@@ -1,0 +1,32 @@
+{
+  "id": "pwr_013",
+  "displayName": "Mains Supply Terminal (230V AC)",
+  "category": "Power Sources & Batteries",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TERMINAL",
+  "pins": [
+    {
+      "name": "L",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "N",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "PE",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "mains",
+    "230V",
+    "AC",
+    "supply",
+    "terminal"
+  ]
+}

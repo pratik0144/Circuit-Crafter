@@ -1,0 +1,27 @@
+{
+  "id": "pwr_012",
+  "displayName": "Supercapacitor (Power)",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "supercapacitor",
+    "ultracapacitor",
+    "energy storage",
+    "power"
+  ],
+  "symbolStyle": "capacitor"
+}

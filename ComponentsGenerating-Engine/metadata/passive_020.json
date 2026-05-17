@@ -1,0 +1,27 @@
+{
+  "id": "passive_020",
+  "displayName": "Ferrite Bead",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "AXIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "ferrite bead",
+    "EMI",
+    "filter",
+    "noise"
+  ],
+  "symbolStyle": "inductor"
+}

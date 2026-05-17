@@ -1,0 +1,31 @@
+{
+  "id": "prot_014",
+  "displayName": "Reverse Polarity Protection (MOSFET)",
+  "category": "Protection & Conditioning",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "reverse polarity",
+    "protection",
+    "MOSFET",
+    "P-channel"
+  ]
+}

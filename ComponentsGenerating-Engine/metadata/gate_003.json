@@ -1,0 +1,26 @@
+{
+  "id": "gate_003",
+  "displayName": "NOT Gate (Inverter)",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 2,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "Y",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "NOT",
+    "inverter",
+    "logic gate",
+    "digital"
+  ]
+}

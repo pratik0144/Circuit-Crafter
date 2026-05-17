@@ -1,0 +1,46 @@
+{
+  "id": "rf_022",
+  "displayName": "Superheterodyne Block",
+  "category": "RF Antenna & Wireless",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF_IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CTRL",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RF_OUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "superheterodyne",
+    "radio",
+    "RF",
+    "IF"
+  ]
+}

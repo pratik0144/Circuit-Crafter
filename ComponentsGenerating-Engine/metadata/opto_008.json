@@ -1,0 +1,28 @@
+{
+  "id": "opto_008",
+  "displayName": "VCSEL",
+  "category": "Optoelectronics & Photonics",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "VCSEL",
+    "vertical cavity",
+    "surface emitting",
+    "laser",
+    "optical"
+  ],
+  "symbolStyle": "zigzag"
+}

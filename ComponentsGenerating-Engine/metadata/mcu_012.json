@@ -1,0 +1,46 @@
+{
+  "id": "mcu_012",
+  "displayName": "DSP Processor Block",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "DATA_IN",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "DATA_OUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "CLK",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "CTRL",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "DSP",
+    "digital signal processor",
+    "TMS320",
+    "audio"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "mems_006",
+  "displayName": "Micro-Heater",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "micro-heater",
+    "MEMS",
+    "thermal",
+    "gas sensor"
+  ],
+  "symbolStyle": "zigzag"
+}

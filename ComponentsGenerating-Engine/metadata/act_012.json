@@ -1,0 +1,27 @@
+{
+  "id": "act_012",
+  "displayName": "Buzzer (Active)",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "active buzzer",
+    "audio",
+    "alarm",
+    "5V"
+  ],
+  "symbolStyle": "zigzag"
+}

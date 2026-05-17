@@ -1,0 +1,27 @@
+{
+  "id": "pwr_007",
+  "displayName": "LiPo Cell",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "LiPo",
+    "lithium polymer",
+    "rechargeable",
+    "drone"
+  ],
+  "symbolStyle": "zigzag"
+}

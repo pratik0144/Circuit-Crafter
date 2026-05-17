@@ -1,0 +1,32 @@
+{
+  "id": "pwr_elec_001",
+  "displayName": "Half-Wave Rectifier",
+  "category": "Power Electronics & Drives",
+  "family": "TwoPin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "AC_IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "DC_OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "half wave rectifier",
+    "diode",
+    "AC-DC",
+    "power"
+  ],
+  "symbolStyle": "diode"
+}

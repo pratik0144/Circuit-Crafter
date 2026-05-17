@@ -1,0 +1,56 @@
+{
+  "id": "mem_008",
+  "displayName": "PROM IC",
+  "category": "Memory ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP24",
+  "pins": [
+    {
+      "name": "A0-A11",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CE",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OE",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VPP",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "DQ0-DQ7",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "PROM",
+    "programmable ROM",
+    "one time",
+    "memory"
+  ]
+}

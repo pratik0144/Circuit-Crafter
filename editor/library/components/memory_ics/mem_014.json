@@ -1,0 +1,163 @@
+{
+  "id": "mem_014",
+  "category": "Memory ICs",
+  "displayName": "SD Card Slot (Symbol)",
+  "dimensions": {
+    "width": 40,
+    "height": 200
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 200,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 20,
+      "y": 100,
+      "content": "SD Card Slot (Symbol)",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "DAT0",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "DAT1",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "DAT2",
+      "number": 3,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 60
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p4",
+      "type": "pin",
+      "name": "DAT3",
+      "number": 4,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 80
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p5",
+      "type": "pin",
+      "name": "CLK",
+      "number": 5,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 100
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p6",
+      "type": "pin",
+      "name": "CMD",
+      "number": 6,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 120
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p7",
+      "type": "pin",
+      "name": "VDD",
+      "number": 7,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 140
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p8",
+      "type": "pin",
+      "name": "VSS",
+      "number": 8,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 160
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p9",
+      "type": "pin",
+      "name": "CD",
+      "number": 9,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 180
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ]
+}

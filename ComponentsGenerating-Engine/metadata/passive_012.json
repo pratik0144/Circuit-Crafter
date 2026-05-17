@@ -1,0 +1,27 @@
+{
+  "id": "passive_012",
+  "displayName": "Tantalum Capacitor",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "tantalum",
+    "capacitor",
+    "polarized",
+    "SMD"
+  ],
+  "symbolStyle": "capacitor"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "act_015",
+  "displayName": "Piezo Buzzer",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DISC",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "piezo buzzer",
+    "audio",
+    "resonant",
+    "alarm"
+  ],
+  "symbolStyle": "zigzag"
+}

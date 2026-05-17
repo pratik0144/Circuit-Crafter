@@ -1,0 +1,27 @@
+{
+  "id": "diode_019",
+  "displayName": "Diac",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO35",
+  "pins": [
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A2",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "diac",
+    "bidirectional",
+    "trigger",
+    "thyristor"
+  ],
+  "symbolStyle": "diode"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "iface_018",
+  "displayName": "Wi-Fi Module (ESP8266)",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TXD",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RXD",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "CH_PD",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "GPIO0",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GPIO2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "RST",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "ESP8266",
+    "Wi-Fi",
+    "IoT",
+    "NodeMCU"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "mcu_005",
+  "displayName": "STM32 (ARM Cortex-M)",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "LQFP48",
+  "pins": [
+    {
+      "name": "VDD",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VSS",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "NRST",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "BOOT0",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "NC_4",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "PA0-PA15",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "PB0-PB15",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "PC13",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "SWDIO",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "SWCLK",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "STM32",
+    "ARM Cortex-M",
+    "microcontroller",
+    "embedded"
+  ]
+}

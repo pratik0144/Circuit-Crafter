@@ -1,0 +1,47 @@
+{
+  "id": "mcu_003",
+  "displayName": "ATtiny Microcontroller",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "RESET",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GPIO",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "PB0-PB5",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "ATtiny",
+    "AVR",
+    "microcontroller",
+    "small",
+    "low power"
+  ]
+}

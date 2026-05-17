@@ -1,0 +1,30 @@
+{
+  "id": "meas_008",
+  "displayName": "Frequency Counter Symbol",
+  "category": "Measurement & Test Instruments",
+  "family": "DipIc",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TRIG",
+      "side": "left",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "frequency counter",
+    "measurement",
+    "timing"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "iface_022",
+  "displayName": "GPS Module Block",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 7,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TXD",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RXD",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "PPS",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "FIX",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "ANT",
+      "side": "right",
+      "number": 7
+    }
+  ],
+  "keywords": [
+    "GPS",
+    "GNSS",
+    "location",
+    "NEO-6M",
+    "serial"
+  ]
+}

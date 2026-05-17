@@ -1,0 +1,26 @@
+{
+  "id": "conn_026",
+  "displayName": "Twisted Pair Symbol",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "twisted pair",
+    "differential",
+    "Ethernet",
+    "signal"
+  ]
+}

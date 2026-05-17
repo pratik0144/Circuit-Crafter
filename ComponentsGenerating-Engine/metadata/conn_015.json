@@ -1,0 +1,26 @@
+{
+  "id": "conn_015",
+  "displayName": "SMA Connector",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "SMA",
+  "pins": [
+    {
+      "name": "CENTER",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "SHIELD",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "SMA",
+    "RF",
+    "coaxial",
+    "antenna"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "prot_005",
+  "displayName": "Surge Protector Block",
+  "category": "Protection & Conditioning",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "surge protector",
+    "overvoltage",
+    "protection",
+    "MOV"
+  ],
+  "symbolStyle": "zigzag"
+}

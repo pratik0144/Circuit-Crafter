@@ -1,0 +1,96 @@
+{
+  "id": "mem_003",
+  "displayName": "SDRAM IC",
+  "category": "Memory ICs",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "TSOP54",
+  "pins": [
+    {
+      "name": "A0-A12",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "BA0-BA1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "CKE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "CS",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "RAS",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "CAS",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "WE",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "DQ0-DQ15",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "DQM",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "NC_5",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "NC_6",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "NC_7",
+      "side": "right",
+      "number": 16
+    }
+  ],
+  "keywords": [
+    "SDRAM",
+    "synchronous",
+    "memory",
+    "DIMM"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "conn_019",
+  "displayName": "SOIC Footprint",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "SOIC8",
+  "pins": [
+    {
+      "name": "A1-A4",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B1-B4",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "SOIC",
+    "SMD",
+    "footprint",
+    "PCB"
+  ]
+}

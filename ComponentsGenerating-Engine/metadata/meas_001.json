@@ -1,0 +1,27 @@
+{
+  "id": "meas_001",
+  "displayName": "Ammeter",
+  "category": "Measurement & Test Instruments",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "ammeter",
+    "current meter",
+    "measurement",
+    "series"
+  ],
+  "symbolStyle": "zigzag"
+}

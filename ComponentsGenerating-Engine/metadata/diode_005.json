@@ -1,0 +1,27 @@
+{
+  "id": "diode_005",
+  "displayName": "TVS Diode",
+  "category": "Diodes & Rectifiers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO214",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "TVS",
+    "transient voltage suppressor",
+    "ESD",
+    "protection"
+  ],
+  "symbolStyle": "diode"
+}

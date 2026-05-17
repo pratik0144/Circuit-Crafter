@@ -1,0 +1,67 @@
+{
+  "id": "iface_019",
+  "displayName": "Zigbee Module",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TXD",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RXD",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "RESET",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "DIN",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "DOUT",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "SLEEP",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "ASSOC",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "INT",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "Zigbee",
+    "IEEE802.15.4",
+    "wireless",
+    "mesh",
+    "IoT"
+  ]
+}

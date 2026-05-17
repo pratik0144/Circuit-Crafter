@@ -1,0 +1,66 @@
+{
+  "id": "conn_008",
+  "displayName": "DB9 (Serial) Connector",
+  "category": "Connectors & Terminals",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "DB9",
+  "pins": [
+    {
+      "name": "1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "4",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "5",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "6",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "7",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "8",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "9",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "DB9",
+    "serial",
+    "RS-232",
+    "COM port"
+  ]
+}

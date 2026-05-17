@@ -1,0 +1,46 @@
+{
+  "id": "gate_021",
+  "displayName": "Parity Generator/Checker",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "I0-I8",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "NC_2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "EVEN",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "ODD",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "parity",
+    "generator",
+    "checker",
+    "74280"
+  ]
+}

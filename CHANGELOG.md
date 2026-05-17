@@ -2,6 +2,30 @@
 
 All notable changes to the Circuit Diagram Editor.
 
+## [2.4.0] - 2026-05-16
+
+### 🚀 Engine Stabilization & Professional Library Integration
+
+#### Added
+- **Dynamic Component Toggles:** Added "Hide Pin Details" and "Hide Comp Name" toggle buttons to the component properties modal, allowing users to independently show or hide the component label and pin labels on generated components for cleaner schematics.
+- **Accordion Library Modal:** Completely rewrote the component library UI (`ui.js`). It now groups 588 components under 29 collapsible accordion categories matching the official `CircuitCrafter_Component_Library.pdf`.
+- **Intelligent Library Search:** Added a global search bar to the library modal that instantly filters components and auto-expands matching family categories.
+- **Detailed Component Engine Reports:** Generated comprehensive technical documentation (`reportEngine.md`) and walkthroughs detailing the architecture of the Component Generation Engine.
+
+#### Changed
+- **Pin Numbering Algorithm Fix:** The right-side pin array for DIP ICs (e.g., 555 Timer) is now numbered bottom-to-top (counter-clockwise convention) rather than top-to-bottom. This correctly aligns pins like `VCC` (Pin 8) with real-world IC physical packaging.
+- **Logic Gate Standardization:** Removed power pins (`VCC`, `GND`) from logic gate definitions (AND, OR, NOT, NAND, NOR, XOR, XNOR, Buffer, Tri-State) in the LLM Knowledge Base to conform to standard US/India schematic symbols.
+- **Library Close Button:** Repositioned the close (`✕`) button on the library modal to the top-left corner as requested for better ergonomics.
+- **Orphan Category Consolidation:** Merged stray component categories (`Passives`, `Sensors`, `ICs`) into standard PDF-approved groupings (`Passive Components`, `Sensors & Transducers`, `Microcontrollers & Processors`).
+
+#### Fixed
+- **Rendering Text Overlap:** Prevented the legacy `drawComponentLabel()` from painting text over dynamically generated primitive labels, eliminating cluttered text overlaps.
+- **"Loading" Flash Glitch:** Removed redundant `initCanvas()` and `loadFromLocalStorage()` calls in `ui.js`. Implemented forced `markDirty()` repainting upon `library_bundle.json` fetch completion so existing components render instantly.
+- **Generated Component Properties Crash:** Updated the double-click modal logic (`openValueEditModal`) to safely support generated components without throwing reference errors against the legacy `COMPONENT_DEFS`.
+- **Duplicate Pin Generation:** Removed duplicate iteration over top pins in `bulk-importer.js` to ensure clean component metadata.
+
+---
+
 ## [2.3.0] - 2026-04-25
 
 ### 🏗️ Project Restructure + Subscript Labels

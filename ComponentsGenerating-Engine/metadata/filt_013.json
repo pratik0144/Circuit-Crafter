@@ -1,0 +1,46 @@
+{
+  "id": "filt_013",
+  "displayName": "Butterworth Filter Block",
+  "category": "Filters & Signal Processing",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "NC_2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "V+",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "V-",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "Butterworth",
+    "maximally flat",
+    "filter",
+    "analog"
+  ]
+}

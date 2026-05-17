@@ -1,0 +1,31 @@
+{
+  "id": "analog_005",
+  "displayName": "Shunt Regulator (TL431)",
+  "category": "Analog ICs & Regulators",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO92",
+  "pins": [
+    {
+      "name": "REF",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "A",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "TL431",
+    "shunt regulator",
+    "voltage reference",
+    "adjustable"
+  ]
+}

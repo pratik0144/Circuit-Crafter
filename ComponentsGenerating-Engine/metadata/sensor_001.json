@@ -1,0 +1,31 @@
+{
+  "id": "sensor_001",
+  "displayName": "Temperature Sensor (LM35)",
+  "category": "Sensors & Transducers",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO92",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "LM35",
+    "temperature sensor",
+    "analog",
+    "Celsius"
+  ]
+}

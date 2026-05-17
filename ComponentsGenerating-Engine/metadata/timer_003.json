@@ -1,0 +1,95 @@
+{
+  "id": "timer_003",
+  "displayName": "558 Quad Timer",
+  "category": "Timers & Oscillators",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "OUT1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "TRIG1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "TRIG2",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "OUT3",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "TRIG3",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "OUT4",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "TRIG4",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 16
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "RST",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "THR1",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "THR2",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "THR3",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "THR4",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "DIS",
+      "side": "right",
+      "number": 9
+    }
+  ],
+  "keywords": [
+    "558",
+    "quad timer",
+    "555x4"
+  ]
+}

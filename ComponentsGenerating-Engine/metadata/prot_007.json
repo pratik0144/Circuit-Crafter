@@ -1,0 +1,32 @@
+{
+  "id": "prot_007",
+  "displayName": "EMI Filter (LC)",
+  "category": "Protection & Conditioning",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "EMI filter",
+    "LC",
+    "common mode",
+    "noise",
+    "suppression"
+  ]
+}

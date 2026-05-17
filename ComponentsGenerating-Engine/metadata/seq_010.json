@@ -1,0 +1,65 @@
+{
+  "id": "seq_010",
+  "displayName": "Ring Counter",
+  "category": "Sequential Logic & Flip-Flops",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLR",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "NC1",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "Q0",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "Q1",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "Q2",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "Q3",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NC2",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "ring counter",
+    "shift register",
+    "sequential"
+  ]
+}

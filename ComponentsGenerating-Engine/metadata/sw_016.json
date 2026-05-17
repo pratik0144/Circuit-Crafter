@@ -1,0 +1,32 @@
+{
+  "id": "sw_016",
+  "displayName": "Microswitch (Limit Switch)",
+  "category": "Switches Relays & Push-buttons",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "COM",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "NO",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "microswitch",
+    "limit switch",
+    "SPDT",
+    "endstop",
+    "CNC"
+  ]
+}

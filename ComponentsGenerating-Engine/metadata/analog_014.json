@@ -1,0 +1,46 @@
+{
+  "id": "analog_014",
+  "displayName": "Voltage Multiplier (Cockcroft-Walton)",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "NC_2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "STAGES",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "Cockcroft-Walton",
+    "voltage multiplier",
+    "HV",
+    "capacitor diode"
+  ]
+}

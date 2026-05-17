@@ -1,0 +1,26 @@
+{
+  "id": "rf_006",
+  "displayName": "Yagi-Uda Antenna",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "Yagi",
+    "directional",
+    "antenna",
+    "high gain"
+  ]
+}

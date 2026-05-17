@@ -1,0 +1,31 @@
+{
+  "id": "prot_009",
+  "displayName": "Pi (Pi) Filter",
+  "category": "Protection & Conditioning",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "pi filter",
+    "CLC",
+    "power supply",
+    "EMI"
+  ]
+}

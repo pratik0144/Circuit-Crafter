@@ -1,0 +1,27 @@
+{
+  "id": "opto_007",
+  "displayName": "Laser Diode",
+  "category": "Optoelectronics & Photonics",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "laser diode",
+    "coherent",
+    "LD",
+    "optical"
+  ],
+  "symbolStyle": "diode"
+}

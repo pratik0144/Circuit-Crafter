@@ -1,0 +1,77 @@
+{
+  "id": "board_012",
+  "displayName": "Raspberry Pi Pico",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 12,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "VSYS",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VBUS",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "3V3_EN",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "RUN",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "GP0-GP28",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "ADC0-ADC2",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "UART0",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "I2C0",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "SPI0",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "BOOTSEL",
+      "side": "right",
+      "number": 12
+    }
+  ],
+  "keywords": [
+    "Raspberry Pi Pico",
+    "RP2040",
+    "MicroPython",
+    "microcontroller",
+    "cheap"
+  ]
+}

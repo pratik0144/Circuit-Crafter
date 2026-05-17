@@ -1,0 +1,36 @@
+{
+  "id": "sensor_006",
+  "displayName": "Force Sensor (Load Cell)",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "E+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "E-",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "A+",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "A-",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "load cell",
+    "force sensor",
+    "strain",
+    "weight"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "prot_017",
+  "displayName": "Metal-Oxide Varistor (MOV)",
+  "category": "Protection & Conditioning",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DISC",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "MOV",
+    "varistor",
+    "surge",
+    "overvoltage",
+    "protection"
+  ],
+  "symbolStyle": "zigzag"
+}

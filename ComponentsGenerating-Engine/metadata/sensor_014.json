@@ -1,0 +1,46 @@
+{
+  "id": "sensor_014",
+  "displayName": "Current Sensor (ACS712)",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "SIP5",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "INT",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "AD0",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "ACS712",
+    "current sensor",
+    "Hall effect",
+    "analog"
+  ]
+}

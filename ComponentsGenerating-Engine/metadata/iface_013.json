@@ -1,0 +1,57 @@
+{
+  "id": "iface_013",
+  "displayName": "Level Shifter (Logic)",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A1-A4",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "OE_A",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VCC_A",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "B1-B4",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "OE_B",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC_B",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "level shifter",
+    "logic level",
+    "3.3V",
+    "5V",
+    "TXB0104"
+  ]
+}

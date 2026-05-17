@@ -1,0 +1,51 @@
+{
+  "id": "mcu_007",
+  "displayName": "ESP8266",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 7,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CH_PD",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GPIO0-GPIO15",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "TXD",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "RXD",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "ADC",
+      "side": "right",
+      "number": 7
+    }
+  ],
+  "keywords": [
+    "ESP8266",
+    "WiFi",
+    "IoT",
+    "NodeMCU"
+  ]
+}

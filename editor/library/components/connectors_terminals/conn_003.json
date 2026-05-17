@@ -1,0 +1,93 @@
+{
+  "id": "conn_003",
+  "category": "Connectors & Terminals",
+  "displayName": "Pin Header (Male)",
+  "dimensions": {
+    "width": 40,
+    "height": 100
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 100,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 20,
+      "y": 50,
+      "content": "Pin Header (Male)",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "P1",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "P2",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "P3",
+      "number": 3,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 60
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p4",
+      "type": "pin",
+      "name": "P4",
+      "number": 4,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 80
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ]
+}

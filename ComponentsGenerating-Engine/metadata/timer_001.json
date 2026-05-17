@@ -1,0 +1,57 @@
+{
+  "id": "timer_001",
+  "displayName": "555 Timer IC",
+  "category": "Timers & Oscillators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "TRIG",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RESET",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "DIS",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "THR",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "CTRL",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "555",
+    "timer",
+    "astable",
+    "monostable",
+    "oscillator"
+  ]
+}

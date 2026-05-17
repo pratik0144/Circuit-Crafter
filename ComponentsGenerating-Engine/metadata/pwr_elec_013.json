@@ -1,0 +1,46 @@
+{
+  "id": "pwr_elec_013",
+  "displayName": "Bootstrap Gate Driver",
+  "category": "Power Electronics & Drives",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "PG",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "bootstrap gate driver",
+    "half-bridge",
+    "IR2104",
+    "high side"
+  ]
+}

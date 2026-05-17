@@ -1,0 +1,27 @@
+{
+  "id": "rf_007",
+  "displayName": "Loop Antenna",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "left",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "loop",
+    "antenna",
+    "AM",
+    "RF",
+    "magnetic"
+  ]
+}

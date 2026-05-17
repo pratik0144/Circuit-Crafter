@@ -1,0 +1,88 @@
+{
+  "id": "board_013",
+  "displayName": "Raspberry Pi Zero 2W",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 14,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "5V",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GPIO2-GPIO27",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "TXD",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "RXD",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "MOSI",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "MISO",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "SCLK",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "CE0",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "PWM0",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "PWM1",
+      "side": "right",
+      "number": 14
+    }
+  ],
+  "keywords": [
+    "Pi Zero 2W",
+    "BCM2710",
+    "Linux",
+    "tiny",
+    "WiFi",
+    "wearable"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "hv_008",
+  "displayName": "Lightning Arrester",
+  "category": "High Voltage & Electrical Power",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "LINE",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "lightning arrester",
+    "surge",
+    "HV",
+    "protection"
+  ],
+  "symbolStyle": "zigzag"
+}

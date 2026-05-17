@@ -1,0 +1,56 @@
+{
+  "id": "mem_002",
+  "displayName": "DRAM IC",
+  "category": "Memory ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A0-A9",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RAS",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CAS",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "WE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "DQ0-DQ7",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "DRAM",
+    "dynamic RAM",
+    "memory",
+    "refresh"
+  ]
+}

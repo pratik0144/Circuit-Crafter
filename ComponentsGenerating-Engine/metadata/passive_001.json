@@ -1,0 +1,27 @@
+{
+  "id": "passive_001",
+  "displayName": "Resistor",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "AXIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "resistor",
+    "passive",
+    "ohm",
+    "current limiting"
+  ],
+  "symbolStyle": "zigzag"
+}

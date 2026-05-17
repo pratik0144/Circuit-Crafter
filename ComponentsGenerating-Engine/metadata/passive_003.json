@@ -1,0 +1,27 @@
+{
+  "id": "passive_003",
+  "displayName": "Inductor",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "AXIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "inductor",
+    "passive",
+    "coil",
+    "filter"
+  ],
+  "symbolStyle": "inductor"
+}

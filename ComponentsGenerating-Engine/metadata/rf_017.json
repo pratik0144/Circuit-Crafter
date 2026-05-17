@@ -1,0 +1,27 @@
+{
+  "id": "rf_017",
+  "displayName": "Isolator",
+  "category": "RF Antenna & Wireless",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "isolator",
+    "non-reciprocal",
+    "RF",
+    "one way"
+  ],
+  "symbolStyle": "zigzag"
+}

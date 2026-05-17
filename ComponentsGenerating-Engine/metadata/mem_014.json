@@ -1,0 +1,61 @@
+{
+  "id": "mem_014",
+  "displayName": "SD Card Slot (Symbol)",
+  "category": "Memory ICs",
+  "family": "Connector",
+  "pinCount": 9,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "DAT0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "DAT1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "DAT2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "DAT3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "CMD",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "VDD",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VSS",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "CD",
+      "side": "right",
+      "number": 9
+    }
+  ],
+  "keywords": [
+    "SD card",
+    "SPI",
+    "storage",
+    "memory"
+  ]
+}

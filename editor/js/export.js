@@ -312,7 +312,8 @@ function handleImportFile(e) {
   reader.onload = function(event) {
     try {
       var data = JSON.parse(event.target.result);
-      if (data.components && data.wires) {
+      var validation = validateImportData(data);
+      if (validation.valid) {
         saveSnapshot();
         state.components = data.components || [];
         state.wires = data.wires || [];
@@ -321,14 +322,102 @@ function handleImportFile(e) {
         saveToLocalStorage();
         markDirty();
       } else {
-        alert('Invalid circuit file format.');
+        alert('Invalid circuit file:\n' + validation.errors.join('\n'));
       }
     } catch (err) {
-      alert('Failed to parse JSON file.');
+      alert('Failed to parse JSON file: ' + err.message);
     }
   };
   reader.readAsText(file);
   e.target.value = '';
+}
+
+/**
+ * Validate imported JSON data against expected schema.
+ * Prevents state corruption from malformed data.
+ */
+function validateImportData(data) {
+  var errors = [];
+
+  if (!data || typeof data !== 'object') {
+    return { valid: false, errors: ['Not a valid JSON object'] };
+  }
+  if (!Array.isArray(data.components)) {
+    errors.push('Missing or invalid "components" array');
+  }
+  if (!Array.isArray(data.wires)) {
+    errors.push('Missing or invalid "wires" array');
+  }
+
+  if (errors.length > 0) return { valid: false, errors: errors };
+
+  // Validate components
+  for (var i = 0; i < data.components.length; i++) {
+    var c = data.components[i];
+    if (!c || typeof c !== 'object') {
+      errors.push('Component [' + i + ']: not a valid object');
+      continue;
+    }
+    if (!c.id || typeof c.id !== 'string') {
+      errors.push('Component [' + i + ']: missing or invalid "id"');
+    }
+    if (!c.type || typeof c.type !== 'string') {
+      errors.push('Component [' + i + ']: missing or invalid "type"');
+    }
+    if (typeof c.x !== 'number' || typeof c.y !== 'number') {
+      errors.push('Component [' + i + ']: missing or invalid x/y coordinates');
+    }
+    if (errors.length > 10) {
+      errors.push('...and more errors (stopped after 10)');
+      break;
+    }
+  }
+
+  // Validate wires
+  for (var j = 0; j < data.wires.length; j++) {
+    var w = data.wires[j];
+    if (!w || typeof w !== 'object') {
+      errors.push('Wire [' + j + ']: not a valid object');
+      continue;
+    }
+    if (!w.id || typeof w.id !== 'string') {
+      errors.push('Wire [' + j + ']: missing or invalid "id"');
+    }
+    if (!Array.isArray(w.points) || w.points.length < 2) {
+      errors.push('Wire [' + j + ']: missing or invalid "points" (need >= 2)');
+    } else {
+      for (var k = 0; k < w.points.length; k++) {
+        var pt = w.points[k];
+        if (!pt || typeof pt.x !== 'number' || typeof pt.y !== 'number') {
+          errors.push('Wire [' + j + '] point [' + k + ']: invalid coordinates');
+          break;
+        }
+      }
+    }
+    if (errors.length > 10) {
+      errors.push('...and more errors (stopped after 10)');
+      break;
+    }
+  }
+
+  // Validate texts (optional array)
+  if (data.texts && Array.isArray(data.texts)) {
+    for (var t = 0; t < data.texts.length; t++) {
+      var txt = data.texts[t];
+      if (!txt || typeof txt !== 'object') {
+        errors.push('Text [' + t + ']: not a valid object');
+        continue;
+      }
+      if (typeof txt.x !== 'number' || typeof txt.y !== 'number') {
+        errors.push('Text [' + t + ']: missing or invalid coordinates');
+      }
+      if (typeof txt.text !== 'string') {
+        errors.push('Text [' + t + ']: missing or invalid "text" field');
+      }
+    }
+  }
+
+  return { valid: errors.length === 0, errors: errors };
 }
 
 /* ========================================

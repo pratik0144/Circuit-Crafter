@@ -1,0 +1,26 @@
+{
+  "id": "hv_011",
+  "displayName": "Power Cable (Symbol)",
+  "category": "High Voltage & Electrical Power",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "power cable",
+    "conductor",
+    "HV",
+    "wiring"
+  ]
+}

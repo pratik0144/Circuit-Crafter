@@ -1,0 +1,47 @@
+{
+  "id": "audio_014",
+  "displayName": "Crossover Network",
+  "category": "Electroacoustic & Audio",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "HF",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "MF",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "LF",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "crossover",
+    "speaker",
+    "passive",
+    "active",
+    "audio"
+  ]
+}

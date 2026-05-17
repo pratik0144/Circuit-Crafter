@@ -1,0 +1,26 @@
+{
+  "id": "conn_018",
+  "displayName": "DIP IC Socket",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "A1-A4",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B1-B4",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "IC socket",
+    "DIP",
+    "ZIF",
+    "PCB"
+  ]
+}

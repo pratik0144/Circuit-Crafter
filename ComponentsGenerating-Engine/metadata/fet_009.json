@@ -1,0 +1,32 @@
+{
+  "id": "fet_009",
+  "displayName": "IGBT",
+  "category": "Field-Effect Transistors (FET)",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO247",
+  "pins": [
+    {
+      "name": "G",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "C",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "E",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "IGBT",
+    "insulated gate",
+    "bipolar",
+    "power",
+    "motor drive"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rf_001",
+  "displayName": "Antenna (Generic)",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 1,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF",
+      "side": "left",
+      "number": 1
+    }
+  ],
+  "keywords": [
+    "antenna",
+    "generic",
+    "wireless",
+    "RF"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "mcu_004",
+  "displayName": "PIC Microcontroller",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP18",
+  "pins": [
+    {
+      "name": "VDD",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VSS",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "MCLR",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RA0-RA5",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "RB0-RB7",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "PIC",
+    "Microchip",
+    "microcontroller",
+    "embedded"
+  ]
+}

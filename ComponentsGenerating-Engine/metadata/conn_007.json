@@ -1,0 +1,26 @@
+{
+  "id": "conn_007",
+  "displayName": "JST Connector",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "JST",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "JST",
+    "connector",
+    "LiPo",
+    "battery"
+  ]
+}

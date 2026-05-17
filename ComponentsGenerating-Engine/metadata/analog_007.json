@@ -1,0 +1,57 @@
+{
+  "id": "analog_007",
+  "displayName": "Boost Converter",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "FB",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SW",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "BST",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "boost",
+    "step-up",
+    "switching",
+    "DC-DC",
+    "converter"
+  ]
+}

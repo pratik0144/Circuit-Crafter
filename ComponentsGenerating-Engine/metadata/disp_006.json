@@ -1,0 +1,37 @@
+{
+  "id": "disp_006",
+  "displayName": "OLED Display Block (SSD1306)",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "OLED",
+    "SSD1306",
+    "I2C",
+    "128x64",
+    "display"
+  ]
+}

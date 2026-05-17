@@ -1,0 +1,26 @@
+{
+  "id": "passive_013",
+  "displayName": "Variable Capacitor",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "AXIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "variable capacitor",
+    "tuning",
+    "RF"
+  ],
+  "symbolStyle": "capacitor"
+}

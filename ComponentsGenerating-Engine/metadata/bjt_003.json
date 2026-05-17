@@ -1,0 +1,31 @@
+{
+  "id": "bjt_003",
+  "displayName": "Darlington Pair (NPN)",
+  "category": "Bipolar Transistors (BJT)",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO92",
+  "pins": [
+    {
+      "name": "B",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "C",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "E",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "Darlington",
+    "NPN",
+    "high gain",
+    "BJT"
+  ]
+}

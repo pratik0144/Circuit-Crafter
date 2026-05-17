@@ -1,0 +1,31 @@
+{
+  "id": "audio_002",
+  "displayName": "Microphone (Condenser)",
+  "category": "Electroacoustic & Audio",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "V+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "microphone",
+    "condenser",
+    "phantom power",
+    "audio"
+  ]
+}

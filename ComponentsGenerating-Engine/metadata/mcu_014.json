@@ -1,0 +1,46 @@
+{
+  "id": "mcu_014",
+  "displayName": "CPLD Block",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "IO0-IO7",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "JTAG",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "CPLD",
+    "complex programmable",
+    "logic",
+    "Verilog"
+  ]
+}

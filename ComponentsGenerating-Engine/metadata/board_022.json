@@ -1,0 +1,47 @@
+{
+  "id": "board_022",
+  "displayName": "HC-05 Bluetooth Module",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TXD",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "RXD",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "KEY",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "STATE",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "HC-05",
+    "Bluetooth",
+    "serial",
+    "AT command",
+    "wireless"
+  ]
+}

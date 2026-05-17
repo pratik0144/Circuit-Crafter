@@ -1,0 +1,27 @@
+{
+  "id": "act_013",
+  "displayName": "Buzzer (Passive)",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "passive buzzer",
+    "audio",
+    "PWM",
+    "frequency"
+  ],
+  "symbolStyle": "zigzag"
+}

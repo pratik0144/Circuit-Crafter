@@ -1,0 +1,27 @@
+{
+  "id": "opto_016",
+  "displayName": "Light Pipe Symbol",
+  "category": "Optoelectronics & Photonics",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "light pipe",
+    "fiber",
+    "optical guide",
+    "LED panel"
+  ],
+  "symbolStyle": "led"
+}

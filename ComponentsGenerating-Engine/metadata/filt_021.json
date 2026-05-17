@@ -1,0 +1,26 @@
+{
+  "id": "filt_021",
+  "displayName": "Delay Line",
+  "category": "Filters & Signal Processing",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "delay line",
+    "tapped",
+    "signal processing"
+  ],
+  "symbolStyle": "zigzag"
+}

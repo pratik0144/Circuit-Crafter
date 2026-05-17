@@ -1,0 +1,31 @@
+{
+  "id": "audio_003",
+  "displayName": "MEMS Microphone",
+  "category": "Electroacoustic & Audio",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VDD",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SD",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "MEMS microphone",
+    "SPH0645",
+    "I2S",
+    "digital audio"
+  ]
+}

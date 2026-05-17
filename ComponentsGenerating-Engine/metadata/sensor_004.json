@@ -1,0 +1,27 @@
+{
+  "id": "sensor_004",
+  "displayName": "Thermocouple (K/J Type)",
+  "category": "Sensors & Transducers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "thermocouple",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "K-type",
+    "J-type",
+    "temperature",
+    "high temperature"
+  ],
+  "symbolStyle": "zigzag"
+}

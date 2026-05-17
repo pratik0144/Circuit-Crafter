@@ -1,0 +1,31 @@
+{
+  "id": "bjt_008",
+  "displayName": "PNP Power Transistor",
+  "category": "Bipolar Transistors (BJT)",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO220",
+  "pins": [
+    {
+      "name": "B",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "C",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "E",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "PNP",
+    "power",
+    "transistor",
+    "high current"
+  ]
+}

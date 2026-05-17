@@ -1,0 +1,27 @@
+{
+  "id": "opto_010",
+  "displayName": "Photodetector (APD)",
+  "category": "Optoelectronics & Photonics",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "APD",
+    "avalanche photodiode",
+    "high sensitivity",
+    "optical"
+  ],
+  "symbolStyle": "diode"
+}

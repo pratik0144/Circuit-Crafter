@@ -1,0 +1,55 @@
+{
+  "id": "analog_018",
+  "displayName": "Multiplier IC (Analog)",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "X",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "Y",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "W",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VS",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "analog multiplier",
+    "MPY634",
+    "wideband"
+  ]
+}

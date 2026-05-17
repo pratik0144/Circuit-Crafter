@@ -1,0 +1,77 @@
+{
+  "id": "disp_003",
+  "displayName": "7-Segment Display (4-Digit)",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 12,
+  "packageType": "DIP12",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "C",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "D",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "E",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "F",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "G",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "DP",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "DIG1",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "DIG2",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "DIG3",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "DIG4",
+      "side": "right",
+      "number": 7
+    }
+  ],
+  "keywords": [
+    "7-segment",
+    "4-digit",
+    "LED",
+    "display",
+    "multiplexed"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "pwr_009",
+  "displayName": "Lead-Acid Battery (Symbol)",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "lead acid",
+    "SLA",
+    "battery",
+    "sealed"
+  ],
+  "symbolStyle": "led"
+}

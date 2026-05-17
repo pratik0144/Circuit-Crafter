@@ -1,0 +1,45 @@
+{
+  "id": "pwr_elec_019",
+  "displayName": "Cycloconverter Block",
+  "category": "Power Electronics & Drives",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "PG",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "cycloconverter",
+    "AC-AC",
+    "frequency converter"
+  ]
+}

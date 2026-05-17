@@ -1,0 +1,27 @@
+{
+  "id": "rf_004",
+  "displayName": "Patch Antenna",
+  "category": "RF Antenna & Wireless",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "patch",
+    "microstrip",
+    "antenna",
+    "PCB",
+    "WiFi"
+  ]
+}

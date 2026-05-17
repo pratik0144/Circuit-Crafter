@@ -1,0 +1,22 @@
+{
+  "id": "conn_023",
+  "displayName": "Chassis Ground",
+  "category": "Connectors & Terminals",
+  "family": "TwoPin",
+  "pinCount": 1,
+  "packageType": "POWER",
+  "pins": [
+    {
+      "name": "CHASSIS",
+      "side": "left",
+      "number": 1
+    }
+  ],
+  "keywords": [
+    "chassis ground",
+    "frame",
+    "shield",
+    "EMI"
+  ],
+  "symbolStyle": "zigzag"
+}

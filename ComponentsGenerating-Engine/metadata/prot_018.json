@@ -1,0 +1,31 @@
+{
+  "id": "prot_018",
+  "displayName": "Zener Clamp Circuit",
+  "category": "Protection & Conditioning",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "zener clamp",
+    "overvoltage",
+    "ESD",
+    "protection"
+  ]
+}

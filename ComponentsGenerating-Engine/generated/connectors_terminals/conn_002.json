@@ -1,0 +1,57 @@
+{
+  "id": "conn_002",
+  "category": "Connectors & Terminals",
+  "displayName": "Terminal / Test Point",
+  "dimensions": {
+    "width": 40,
+    "height": 40
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 20,
+      "y": 20,
+      "content": "Terminal / Test Point",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "TP",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ],
+  "_engineMeta": {
+    "generatedAt": "2026-05-15T22:05:38.973Z",
+    "engineVersion": "1.0.0",
+    "generatorFamily": "Connector",
+    "sourceMetadataPath": "/Users/pratikpotadar/Developer/ckt ee/ComponentsGenerating-Engine/metadata/conn_002.json"
+  }
+}

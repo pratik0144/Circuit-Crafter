@@ -1,0 +1,26 @@
+{
+  "id": "conn_017",
+  "displayName": "Screw Terminal",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "TERMINAL",
+  "pins": [
+    {
+      "name": "1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "2",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "screw terminal",
+    "PCB",
+    "wire",
+    "KF301"
+  ]
+}

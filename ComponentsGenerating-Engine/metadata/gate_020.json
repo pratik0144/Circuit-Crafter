@@ -1,0 +1,65 @@
+{
+  "id": "gate_020",
+  "displayName": "Comparator (4-bit)",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A3:A0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B3:B0",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "IAGB",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "IAEB",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "IASB",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "OAGB",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "OAEB",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "OASB",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "4-bit comparator",
+    "magnitude",
+    "74HC85"
+  ]
+}

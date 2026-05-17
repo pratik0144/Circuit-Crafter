@@ -1,0 +1,46 @@
+{
+  "id": "timer_006",
+  "displayName": "Bistable Multivibrator",
+  "category": "Timers & Oscillators",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "A0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "A2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "bistable",
+    "flip-flop",
+    "latch",
+    "memory"
+  ]
+}

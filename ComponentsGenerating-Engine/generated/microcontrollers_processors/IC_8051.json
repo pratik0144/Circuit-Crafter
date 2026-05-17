@@ -1,0 +1,1576 @@
+{
+  "id": "IC_8051",
+  "category": "Microcontrollers & Processors",
+  "displayName": "8051",
+  "dimensions": {
+    "width": 160,
+    "height": 440
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 160,
+      "height": 440,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "notch",
+      "type": "arc",
+      "cx": 80,
+      "cy": 0,
+      "radius": 6,
+      "startAngle": 0,
+      "endAngle": 180,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 1.5,
+      "anticlockwise": false
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 80,
+      "y": 220,
+      "content": "8051",
+      "fontSize": 11,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_1",
+      "type": "text",
+      "x": 8,
+      "y": 20,
+      "content": "P1.0",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_2",
+      "type": "text",
+      "x": 8,
+      "y": 40,
+      "content": "P1.1",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_3",
+      "type": "text",
+      "x": 8,
+      "y": 60,
+      "content": "P1.2",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_4",
+      "type": "text",
+      "x": 8,
+      "y": 80,
+      "content": "P1.3",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_5",
+      "type": "text",
+      "x": 8,
+      "y": 100,
+      "content": "P1.4",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_6",
+      "type": "text",
+      "x": 8,
+      "y": 120,
+      "content": "P1.5",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_7",
+      "type": "text",
+      "x": 8,
+      "y": 140,
+      "content": "P1.6",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_8",
+      "type": "text",
+      "x": 8,
+      "y": 160,
+      "content": "P1.7",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_9",
+      "type": "text",
+      "x": 8,
+      "y": 180,
+      "content": "RST",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_10",
+      "type": "text",
+      "x": 8,
+      "y": 200,
+      "content": "RXD",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_11",
+      "type": "text",
+      "x": 8,
+      "y": 220,
+      "content": "TXD",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_12",
+      "type": "text",
+      "x": 8,
+      "y": 240,
+      "content": "INT0",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_13",
+      "type": "text",
+      "x": 8,
+      "y": 260,
+      "content": "INT1",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_14",
+      "type": "text",
+      "x": 8,
+      "y": 280,
+      "content": "T0",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_15",
+      "type": "text",
+      "x": 8,
+      "y": 300,
+      "content": "T1",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_16",
+      "type": "text",
+      "x": 8,
+      "y": 320,
+      "content": "WR",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_17",
+      "type": "text",
+      "x": 8,
+      "y": 340,
+      "content": "RD",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_18",
+      "type": "text",
+      "x": 8,
+      "y": 360,
+      "content": "XTAL2",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_19",
+      "type": "text",
+      "x": 8,
+      "y": 380,
+      "content": "XTAL1",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_20",
+      "type": "text",
+      "x": 8,
+      "y": 400,
+      "content": "GND",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_40",
+      "type": "text",
+      "x": 152,
+      "y": 20,
+      "content": "VCC",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_39",
+      "type": "text",
+      "x": 152,
+      "y": 40,
+      "content": "P0.0/AD0",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_38",
+      "type": "text",
+      "x": 152,
+      "y": 60,
+      "content": "P0.1/AD1",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_37",
+      "type": "text",
+      "x": 152,
+      "y": 80,
+      "content": "P0.2/AD2",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_36",
+      "type": "text",
+      "x": 152,
+      "y": 100,
+      "content": "P0.3/AD3",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_35",
+      "type": "text",
+      "x": 152,
+      "y": 120,
+      "content": "P0.4/AD4",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_34",
+      "type": "text",
+      "x": 152,
+      "y": 140,
+      "content": "P0.5/AD5",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_33",
+      "type": "text",
+      "x": 152,
+      "y": 160,
+      "content": "P0.6/AD6",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_32",
+      "type": "text",
+      "x": 152,
+      "y": 180,
+      "content": "P0.7/AD7",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_31",
+      "type": "text",
+      "x": 152,
+      "y": 200,
+      "content": "EA",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_30",
+      "type": "text",
+      "x": 152,
+      "y": 220,
+      "content": "ALE/PROG",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_29",
+      "type": "text",
+      "x": 152,
+      "y": 240,
+      "content": "PSEN",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_28",
+      "type": "text",
+      "x": 152,
+      "y": 260,
+      "content": "P2.7/A15",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_27",
+      "type": "text",
+      "x": 152,
+      "y": 280,
+      "content": "P2.6/A14",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_26",
+      "type": "text",
+      "x": 152,
+      "y": 300,
+      "content": "P2.5/A13",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_25",
+      "type": "text",
+      "x": 152,
+      "y": 320,
+      "content": "P2.4/A12",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_24",
+      "type": "text",
+      "x": 152,
+      "y": 340,
+      "content": "P2.3/A11",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_23",
+      "type": "text",
+      "x": 152,
+      "y": 360,
+      "content": "P2.2/A10",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_22",
+      "type": "text",
+      "x": 152,
+      "y": 380,
+      "content": "P2.1/A9",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_label_21",
+      "type": "text",
+      "x": 152,
+      "y": 400,
+      "content": "P2.0/A8",
+      "fontSize": 8,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "currentColor"
+    },
+    {
+      "id": "pin_num_1",
+      "type": "text",
+      "x": -8,
+      "y": 20,
+      "content": "1",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_2",
+      "type": "text",
+      "x": -8,
+      "y": 40,
+      "content": "2",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_3",
+      "type": "text",
+      "x": -8,
+      "y": 60,
+      "content": "3",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_4",
+      "type": "text",
+      "x": -8,
+      "y": 80,
+      "content": "4",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_5",
+      "type": "text",
+      "x": -8,
+      "y": 100,
+      "content": "5",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_6",
+      "type": "text",
+      "x": -8,
+      "y": 120,
+      "content": "6",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_7",
+      "type": "text",
+      "x": -8,
+      "y": 140,
+      "content": "7",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_8",
+      "type": "text",
+      "x": -8,
+      "y": 160,
+      "content": "8",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_9",
+      "type": "text",
+      "x": -8,
+      "y": 180,
+      "content": "9",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_10",
+      "type": "text",
+      "x": -8,
+      "y": 200,
+      "content": "10",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_11",
+      "type": "text",
+      "x": -8,
+      "y": 220,
+      "content": "11",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_12",
+      "type": "text",
+      "x": -8,
+      "y": 240,
+      "content": "12",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_13",
+      "type": "text",
+      "x": -8,
+      "y": 260,
+      "content": "13",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_14",
+      "type": "text",
+      "x": -8,
+      "y": 280,
+      "content": "14",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_15",
+      "type": "text",
+      "x": -8,
+      "y": 300,
+      "content": "15",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_16",
+      "type": "text",
+      "x": -8,
+      "y": 320,
+      "content": "16",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_17",
+      "type": "text",
+      "x": -8,
+      "y": 340,
+      "content": "17",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_18",
+      "type": "text",
+      "x": -8,
+      "y": 360,
+      "content": "18",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_19",
+      "type": "text",
+      "x": -8,
+      "y": 380,
+      "content": "19",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_20",
+      "type": "text",
+      "x": -8,
+      "y": 400,
+      "content": "20",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "right",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_40",
+      "type": "text",
+      "x": 168,
+      "y": 20,
+      "content": "40",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_39",
+      "type": "text",
+      "x": 168,
+      "y": 40,
+      "content": "39",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_38",
+      "type": "text",
+      "x": 168,
+      "y": 60,
+      "content": "38",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_37",
+      "type": "text",
+      "x": 168,
+      "y": 80,
+      "content": "37",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_36",
+      "type": "text",
+      "x": 168,
+      "y": 100,
+      "content": "36",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_35",
+      "type": "text",
+      "x": 168,
+      "y": 120,
+      "content": "35",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_34",
+      "type": "text",
+      "x": 168,
+      "y": 140,
+      "content": "34",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_33",
+      "type": "text",
+      "x": 168,
+      "y": 160,
+      "content": "33",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_32",
+      "type": "text",
+      "x": 168,
+      "y": 180,
+      "content": "32",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_31",
+      "type": "text",
+      "x": 168,
+      "y": 200,
+      "content": "31",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_30",
+      "type": "text",
+      "x": 168,
+      "y": 220,
+      "content": "30",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_29",
+      "type": "text",
+      "x": 168,
+      "y": 240,
+      "content": "29",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_28",
+      "type": "text",
+      "x": 168,
+      "y": 260,
+      "content": "28",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_27",
+      "type": "text",
+      "x": 168,
+      "y": 280,
+      "content": "27",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_26",
+      "type": "text",
+      "x": 168,
+      "y": 300,
+      "content": "26",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_25",
+      "type": "text",
+      "x": 168,
+      "y": 320,
+      "content": "25",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_24",
+      "type": "text",
+      "x": 168,
+      "y": 340,
+      "content": "24",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_23",
+      "type": "text",
+      "x": 168,
+      "y": 360,
+      "content": "23",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_22",
+      "type": "text",
+      "x": 168,
+      "y": 380,
+      "content": "22",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    },
+    {
+      "id": "pin_num_21",
+      "type": "text",
+      "x": 168,
+      "y": 400,
+      "content": "21",
+      "fontSize": 7,
+      "fontFamily": "sans-serif",
+      "align": "left",
+      "baseline": "middle",
+      "fill": "#888"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "P1.0",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "P1.1",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "P1.2",
+      "number": 3,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 60
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p4",
+      "type": "pin",
+      "name": "P1.3",
+      "number": 4,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 80
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p5",
+      "type": "pin",
+      "name": "P1.4",
+      "number": 5,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 100
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p6",
+      "type": "pin",
+      "name": "P1.5",
+      "number": 6,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 120
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p7",
+      "type": "pin",
+      "name": "P1.6",
+      "number": 7,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 140
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p8",
+      "type": "pin",
+      "name": "P1.7",
+      "number": 8,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 160
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p9",
+      "type": "pin",
+      "name": "RST",
+      "number": 9,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 180
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p10",
+      "type": "pin",
+      "name": "RXD",
+      "number": 10,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 200
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p11",
+      "type": "pin",
+      "name": "TXD",
+      "number": 11,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 220
+      },
+      "electricalType": "output",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p12",
+      "type": "pin",
+      "name": "INT0",
+      "number": 12,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 240
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": true
+    },
+    {
+      "id": "p13",
+      "type": "pin",
+      "name": "INT1",
+      "number": 13,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 260
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": true
+    },
+    {
+      "id": "p14",
+      "type": "pin",
+      "name": "T0",
+      "number": 14,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 280
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p15",
+      "type": "pin",
+      "name": "T1",
+      "number": 15,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 300
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p16",
+      "type": "pin",
+      "name": "WR",
+      "number": 16,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 320
+      },
+      "electricalType": "output",
+      "length": 20,
+      "invert": true
+    },
+    {
+      "id": "p17",
+      "type": "pin",
+      "name": "RD",
+      "number": 17,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 340
+      },
+      "electricalType": "output",
+      "length": 20,
+      "invert": true
+    },
+    {
+      "id": "p18",
+      "type": "pin",
+      "name": "XTAL2",
+      "number": 18,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 360
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p19",
+      "type": "pin",
+      "name": "XTAL1",
+      "number": 19,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 380
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p20",
+      "type": "pin",
+      "name": "GND",
+      "number": 20,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 400
+      },
+      "electricalType": "ground",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p40",
+      "type": "pin",
+      "name": "VCC",
+      "number": 40,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 20
+      },
+      "electricalType": "power",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p39",
+      "type": "pin",
+      "name": "P0.0/AD0",
+      "number": 39,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 40
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p38",
+      "type": "pin",
+      "name": "P0.1/AD1",
+      "number": 38,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 60
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p37",
+      "type": "pin",
+      "name": "P0.2/AD2",
+      "number": 37,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 80
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p36",
+      "type": "pin",
+      "name": "P0.3/AD3",
+      "number": 36,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 100
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p35",
+      "type": "pin",
+      "name": "P0.4/AD4",
+      "number": 35,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 120
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p34",
+      "type": "pin",
+      "name": "P0.5/AD5",
+      "number": 34,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 140
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p33",
+      "type": "pin",
+      "name": "P0.6/AD6",
+      "number": 33,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 160
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p32",
+      "type": "pin",
+      "name": "P0.7/AD7",
+      "number": 32,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 180
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p31",
+      "type": "pin",
+      "name": "EA",
+      "number": 31,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 200
+      },
+      "electricalType": "input",
+      "length": 20,
+      "invert": true
+    },
+    {
+      "id": "p30",
+      "type": "pin",
+      "name": "ALE/PROG",
+      "number": 30,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 220
+      },
+      "electricalType": "output",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p29",
+      "type": "pin",
+      "name": "PSEN",
+      "number": 29,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 240
+      },
+      "electricalType": "output",
+      "length": 20,
+      "invert": true
+    },
+    {
+      "id": "p28",
+      "type": "pin",
+      "name": "P2.7/A15",
+      "number": 28,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 260
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p27",
+      "type": "pin",
+      "name": "P2.6/A14",
+      "number": 27,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 280
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p26",
+      "type": "pin",
+      "name": "P2.5/A13",
+      "number": 26,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 300
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p25",
+      "type": "pin",
+      "name": "P2.4/A12",
+      "number": 25,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 320
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p24",
+      "type": "pin",
+      "name": "P2.3/A11",
+      "number": 24,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 340
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p23",
+      "type": "pin",
+      "name": "P2.2/A10",
+      "number": 23,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 360
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p22",
+      "type": "pin",
+      "name": "P2.1/A9",
+      "number": 22,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 380
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    },
+    {
+      "id": "p21",
+      "type": "pin",
+      "name": "P2.0/A8",
+      "number": 21,
+      "side": "right",
+      "position": {
+        "x": 160,
+        "y": 400
+      },
+      "electricalType": "bidirectional",
+      "length": 20,
+      "invert": false
+    }
+  ],
+  "_engineMeta": {
+    "generatedAt": "2026-05-15T22:05:38.993Z",
+    "engineVersion": "1.0.0",
+    "generatorFamily": "DipIc",
+    "sourceMetadataPath": "/Users/pratikpotadar/Developer/ckt ee/ComponentsGenerating-Engine/metadata/ics/8051.json"
+  }
+}

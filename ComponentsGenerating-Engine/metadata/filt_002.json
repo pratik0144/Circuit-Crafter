@@ -1,0 +1,31 @@
+{
+  "id": "filt_002",
+  "displayName": "RC High-Pass Filter",
+  "category": "Filters & Signal Processing",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "RC",
+    "high pass",
+    "filter",
+    "passive"
+  ]
+}

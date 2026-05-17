@@ -1,0 +1,38 @@
+{
+  "id": "sensor_017",
+  "displayName": "Gas Sensor (MQ-x Series)",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "MQ-2",
+    "MQ-7",
+    "gas sensor",
+    "CO",
+    "smoke",
+    "analog"
+  ]
+}

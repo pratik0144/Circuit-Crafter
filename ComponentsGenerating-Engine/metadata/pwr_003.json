@@ -1,0 +1,27 @@
+{
+  "id": "pwr_003",
+  "displayName": "Current Source",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "SPICE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "current source",
+    "ideal",
+    "constant",
+    "SPICE"
+  ],
+  "symbolStyle": "zigzag"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "hv_014",
+  "displayName": "Reactor (Shunt/Series)",
+  "category": "High Voltage & Electrical Power",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "reactor",
+    "inductor",
+    "HV",
+    "power factor"
+  ],
+  "symbolStyle": "inductor"
+}

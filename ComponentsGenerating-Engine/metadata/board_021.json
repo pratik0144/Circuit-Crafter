@@ -1,0 +1,93 @@
+{
+  "id": "board_021",
+  "displayName": "SparkFun RedBoard Artemis",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 15,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "D0/RX",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "D1/TX",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "D2-D13~",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "A0-A5",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "MOSI",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "MISO",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "SCK",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "CS",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "PDM_CLK",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "PDM_DATA",
+      "side": "right",
+      "number": 15
+    }
+  ],
+  "keywords": [
+    "Artemis",
+    "Apollo3",
+    "Cortex-M4F",
+    "BLE",
+    "ultra low power",
+    "ML"
+  ]
+}

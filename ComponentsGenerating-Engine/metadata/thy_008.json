@@ -1,0 +1,32 @@
+{
+  "id": "thy_008",
+  "displayName": "LASCR (Light-Activated SCR)",
+  "category": "Thyristors & Power Semiconductors",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "G",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "LASCR",
+    "light activated",
+    "SCR",
+    "optical",
+    "thyristor"
+  ]
+}

@@ -107,37 +107,108 @@ var COMPONENT_DEFS = {
 /* --- Create Component --- */
 
 function createComponent(type, x, y) {
+  // Try legacy first
   var def = COMPONENT_DEFS[type];
-  return {
-    id: generateId(),
-    type: type,
-    x: x,
-    y: y,
-    rotation: def.defaultRotation,
-    value: def.defaultValue,
-    ports: def.ports.map(function(p, i) { return { id: i, x: p.x, y: p.y }; })
-  };
+  if (def) {
+    return {
+      id: generateId(),
+      type: type,
+      x: x,
+      y: y,
+      rotation: def.defaultRotation,
+      value: def.defaultValue,
+      ports: def.ports.map(function(p, i) { return { id: i, x: p.x, y: p.y }; })
+    };
+  }
+
+  // Try generated component
+  var genDef = GENERATED_COMPONENT_DEFS[type];
+  if (genDef) {
+    return {
+      id: generateId(),
+      type: type,
+      x: x,
+      y: y,
+      rotation: genDef.defaultRotation || 0,
+      value: '',
+      _generated: true
+    };
+  }
+
+  // Fallback
+  return { id: generateId(), type: type, x: x, y: y, rotation: 0, value: '' };
 }
 
 /* --- Port Positions (World) --- */
 
 function getComponentPorts(comp) {
-  var def = COMPONENT_DEFS[comp.type];
   var angle = comp.rotation * Math.PI / 180;
   var cosA = Math.cos(angle);
   var sinA = Math.sin(angle);
 
-  return def.ports.map(function(p) {
-    return {
-      x: comp.x + Math.round(p.x * cosA - p.y * sinA),
-      y: comp.y + Math.round(p.x * sinA + p.y * cosA)
-    };
-  });
+  // 1. JSON port definition (priority)
+  if (comp.ports && comp.ports.length > 0) {
+    return comp.ports.map(function(p) {
+      return {
+        x: comp.x + Math.round(p.x * cosA - p.y * sinA),
+        y: comp.y + Math.round(p.x * sinA + p.y * cosA)
+      };
+    });
+  }
+
+  // 2. Legacy Hardcoded fallback
+  var def = COMPONENT_DEFS[comp.type];
+  if (def) {
+    return def.ports.map(function(p) {
+      return {
+        x: comp.x + Math.round(p.x * cosA - p.y * sinA),
+        y: comp.y + Math.round(p.x * sinA + p.y * cosA)
+      };
+    });
+  }
+
+  // 3. Generated component fallback
+  var genDef = typeof GENERATED_COMPONENT_DEFS !== 'undefined' ? GENERATED_COMPONENT_DEFS[comp.type] : null;
+  if (genDef && genDef.pins) {
+    var w = genDef.dimensions.width;
+    var h = genDef.dimensions.height;
+    return genDef.pins.map(function(pin) {
+      // Pin position relative to component center
+      var localX = pin.position.x - w / 2;
+      var localY = pin.position.y - h / 2;
+      // Add pin length outward
+      var len = (pin.length !== undefined && pin.length !== null) ? pin.length : 20;
+      if (pin.side === 'left')   localX -= len;
+      if (pin.side === 'right')  localX += len;
+      if (pin.side === 'top')    localY -= len;
+      if (pin.side === 'bottom') localY += len;
+      return {
+        x: comp.x + Math.round(localX * cosA - localY * sinA),
+        y: comp.y + Math.round(localX * sinA + localY * cosA)
+      };
+    });
+  }
+
+  return [];
 }
 
 /* --- Bounds --- */
 
 function getComponentBounds(comp) {
+  // Generated component bounds from dimensions
+  var genDef = GENERATED_COMPONENT_DEFS[comp.type];
+  if (genDef) {
+    var w = genDef.dimensions.width;
+    var h = genDef.dimensions.height;
+    var pad = 15; // pin length padding
+    var isVertical = (comp.rotation === 90 || comp.rotation === 270);
+    if (isVertical) {
+      return { x: comp.x - h / 2 - pad, y: comp.y - w / 2 - pad, w: h + pad * 2, h: w + pad * 2 };
+    }
+    return { x: comp.x - w / 2 - pad, y: comp.y - h / 2 - pad, w: w + pad * 2, h: h + pad * 2 };
+  }
+
+  // Legacy bounds
   if (comp.type === 'ground') {
     return { x: comp.x - 18, y: comp.y - 22, w: 36, h: 36 };
   }
@@ -183,12 +254,16 @@ function drawComponent(ctx, comp) {
   ctx.translate(comp.x, comp.y);
   ctx.rotate(comp.rotation * Math.PI / 180);
 
-  ctx.strokeStyle = '#000000';
-  ctx.fillStyle = '#000000';
+  var strokeColor = typeof CANVAS_THEME !== 'undefined' ? CANVAS_THEME.textDefault : '#000000';
+  ctx.strokeStyle = strokeColor;
+  ctx.fillStyle = strokeColor;
   ctx.lineWidth = 2;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
 
+  /* === LEGACY HARDCODED COMPONENTS === */
+  // TODO: Migrate to generated system when engine covers all 12 components
+  var isLegacy = true;
   switch (comp.type) {
     case 'resistor':   drawResistor(ctx);      break;
     case 'capacitor':  drawCapacitor(ctx);     break;
@@ -202,16 +277,27 @@ function drawComponent(ctx, comp) {
     case 'cccvs':      drawDependentVoltageSource(ctx); break;
     case 'vccs':       drawDependentCurrentSource(ctx); break;
     case 'cccs':       drawDependentCurrentSource(ctx); break;
+    default:           isLegacy = false;       break;
   }
 
-  // Port dots (small circles at endpoints)
-  var def = COMPONENT_DEFS[comp.type];
-  ctx.fillStyle = '#333';
-  def.ports.forEach(function(p) {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
-    ctx.fill();
-  });
+  if (isLegacy) {
+    // Port dots for legacy components
+    var def = COMPONENT_DEFS[comp.type];
+    if (def) {
+      ctx.fillStyle = '#333';
+      def.ports.forEach(function(p) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+  } else {
+    /* === GENERATED COMPONENT RENDERER === */
+    var genDef = GENERATED_COMPONENT_DEFS[comp.type];
+    if (genDef) {
+      drawGeneratedComponent(ctx, genDef, comp);
+    }
+  }
 
   ctx.restore();
 }
@@ -662,11 +748,180 @@ function drawComponentLabel(ctx, comp) {
     return;
   }
 
-  // Regular components: plain text label
-  var label = comp.value || def.abbrev;
+  // Generated components have labels baked into their primitives.
+  // Only draw an external label if the user set a custom value.
+  var genDef = typeof GENERATED_COMPONENT_DEFS !== 'undefined' ? GENERATED_COMPONENT_DEFS[comp.type] : null;
+  if (genDef) {
+    if (!comp.value) return; // No custom value → skip (primitives already have the name)
+    // User set a custom value → draw it below the component
+    var bounds = getComponentBounds(comp);
+    ctx.font = '11px sans-serif';
+    ctx.fillStyle = '#444';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    ctx.fillText(comp.value, comp.x, bounds.y + bounds.h + 4);
+    return;
+  }
+
+  // Legacy components: plain text label
+  var fallbackLabel = def ? def.abbrev : 'Unknown';
+  var label = comp.value || fallbackLabel;
   ctx.font = '12px sans-serif';
   ctx.fillStyle = '#444';
   ctx.textAlign = align;
   ctx.textBaseline = 'top';
   ctx.fillText(label, labelX, labelY);
+}
+
+/* ========================================
+   GENERATED COMPONENT PRIMITIVE RENDERER
+   Renders components defined by editable primitives.
+   Each primitive is drawn individually.
+   ======================================== */
+
+function drawGeneratedComponent(ctx, genDef, comp) {
+  var w = genDef.dimensions.width;
+  var h = genDef.dimensions.height;
+  var hidePinLabels = comp && comp.showPinLabels === false;
+  var hideCompName = comp && comp.showComponentName === false;
+
+  // Translate so component center is at origin (matching legacy convention)
+  ctx.translate(-w / 2, -h / 2);
+
+  // ── Draw primitives ──
+  genDef.primitives.forEach(function(prim) {
+    // Skip text if user hid them
+    if (prim.type === 'text' && prim.id) {
+      if (prim.id === 'label' && hideCompName) return;
+      if (prim.id !== 'label' && hidePinLabels) return;
+    }
+    ctx.save();
+    switch (prim.type) {
+      case 'line':
+        ctx.strokeStyle = prim.stroke === 'currentColor' ? '#000' : prim.stroke;
+        ctx.lineWidth = prim.strokeWidth || 2;
+        ctx.lineCap = prim.lineCap || 'round';
+        ctx.beginPath();
+        ctx.moveTo(prim.x1, prim.y1);
+        ctx.lineTo(prim.x2, prim.y2);
+        ctx.stroke();
+        break;
+
+      case 'polyline':
+        if (!prim.points || prim.points.length < 2) break;
+        ctx.strokeStyle = prim.stroke === 'currentColor' ? '#000' : prim.stroke;
+        ctx.lineWidth = prim.strokeWidth || 2;
+        ctx.lineCap = prim.lineCap || 'round';
+        ctx.lineJoin = prim.lineJoin || 'round';
+        ctx.beginPath();
+        ctx.moveTo(prim.points[0][0], prim.points[0][1]);
+        for (var i = 1; i < prim.points.length; i++) {
+          ctx.lineTo(prim.points[i][0], prim.points[i][1]);
+        }
+        if (prim.fill && prim.fill !== 'none') {
+          ctx.fillStyle = prim.fill === 'currentColor' ? '#000' : prim.fill;
+          ctx.fill();
+        }
+        ctx.stroke();
+        break;
+
+      case 'rect':
+        ctx.strokeStyle = prim.stroke === 'currentColor' ? '#000' : prim.stroke;
+        ctx.lineWidth = prim.strokeWidth || 2;
+        if (prim.fill && prim.fill !== 'none') {
+          ctx.fillStyle = prim.fill === 'currentColor' ? '#000' : prim.fill;
+          ctx.fillRect(prim.x, prim.y, prim.width, prim.height);
+        }
+        ctx.strokeRect(prim.x, prim.y, prim.width, prim.height);
+        break;
+
+      case 'arc':
+        ctx.strokeStyle = prim.stroke === 'currentColor' ? '#000' : prim.stroke;
+        ctx.lineWidth = prim.strokeWidth || 1.5;
+        ctx.beginPath();
+        var startRad = (prim.startAngle || 0) * Math.PI / 180;
+        var endRad = (prim.endAngle || 360) * Math.PI / 180;
+        ctx.arc(prim.cx, prim.cy, prim.radius, startRad, endRad, prim.anticlockwise || false);
+        if (prim.fill && prim.fill !== 'none') {
+          ctx.fillStyle = prim.fill === 'currentColor' ? '#000' : prim.fill;
+          ctx.fill();
+        }
+        ctx.stroke();
+        break;
+
+      case 'circle':
+        ctx.strokeStyle = prim.stroke === 'currentColor' ? '#000' : prim.stroke;
+        ctx.lineWidth = prim.strokeWidth || 2;
+        ctx.beginPath();
+        ctx.arc(prim.cx, prim.cy, prim.radius, 0, Math.PI * 2);
+        if (prim.fill && prim.fill !== 'none') {
+          ctx.fillStyle = prim.fill === 'currentColor' ? '#000' : prim.fill;
+          ctx.fill();
+        }
+        ctx.stroke();
+        break;
+
+      case 'text':
+        ctx.fillStyle = (prim.fill && prim.fill !== 'none') ? (prim.fill === 'currentColor' ? '#000' : prim.fill) : '#000';
+        ctx.font = (prim.fontSize || 11) + 'px ' + (prim.fontFamily || 'sans-serif');
+        ctx.textAlign = prim.align || 'center';
+        ctx.textBaseline = prim.baseline || 'middle';
+        ctx.fillText(prim.content || '', prim.x, prim.y);
+        break;
+    }
+    ctx.restore();
+  });
+
+  // ── Draw pins ──
+  if (genDef.pins) {
+    genDef.pins.forEach(function(pin) {
+      var px = pin.position.x;
+      var py = pin.position.y;
+      var len = (pin.length !== undefined && pin.length !== null) ? pin.length : 20;
+      if (len === 0) {
+        // No pin line needed (passive/path-based components)
+        ctx.fillStyle = '#333';
+        ctx.beginPath();
+        ctx.arc(px, py, 3, 0, Math.PI * 2);
+        ctx.fill();
+        return;
+      }
+
+      // Calculate pin endpoint
+      var endX = px, endY = py;
+      if (pin.side === 'left')   endX = px - len;
+      if (pin.side === 'right')  endX = px + len;
+      if (pin.side === 'top')    endY = py - len;
+      if (pin.side === 'bottom') endY = py + len;
+
+      // Draw pin line
+      ctx.strokeStyle = '#000';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(endX, endY);
+      ctx.stroke();
+
+      // Inversion bubble
+      if (pin.invert) {
+        var bx = px, by = py;
+        var bubbleR = 3;
+        if (pin.side === 'left')   bx -= bubbleR;
+        if (pin.side === 'right')  bx += bubbleR;
+        if (pin.side === 'top')    by -= bubbleR;
+        if (pin.side === 'bottom') by += bubbleR;
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(bx, by, bubbleR, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      // Port dot at wire connection point
+      ctx.fillStyle = '#333';
+      ctx.beginPath();
+      ctx.arc(endX, endY, 3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
 }

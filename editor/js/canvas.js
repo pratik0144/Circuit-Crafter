@@ -8,6 +8,16 @@ const GRID_SIZE = 20;
 const MIN_ZOOM = 0.25;
 const MAX_ZOOM = 4;
 
+const CANVAS_THEME = {
+  background: '#ffffff',
+  gridLine: '#e8e8e8',
+  selectionGlow: '#b5a3f7',
+  portHighlightFill: '#b5a3f7',
+  portHighlightStroke: 'rgba(181, 163, 247, 0.4)',
+  printOverlayStroke: '#ef4444',
+  printOverlayFill: 'rgba(239, 68, 68, 0.6)',
+  textDefault: '#000000'
+};
 function initCanvas() {
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
@@ -55,7 +65,7 @@ function drawGrid() {
   const endX = Math.ceil(bottomRight.x / GRID_SIZE) * GRID_SIZE;
   const endY = Math.ceil(bottomRight.y / GRID_SIZE) * GRID_SIZE;
 
-  ctx.strokeStyle = '#e8e8e8';
+  ctx.strokeStyle = CANVAS_THEME.gridLine;
   ctx.lineWidth = 0.5 / state.zoom;
 
   ctx.beginPath();
@@ -80,67 +90,69 @@ function render() {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // White canvas background
-  ctx.fillStyle = '#ffffff';
+  // Canvas background
+  ctx.fillStyle = CANVAS_THEME.background;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   ctx.save();
-  ctx.translate(state.offset.x, state.offset.y);
-  ctx.scale(state.zoom, state.zoom);
+  try {
+    ctx.translate(state.offset.x, state.offset.y);
+    ctx.scale(state.zoom, state.zoom);
 
-  // 1. Grid
-  drawGrid();
+    // 1. Grid
+    drawGrid();
 
-  // 2. Print preview overlay (A4 boundary)
-  if (state.showPrintPreview) {
-    drawPrintPreviewOverlay(ctx);
+    // 2. Print preview overlay (A4 boundary)
+    if (state.showPrintPreview) {
+      drawPrintPreviewOverlay(ctx);
+    }
+
+    // 3. Wires
+    state.wires.forEach(function(wire) { drawWire(ctx, wire); });
+
+    // 4. Junction dots
+    drawJunctionDots(ctx);
+
+    // 5. Wire preview (in-progress drawing)
+    if (state.wireStart && state.wireDrawingPoints.length > 0) {
+      var snapPos = state.wireSnapTarget ? state.wireSnapTarget.pos : state.mouseWorld;
+      drawWirePreview(ctx, state.wireDrawingPoints, snapPos, state.wireOrthoMode);
+    }
+
+    // 6. Snap indicator (while wire tool active)
+    if (state.tool === 'wire' && state.wireSnapTarget) {
+      drawSnapIndicator(ctx, state.wireSnapTarget);
+    }
+
+    // 7. Components + labels
+    state.components.forEach(function(comp) {
+      drawComponent(ctx, comp);
+      drawComponentLabel(ctx, comp);
+    });
+
+    // 8. Texts
+    state.texts.forEach(function(t) { drawText(ctx, t); });
+
+    // 9. Selection highlight
+    drawSelectionHighlight(ctx);
+
+    // 10. Port highlights
+    drawPortHighlights(ctx);
+
+    // 11. Placing preview
+    if (state.tool === 'place' && state.placingComponent) {
+      drawPlacingPreview(ctx);
+    }
+  } finally {
+    ctx.restore();
   }
-
-  // 3. Wires
-  state.wires.forEach(function(wire) { drawWire(ctx, wire); });
-
-  // 4. Junction dots
-  drawJunctionDots(ctx);
-
-  // 5. Wire preview (in-progress drawing)
-  if (state.wireStart && state.wireDrawingPoints.length > 0) {
-    var snapPos = state.wireSnapTarget ? state.wireSnapTarget.pos : state.mouseWorld;
-    drawWirePreview(ctx, state.wireDrawingPoints, snapPos, state.wireOrthoMode);
-  }
-
-  // 6. Snap indicator (while wire tool active)
-  if (state.tool === 'wire' && state.wireSnapTarget) {
-    drawSnapIndicator(ctx, state.wireSnapTarget);
-  }
-
-  // 7. Components + labels
-  state.components.forEach(function(comp) {
-    drawComponent(ctx, comp);
-    drawComponentLabel(ctx, comp);
-  });
-
-  // 8. Texts
-  state.texts.forEach(function(t) { drawText(ctx, t); });
-
-  // 9. Selection highlight
-  drawSelectionHighlight(ctx);
-
-  // 10. Port highlights
-  drawPortHighlights(ctx);
-
-  // 11. Placing preview
-  if (state.tool === 'place' && state.placingComponent) {
-    drawPlacingPreview(ctx);
-  }
-
-  ctx.restore();
 }
 
 /* --- Selection Highlight --- */
 
 function drawSelectionHighlight(ctx) {
   if (state.selectAllActive) {
-    ctx.strokeStyle = '#b5a3f7';
+    ctx.strokeStyle = CANVAS_THEME.selectionGlow;
     ctx.lineWidth = 2 / state.zoom;
     ctx.setLineDash([6 / state.zoom, 4 / state.zoom]);
 
@@ -173,7 +185,7 @@ function drawSelectionHighlight(ctx) {
 
   if (!state.selected) return;
 
-  ctx.strokeStyle = '#b5a3f7';
+  ctx.strokeStyle = CANVAS_THEME.selectionGlow;
   ctx.lineWidth = 2 / state.zoom;
   ctx.setLineDash([6 / state.zoom, 4 / state.zoom]);
 
@@ -196,7 +208,7 @@ function drawSelectionHighlight(ctx) {
 
     // Draw draggable points
     ctx.setLineDash([]);
-    ctx.fillStyle = '#b5a3f7';
+    ctx.fillStyle = CANVAS_THEME.selectionGlow;
     for (var j = 0; j < wire.points.length; j++) {
       ctx.beginPath();
       ctx.arc(wire.points[j].x, wire.points[j].y, 4, 0, Math.PI * 2);
@@ -228,12 +240,12 @@ function drawPortHighlights(ctx) {
       var dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < 15) {
-        ctx.fillStyle = '#b5a3f7';
+        ctx.fillStyle = CANVAS_THEME.portHighlightFill;
         ctx.beginPath();
         ctx.arc(port.x, port.y, 6, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.strokeStyle = 'rgba(181, 163, 247, 0.4)';
+        ctx.strokeStyle = CANVAS_THEME.portHighlightStroke;
         ctx.lineWidth = 2 / state.zoom;
         ctx.beginPath();
         ctx.arc(port.x, port.y, 10, 0, Math.PI * 2);
@@ -249,6 +261,26 @@ function drawPlacingPreview(ctx) {
   var x = snapToGrid(state.mouseWorld.x);
   var y = snapToGrid(state.mouseWorld.y);
   var def = COMPONENT_DEFS[state.placingComponent];
+
+  // Check generated components if not legacy
+  if (!def && typeof GENERATED_COMPONENT_DEFS !== 'undefined') {
+    var genDef = GENERATED_COMPONENT_DEFS[state.placingComponent];
+    if (!genDef) return;
+    ctx.globalAlpha = 0.45;
+    var preview = {
+      id: '_preview',
+      type: state.placingComponent,
+      x: x,
+      y: y,
+      rotation: genDef.defaultRotation || 0,
+      value: '',
+      _generated: true
+    };
+    drawComponent(ctx, preview);
+    ctx.globalAlpha = 1.0;
+    return;
+  }
+
   if (!def) return;
 
   ctx.globalAlpha = 0.45;
@@ -278,14 +310,14 @@ function drawPrintPreviewOverlay(ctx) {
   // Semi-transparent overlay outside A4
   // (We just draw the boundary for simplicity)
 
-  ctx.strokeStyle = '#ef4444';
+  ctx.strokeStyle = CANVAS_THEME.printOverlayStroke;
   ctx.lineWidth = 2 / state.zoom;
   ctx.setLineDash([10 / state.zoom, 6 / state.zoom]);
   ctx.strokeRect(ox, oy, a4w, a4h);
   ctx.setLineDash([]);
 
   // "A4" label
-  ctx.fillStyle = 'rgba(239, 68, 68, 0.6)';
+  ctx.fillStyle = CANVAS_THEME.printOverlayFill;
   ctx.font = (12 / state.zoom) + 'px Inter, sans-serif';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
@@ -297,7 +329,7 @@ function drawPrintPreviewOverlay(ctx) {
 function drawText(ctx, textObj) {
   var fontStyle = textObj.bold ? 'bold ' : '';
   ctx.font = fontStyle + textObj.fontSize + 'px sans-serif';
-  ctx.fillStyle = '#000000';
+  ctx.fillStyle = CANVAS_THEME.textDefault;
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
   ctx.fillText(textObj.text, textObj.x, textObj.y);

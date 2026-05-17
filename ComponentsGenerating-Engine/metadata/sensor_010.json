@@ -1,0 +1,37 @@
+{
+  "id": "sensor_010",
+  "displayName": "Gyroscope (MPU-6050)",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "MPU-6050",
+    "gyroscope",
+    "accelerometer",
+    "I2C",
+    "IMU"
+  ]
+}

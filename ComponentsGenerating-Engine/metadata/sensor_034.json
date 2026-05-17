@@ -1,0 +1,27 @@
+{
+  "id": "sensor_034",
+  "displayName": "Flex Sensor",
+  "category": "Sensors & Transducers",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "flex sensor",
+    "bend",
+    "resistive",
+    "glove"
+  ],
+  "symbolStyle": "zigzag"
+}

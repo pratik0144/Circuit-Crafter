@@ -1,0 +1,27 @@
+{
+  "id": "rf_013",
+  "displayName": "Low-Pass Filter (RF)",
+  "category": "RF Antenna & Wireless",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RFin",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RFout",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "low pass filter",
+    "RF",
+    "LPF",
+    "harmonic"
+  ],
+  "symbolStyle": "zigzag"
+}

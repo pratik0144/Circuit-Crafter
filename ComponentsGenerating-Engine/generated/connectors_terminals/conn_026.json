@@ -1,0 +1,71 @@
+{
+  "id": "conn_026",
+  "category": "Connectors & Terminals",
+  "displayName": "Twisted Pair Symbol",
+  "dimensions": {
+    "width": 40,
+    "height": 60
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 60,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 20,
+      "y": 30,
+      "content": "Twisted Pair Symbol",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "A",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "B",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ],
+  "_engineMeta": {
+    "generatedAt": "2026-05-15T22:05:38.976Z",
+    "engineVersion": "1.0.0",
+    "generatorFamily": "Connector",
+    "sourceMetadataPath": "/Users/pratikpotadar/Developer/ckt ee/ComponentsGenerating-Engine/metadata/conn_026.json"
+  }
+}

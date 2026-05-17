@@ -1,0 +1,76 @@
+{
+  "id": "act_011",
+  "displayName": "Contactor",
+  "category": "Actuators & Electromechanical",
+  "family": "DipIc",
+  "pinCount": 12,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "NC_4",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "NC_5",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "L1",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "L2",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "L3",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "T1",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "T2",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "T3",
+      "side": "right",
+      "number": 12
+    }
+  ],
+  "keywords": [
+    "contactor",
+    "HV switch",
+    "motor starter",
+    "3-phase"
+  ]
+}

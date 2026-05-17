@@ -1,0 +1,36 @@
+{
+  "id": "prot_004",
+  "displayName": "TVS Diode Array (ESD Protection)",
+  "category": "Protection & Conditioning",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "SOP6",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "EN",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "TVS array",
+    "ESD",
+    "protection",
+    "PRTR5V0U2X"
+  ]
+}

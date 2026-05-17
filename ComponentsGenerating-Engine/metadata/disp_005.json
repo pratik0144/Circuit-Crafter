@@ -1,0 +1,96 @@
+{
+  "id": "disp_005",
+  "displayName": "20x4 LCD",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "VSS",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VDD",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VO",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RS",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "RW",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "D0",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "D1",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "D2",
+      "side": "right",
+      "number": 16
+    },
+    {
+      "name": "D3",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "D4",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "D5",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "D6",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "D7",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "A",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "K",
+      "side": "right",
+      "number": 9
+    }
+  ],
+  "keywords": [
+    "LCD",
+    "20x4",
+    "HD44780",
+    "character display"
+  ]
+}

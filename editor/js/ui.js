@@ -3,6 +3,12 @@
    context panel, modals
    ======================================== */
 
+/* --- HTML Escape Utility (XSS Prevention) --- */
+function escapeHTML(str) {
+  if (!str) return '';
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g, '&#39;');
+}
+
 /* --- SI Unit Data per component type --- */
 
 var COMPONENT_UNITS = {
@@ -47,7 +53,18 @@ function initUI() {
     toggleComponentPicker();
   });
 
-  // Component picker items
+  document.getElementById('library-btn').addEventListener('click', function(e) {
+    e.stopPropagation();
+    closeComponentPicker();
+    if (typeof ensureLibraryModalBuilt === 'function') ensureLibraryModalBuilt();
+    document.getElementById('library-modal').style.display = 'flex';
+  });
+
+  document.getElementById('library-close-btn').addEventListener('click', function() {
+    document.getElementById('library-modal').style.display = 'none';
+  });
+
+  // Component picker items (for legacy + More Components dropdown)
   document.querySelectorAll('.picker-item').forEach(function(item) {
     item.addEventListener('click', function() {
       activateComponent(item.dataset.type);
@@ -57,7 +74,7 @@ function initUI() {
 
   // Close picker on outside click
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('#component-picker') && !e.target.closest('#more-comps-btn')) {
+    if (!e.target.closest('#component-picker') && !e.target.closest('#more-comps-btn') && !e.target.closest('#library-btn')) {
       closeComponentPicker();
     }
     if (!e.target.closest('#export-wrapper')) {
@@ -113,11 +130,9 @@ function initUI() {
   // Export modal bindings
   initExportModalBindings();
 
-  // Bottom bar update
-  setInterval(updateBottomBar, 500);
-
-  // Watch selection for context panel
-  setInterval(updateContextPanel, 400);
+  // Initial UI render
+  updateBottomBar();
+  updateContextPanel();
 }
 
 /* ========================================
@@ -214,14 +229,31 @@ function updateContextPanel() {
 
 function buildComponentContext(panel, comp) {
   var def = COMPONENT_DEFS[comp.type];
+  var genDef = (typeof GENERATED_COMPONENT_DEFS !== 'undefined') ? GENERATED_COMPONENT_DEFS[comp.type] : null;
   var unitInfo = COMPONENT_UNITS[comp.type] || {};
+
+  // Resolve display info from legacy def OR generated def
+  var iconText, nameText, categoryText;
+  if (def) {
+    iconText = def.icon || def.abbrev;
+    nameText = def.name;
+    categoryText = unitInfo.category || '';
+  } else if (genDef) {
+    iconText = genDef.displayName ? genDef.displayName.substring(0, 2).toUpperCase() : '⚡';
+    nameText = genDef.displayName || comp.type;
+    categoryText = (genDef.category || 'Component') + ' • ' + (genDef.pins ? genDef.pins.length : 0) + ' pins';
+  } else {
+    iconText = '?';
+    nameText = comp.type;
+    categoryText = 'Unknown';
+  }
 
   var html = '';
   html += '<div class="ctx-comp-header">';
-  html += '  <div class="ctx-comp-icon">' + (def.icon || def.abbrev) + '</div>';
+  html += '  <div class="ctx-comp-icon">' + escapeHTML(iconText) + '</div>';
   html += '  <div>';
-  html += '    <div class="ctx-comp-name">' + def.name + '</div>';
-  html += '    <div class="ctx-comp-type">' + (unitInfo.category || '') + '</div>';
+  html += '    <div class="ctx-comp-name">' + escapeHTML(nameText) + '</div>';
+  html += '    <div class="ctx-comp-type">' + escapeHTML(categoryText) + '</div>';
   html += '  </div>';
   html += '</div>';
 
@@ -229,18 +261,20 @@ function buildComponentContext(panel, comp) {
   html += '<div class="ctx-section">';
   html += '  <div class="ctx-label">Value</div>';
   html += '  <div class="ctx-row">';
-  html += '    <input class="ctx-input" id="ctx-value-input" value="' + (comp.value || '') + '" placeholder="e.g. ' + ((unitInfo.examples && unitInfo.examples[0]) || '') + '">';
+  html += '    <input class="ctx-input" id="ctx-value-input" value="' + escapeHTML(comp.value || '') + '" placeholder="e.g. ' + escapeHTML((unitInfo.examples && unitInfo.examples[0]) || (genDef ? 'U1' : '')) + '">';
   html += '  </div>';
 
   if (unitInfo.examples && unitInfo.examples.length > 0) {
     html += '  <div class="ctx-chips">';
     unitInfo.examples.forEach(function(ex) {
-      html += '<button class="ctx-chip" data-val="' + ex + '">' + ex + '</button>';
+      html += '<button class="ctx-chip" data-val="' + escapeHTML(ex) + '">' + escapeHTML(ex) + '</button>';
     });
     html += '  </div>';
   }
   if (unitInfo.guide) {
-    html += '  <div class="ctx-hint">' + unitInfo.guide + '</div>';
+    html += '  <div class="ctx-hint">' + escapeHTML(unitInfo.guide) + '</div>';
+  } else if (genDef) {
+    html += '  <div class="ctx-hint">Enter a custom label for this component</div>';
   }
   html += '</div>';
 
@@ -300,7 +334,7 @@ function buildTextContext(panel, txt) {
 
   html += '<div class="ctx-section">';
   html += '  <div class="ctx-label">Content</div>';
-  html += '  <input class="ctx-input" id="ctx-text-input" value="' + (txt.text || '') + '">';
+  html += '  <input class="ctx-input" id="ctx-text-input" value="' + escapeHTML(txt.text || '') + '">';
   html += '</div>';
 
   html += '<div class="ctx-section">';
@@ -494,18 +528,43 @@ function closeModal(id) {
 
 function openValueEditModal(comp) {
   var def = COMPONENT_DEFS[comp.type];
+  var genDef = typeof GENERATED_COMPONENT_DEFS !== 'undefined' ? GENERATED_COMPONENT_DEFS[comp.type] : null;
   var unitInfo = COMPONENT_UNITS[comp.type] || {};
 
-  document.getElementById('modal-comp-icon').textContent = def.icon || def.abbrev;
-  document.getElementById('modal-comp-name').textContent = def.name;
-  document.getElementById('modal-comp-type').textContent = unitInfo.category || 'Component';
+  var iconEl = document.getElementById('modal-comp-icon');
+  var nameEl = document.getElementById('modal-comp-name');
+  var typeEl = document.getElementById('modal-comp-type');
+
+  if (def) {
+    // Legacy component
+    iconEl.textContent = def.icon || def.abbrev;
+    nameEl.textContent = def.name;
+    typeEl.textContent = unitInfo.category || 'Component';
+  } else if (genDef) {
+    // Generated component
+    iconEl.textContent = genDef.displayName ? genDef.displayName.substring(0, 2).toUpperCase() : '⚡';
+    nameEl.textContent = genDef.displayName || comp.type;
+    typeEl.textContent = (genDef.category || 'Generated') + ' • ' + (genDef.pins ? genDef.pins.length : 0) + ' pins';
+  } else {
+    iconEl.textContent = '?';
+    nameEl.textContent = comp.type;
+    typeEl.textContent = 'Unknown Component';
+  }
 
   var input = document.getElementById('modal-value-input');
   input.value = comp.value || '';
-  input.placeholder = 'e.g. ' + ((unitInfo.examples && unitInfo.examples[0]) || 'value');
+
+  if (def && unitInfo.examples) {
+    input.placeholder = 'e.g. ' + unitInfo.examples[0];
+  } else if (genDef) {
+    input.placeholder = 'Custom label (e.g. U1, IC2)';
+  } else {
+    input.placeholder = 'value';
+  }
 
   var chipsContainer = document.getElementById('modal-unit-chips');
   chipsContainer.innerHTML = '';
+
   if (unitInfo.examples) {
     unitInfo.examples.forEach(function(example) {
       var chip = document.createElement('button');
@@ -519,9 +578,49 @@ function openValueEditModal(comp) {
     });
   }
 
+  // For generated components: add Show/Hide toggles
+  if (genDef) {
+    // 1. Pin Labels Toggle
+    var pinToggle = document.createElement('button');
+    pinToggle.className = 'unit-chip';
+    var pinHidden = comp.showPinLabels === false;
+    pinToggle.textContent = pinHidden ? '👁 Show Pin Details' : '🚫 Hide Pin Details';
+    pinToggle.style.background = pinHidden ? '#2d5a2d' : '#5a2d2d';
+    pinToggle.addEventListener('click', function() {
+      saveSnapshot();
+      comp.showPinLabels = pinHidden ? true : false;
+      pinHidden = !pinHidden;
+      pinToggle.textContent = pinHidden ? '👁 Show Pin Details' : '🚫 Hide Pin Details';
+      pinToggle.style.background = pinHidden ? '#2d5a2d' : '#5a2d2d';
+      saveToLocalStorage();
+      markDirty();
+    });
+    chipsContainer.appendChild(pinToggle);
+
+    // 2. Component Name Toggle
+    var nameToggle = document.createElement('button');
+    nameToggle.className = 'unit-chip';
+    var nameHidden = comp.showComponentName === false;
+    nameToggle.textContent = nameHidden ? '👁 Show Comp Name' : '🚫 Hide Comp Name';
+    nameToggle.style.background = nameHidden ? '#2d5a2d' : '#5a2d2d';
+    nameToggle.addEventListener('click', function() {
+      saveSnapshot();
+      comp.showComponentName = nameHidden ? true : false;
+      nameHidden = !nameHidden;
+      nameToggle.textContent = nameHidden ? '👁 Show Comp Name' : '🚫 Hide Comp Name';
+      nameToggle.style.background = nameHidden ? '#2d5a2d' : '#5a2d2d';
+      saveToLocalStorage();
+      markDirty();
+    });
+    chipsContainer.appendChild(nameToggle);
+  }
+
   var guideEl = document.getElementById('modal-si-guide');
   if (unitInfo.guide) {
     guideEl.textContent = unitInfo.guide;
+    guideEl.style.display = '';
+  } else if (genDef) {
+    guideEl.textContent = 'Enter a custom label for this component. Leave blank to use the default name.';
     guideEl.style.display = '';
   } else {
     guideEl.style.display = 'none';
@@ -654,3 +753,209 @@ function insertAtCursor(inputId, text) {
   input.focus();
   input.setSelectionRange(newPos, newPos);
 }
+
+/* ========================================
+   LIBRARY MODAL LOGIC
+   ======================================== */
+
+window.buildLibraryModal = function(bundle) {
+  var grid = document.getElementById('library-grid');
+  var searchInput = document.getElementById('library-search');
+  var categorySelect = document.getElementById('library-category-filter');
+  if (!grid || !searchInput || !categorySelect) return;
+
+  var components = bundle.components;
+
+  // PDF-ordered category list (exact order from CircuitCrafter_Component_Library.pdf)
+  var PDF_CATEGORY_ORDER = [
+    'Passive Components',
+    'Diodes & Rectifiers',
+    'Bipolar Transistors (BJT)',
+    'Field-Effect Transistors (FET)',
+    'Thyristors & Power Semiconductors',
+    'Op-Amps & Comparators',
+    'Logic Gates & Combinational ICs',
+    'Sequential Logic & Flip-Flops',
+    'Timers & Oscillators',
+    'Analog ICs & Regulators',
+    'Microcontrollers & Processors',
+    'Memory ICs',
+    'Interface & Communication ICs',
+    'Sensors & Transducers',
+    'Displays & Indicators',
+    'Actuators & Electromechanical',
+    'Switches Relays & Push-buttons',
+    'Power Sources & Batteries',
+    'Connectors & Terminals',
+    'Protection & Conditioning',
+    'RF Antenna & Wireless',
+    'Filters & Signal Processing',
+    'Power Electronics & Drives',
+    'Measurement & Test Instruments',
+    'Electroacoustic & Audio',
+    'Optoelectronics & Photonics',
+    'MEMS Emerging & Nanotechnology',
+    'High Voltage & Electrical Power',
+    'Development Boards'
+  ];
+
+  // Merge orphan categories into their parent
+  var CATEGORY_MERGE = {
+    'Passives': 'Passive Components',
+    'Sensors': 'Sensors & Transducers',
+    'ICs': 'Microcontrollers & Processors'
+  };
+
+  // Normalize component categories
+  components.forEach(function(c) {
+    if (CATEGORY_MERGE[c.category]) {
+      c.category = CATEGORY_MERGE[c.category];
+    }
+  });
+
+  // Build category map
+  var categoryMap = {};
+  components.forEach(function(c) {
+    var cat = c.category || 'Uncategorized';
+    if (!categoryMap[cat]) categoryMap[cat] = [];
+    categoryMap[cat].push(c);
+  });
+
+  // Build ordered category list (PDF order first, then any remaining)
+  var orderedCategories = [];
+  PDF_CATEGORY_ORDER.forEach(function(cat) {
+    if (categoryMap[cat]) orderedCategories.push(cat);
+  });
+  Object.keys(categoryMap).forEach(function(cat) {
+    if (orderedCategories.indexOf(cat) === -1) orderedCategories.push(cat);
+  });
+
+  // Populate category dropdown
+  categorySelect.innerHTML = '<option value="all">All Categories (' + components.length + ')</option>';
+  orderedCategories.forEach(function(cat) {
+    var option = document.createElement('option');
+    option.value = cat;
+    option.textContent = cat + ' (' + categoryMap[cat].length + ')';
+    categorySelect.appendChild(option);
+  });
+
+  // Category emoji map
+  var CATEGORY_ICONS = {
+    'Passive Components': '⚡', 'Diodes & Rectifiers': '▷', 'Bipolar Transistors (BJT)': '🔌',
+    'Field-Effect Transistors (FET)': '🔌', 'Thyristors & Power Semiconductors': '⚡',
+    'Op-Amps & Comparators': '△', 'Logic Gates & Combinational ICs': '🔲',
+    'Sequential Logic & Flip-Flops': '🔁', 'Timers & Oscillators': '⏱',
+    'Analog ICs & Regulators': '📉', 'Microcontrollers & Processors': '🖥',
+    'Memory ICs': '💾', 'Interface & Communication ICs': '📡',
+    'Sensors & Transducers': '🌡', 'Displays & Indicators': '📺',
+    'Actuators & Electromechanical': '⚙', 'Switches Relays & Push-buttons': '🔘',
+    'Power Sources & Batteries': '🔋', 'Connectors & Terminals': '🔗',
+    'Protection & Conditioning': '🛡', 'RF Antenna & Wireless': '📶',
+    'Filters & Signal Processing': '🎛', 'Power Electronics & Drives': '⚡',
+    'Measurement & Test Instruments': '📊', 'Electroacoustic & Audio': '🔊',
+    'Optoelectronics & Photonics': '💡', 'MEMS Emerging & Nanotechnology': '🔬',
+    'High Voltage & Electrical Power': '🏭', 'Development Boards': '🧩'
+  };
+
+  // Track collapsed state
+  var collapsedState = {};
+
+  function renderComponents() {
+    var filterText = searchInput.value.toLowerCase().trim();
+    var filterCat = categorySelect.value;
+
+    grid.innerHTML = '';
+    grid.style.display = 'block'; // Switch from grid to block for sections
+
+    var categoriesToShow = filterCat === 'all' ? orderedCategories : [filterCat];
+
+    categoriesToShow.forEach(function(cat) {
+      var catComponents = categoryMap[cat] || [];
+
+      // Filter components by search
+      var filtered = catComponents.filter(function(comp) {
+        if (!filterText) return true;
+        var searchable = (comp.id + ' ' + comp.displayName + ' ' + (comp.category || '')).toLowerCase();
+        if (comp.keywords) searchable += ' ' + comp.keywords.join(' ');
+        return searchable.indexOf(filterText) !== -1;
+      });
+
+      if (filtered.length === 0) return;
+
+      // Auto-expand when searching
+      if (filterText) collapsedState[cat] = false;
+
+      // Category section header
+      var section = document.createElement('div');
+      section.style.marginBottom = '16px';
+
+      var header = document.createElement('button');
+      header.style.cssText = 'width:100%;display:flex;align-items:center;gap:8px;padding:10px 12px;background:var(--toolbar-bg);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:inherit;font-size:0.95em;font-weight:600;text-align:left;';
+      var isCollapsed = collapsedState[cat] === true;
+      var arrow = isCollapsed ? '▶' : '▼';
+      var icon = CATEGORY_ICONS[cat] || '📦';
+      header.innerHTML = '<span style="font-size:0.8em;transition:transform 0.2s">' + arrow + '</span> ' +
+        '<span>' + icon + '</span> ' +
+        '<span style="flex:1">' + cat + '</span>' +
+        '<span style="color:var(--text-muted);font-weight:400;font-size:0.85em">' + filtered.length + ' component' + (filtered.length !== 1 ? 's' : '') + '</span>';
+
+      header.addEventListener('click', function() {
+        collapsedState[cat] = !collapsedState[cat];
+        renderComponents();
+      });
+
+      section.appendChild(header);
+
+      // Component grid (collapsible)
+      if (!isCollapsed) {
+        var compGrid = document.createElement('div');
+        compGrid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;padding:8px 0 0 0;';
+
+        filtered.forEach(function(comp) {
+          var btn = document.createElement('button');
+          btn.className = 'picker-item';
+          btn.style.cssText = 'flex-direction:column;align-items:center;justify-content:center;padding:12px 8px;height:80px;';
+
+          var iconSpan = document.createElement('span');
+          iconSpan.className = 'picker-item-icon';
+          iconSpan.style.cssText = 'font-size:1.3em;margin-bottom:6px;font-weight:bold;';
+          iconSpan.textContent = comp.displayName.substring(0, 2).toUpperCase();
+
+          var labelSpan = document.createElement('span');
+          labelSpan.className = 'picker-item-label';
+          labelSpan.style.cssText = 'text-align:center;white-space:normal;line-height:1.2;font-size:0.8em;overflow:hidden;max-height:2.4em;';
+          labelSpan.textContent = comp.displayName;
+
+          btn.appendChild(iconSpan);
+          btn.appendChild(labelSpan);
+
+          btn.addEventListener('click', function() {
+            activateComponent(comp.id);
+            document.getElementById('library-modal').style.display = 'none';
+          });
+
+          compGrid.appendChild(btn);
+        });
+
+        section.appendChild(compGrid);
+      }
+
+      grid.appendChild(section);
+    });
+
+    // Empty state
+    if (grid.children.length === 0) {
+      var empty = document.createElement('div');
+      empty.style.cssText = 'text-align:center;padding:40px;color:var(--text-muted);';
+      empty.textContent = 'No components match "' + searchInput.value + '"';
+      grid.appendChild(empty);
+    }
+  }
+
+  // Bind events
+  searchInput.addEventListener('input', renderComponents);
+  categorySelect.addEventListener('change', renderComponents);
+
+  // Initial render
+  renderComponents();
+};

@@ -1,0 +1,96 @@
+{
+  "id": "seq_012",
+  "displayName": "Up/Down Counter",
+  "category": "Sequential Logic & Flip-Flops",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "D0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "D1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "D2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "D3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "D4",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "D5",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "D6",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "D7",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "Y",
+      "side": "right",
+      "number": 16
+    },
+    {
+      "name": "A",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "C",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "EN",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 9
+    }
+  ],
+  "keywords": [
+    "up down counter",
+    "bidirectional",
+    "74HC191",
+    "sequential"
+  ]
+}

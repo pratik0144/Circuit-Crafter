@@ -1,0 +1,66 @@
+{
+  "id": "analog_024",
+  "displayName": "Active Filter IC (UAF42)",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "R1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "R2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "LP",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "BP",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "HP",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "N",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "UAF42",
+    "active filter",
+    "state variable",
+    "universal"
+  ]
+}

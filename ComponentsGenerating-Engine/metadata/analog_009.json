@@ -1,0 +1,56 @@
+{
+  "id": "analog_009",
+  "displayName": "Flyback Converter",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CTRL",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "NC_3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "FB",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "flyback",
+    "isolated",
+    "switching",
+    "converter"
+  ]
+}

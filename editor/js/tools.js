@@ -342,6 +342,7 @@ function eraserMouseDown(world) {
         return true;
       });
       if (state.selected && state.selected.id === compId) state.selected = null;
+      cleanupOrphanedConnections();
       saveToLocalStorage();
       markDirty();
       return;
@@ -355,6 +356,7 @@ function eraserMouseDown(world) {
       saveSnapshot();
       state.wires.splice(j, 1);
       if (state.selected && state.selected.id === wire.id) state.selected = null;
+      cleanupOrphanedConnections();
       saveToLocalStorage();
       markDirty();
       return;
@@ -368,6 +370,7 @@ function eraserMouseDown(world) {
       saveSnapshot();
       state.texts.splice(k, 1);
       if (state.selected && state.selected.id === txt.id) state.selected = null;
+      cleanupOrphanedConnections();
       saveToLocalStorage();
       markDirty();
       return;
@@ -541,8 +544,29 @@ function deleteSelected() {
   }
 
   state.selected = null;
+  cleanupOrphanedConnections();
   saveToLocalStorage();
   markDirty();
+}
+
+function cleanupOrphanedConnections() {
+  var wireIds = {};
+  var compIds = {};
+  state.wires.forEach(function(w) { wireIds[w.id] = true; });
+  state.components.forEach(function(c) { compIds[c.id] = true; });
+
+  state.wires.forEach(function(w) {
+    if (w.connections) {
+      if (w.connections.start) {
+        if (w.connections.start.type === 'wire' && !wireIds[w.connections.start.wireId]) w.connections.start = { type: 'free' };
+        if (w.connections.start.type === 'port' && !compIds[w.connections.start.componentId]) w.connections.start = { type: 'free' };
+      }
+      if (w.connections.end) {
+        if (w.connections.end.type === 'wire' && !wireIds[w.connections.end.wireId]) w.connections.end = { type: 'free' };
+        if (w.connections.end.type === 'port' && !compIds[w.connections.end.componentId]) w.connections.end = { type: 'free' };
+      }
+    }
+  });
 }
 
 function editSelectedValue() {

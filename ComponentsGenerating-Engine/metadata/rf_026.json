@@ -1,0 +1,42 @@
+{
+  "id": "rf_026",
+  "displayName": "VCO (Voltage-Controlled Oscillator)",
+  "category": "RF Antenna & Wireless",
+  "family": "DipIc",
+  "pinCount": 5,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RF_IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "IF_OUT",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "LO",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "VCO",
+    "voltage controlled",
+    "oscillator",
+    "PLL",
+    "RF"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "analog_023",
+  "displayName": "Variable Gain Amplifier (VGA)",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GAIN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "AGC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "VGA",
+    "variable gain",
+    "amplifier",
+    "AGC",
+    "VCA"
+  ]
+}

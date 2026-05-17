@@ -1,0 +1,37 @@
+{
+  "id": "board_023",
+  "displayName": "HC-SR04 Ultrasonic Sensor",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "TRIG",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "ECHO",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "HC-SR04",
+    "ultrasonic",
+    "distance",
+    "sonar",
+    "4-pin"
+  ]
+}

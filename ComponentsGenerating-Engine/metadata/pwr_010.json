@@ -1,0 +1,26 @@
+{
+  "id": "pwr_010",
+  "displayName": "Fuel Cell",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "fuel cell",
+    "hydrogen",
+    "clean energy"
+  ],
+  "symbolStyle": "zigzag"
+}

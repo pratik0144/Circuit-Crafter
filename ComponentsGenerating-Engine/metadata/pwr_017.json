@@ -1,0 +1,27 @@
+{
+  "id": "pwr_017",
+  "displayName": "Wireless Charging Coil",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "wireless charging",
+    "Qi",
+    "inductive",
+    "coil"
+  ],
+  "symbolStyle": "inductor"
+}

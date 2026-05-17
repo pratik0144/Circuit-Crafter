@@ -1,0 +1,56 @@
+{
+  "id": "hv_015",
+  "displayName": "STATCOM Block",
+  "category": "High Voltage & Electrical Power",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "L1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "L2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "L3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "CTRL",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "FB",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VREF",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "STATUS",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "STATCOM",
+    "reactive power",
+    "FACTS",
+    "HV"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "mems_009",
+  "displayName": "Thermoelectric Generator (TEG)",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "TEG",
+    "thermoelectric",
+    "Peltier",
+    "energy harvest"
+  ],
+  "symbolStyle": "zigzag"
+}

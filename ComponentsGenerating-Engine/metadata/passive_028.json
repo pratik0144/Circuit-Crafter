@@ -1,0 +1,30 @@
+{
+  "id": "passive_028",
+  "displayName": "Saturable Core Reactor",
+  "category": "Passive Components",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CTL",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "saturable core",
+    "reactor",
+    "magnetic amplifier"
+  ]
+}

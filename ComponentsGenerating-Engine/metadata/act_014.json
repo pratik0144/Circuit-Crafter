@@ -1,0 +1,27 @@
+{
+  "id": "act_014",
+  "displayName": "Speaker / Loudspeaker",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "speaker",
+    "audio",
+    "loudspeaker",
+    "sound"
+  ],
+  "symbolStyle": "zigzag"
+}

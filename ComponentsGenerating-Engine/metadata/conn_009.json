@@ -1,0 +1,146 @@
+{
+  "id": "conn_009",
+  "displayName": "DB25 Connector",
+  "category": "Connectors & Terminals",
+  "family": "DipIc",
+  "pinCount": 26,
+  "packageType": "DB25",
+  "pins": [
+    {
+      "name": "1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "4",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "5",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "6",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "7",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "8",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "9",
+      "side": "left",
+      "number": 9
+    },
+    {
+      "name": "10",
+      "side": "left",
+      "number": 10
+    },
+    {
+      "name": "11",
+      "side": "left",
+      "number": 11
+    },
+    {
+      "name": "12",
+      "side": "left",
+      "number": 12
+    },
+    {
+      "name": "13",
+      "side": "left",
+      "number": 13
+    },
+    {
+      "name": "14",
+      "side": "right",
+      "number": 26
+    },
+    {
+      "name": "15",
+      "side": "right",
+      "number": 25
+    },
+    {
+      "name": "16",
+      "side": "right",
+      "number": 24
+    },
+    {
+      "name": "17",
+      "side": "right",
+      "number": 23
+    },
+    {
+      "name": "18",
+      "side": "right",
+      "number": 22
+    },
+    {
+      "name": "19",
+      "side": "right",
+      "number": 21
+    },
+    {
+      "name": "20",
+      "side": "right",
+      "number": 20
+    },
+    {
+      "name": "21",
+      "side": "right",
+      "number": 19
+    },
+    {
+      "name": "22",
+      "side": "right",
+      "number": 18
+    },
+    {
+      "name": "23",
+      "side": "right",
+      "number": 17
+    },
+    {
+      "name": "24",
+      "side": "right",
+      "number": 16
+    },
+    {
+      "name": "25",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 14
+    }
+  ],
+  "keywords": [
+    "DB25",
+    "parallel",
+    "RS-232",
+    "printer"
+  ]
+}

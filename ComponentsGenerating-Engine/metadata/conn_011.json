@@ -1,0 +1,36 @@
+{
+  "id": "conn_011",
+  "displayName": "USB-A Connector",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 4,
+  "packageType": "USB-A",
+  "pins": [
+    {
+      "name": "VBUS",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "D-",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "D+",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "USB-A",
+    "host",
+    "USB",
+    "connector"
+  ]
+}

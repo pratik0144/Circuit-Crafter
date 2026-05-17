@@ -1,0 +1,26 @@
+{
+  "id": "conn_005",
+  "displayName": "2-Pin Connector",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "2",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "connector",
+    "2-pin",
+    "Dupont",
+    "JST"
+  ]
+}

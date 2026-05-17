@@ -1,0 +1,96 @@
+{
+  "id": "mem_016",
+  "displayName": "NAND Flash",
+  "category": "Memory ICs",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "TSOP48",
+  "pins": [
+    {
+      "name": "IO0-IO7",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLE",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "ALE",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "CE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "RE",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "WE",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "WP",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "RB",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "NC_5",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "NC_6",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "NC_7",
+      "side": "right",
+      "number": 16
+    }
+  ],
+  "keywords": [
+    "NAND Flash",
+    "high density",
+    "memory",
+    "storage"
+  ]
+}

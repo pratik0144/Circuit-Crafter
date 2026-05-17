@@ -1,0 +1,26 @@
+{
+  "id": "conn_025",
+  "displayName": "Coax Cable Symbol",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "CENTER",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "SHIELD",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "coaxial cable",
+    "RF",
+    "shielded",
+    "signal"
+  ]
+}

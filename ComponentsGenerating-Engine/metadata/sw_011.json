@@ -1,0 +1,31 @@
+{
+  "id": "sw_011",
+  "displayName": "Slide Switch",
+  "category": "Switches Relays & Push-buttons",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "COM",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "ON",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "OFF",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "slide switch",
+    "SPDT",
+    "PCB",
+    "power switch"
+  ]
+}

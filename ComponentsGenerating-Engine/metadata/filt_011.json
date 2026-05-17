@@ -1,0 +1,66 @@
+{
+  "id": "filt_011",
+  "displayName": "State-Variable Filter",
+  "category": "Filters & Signal Processing",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "F",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "Q",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "V+",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "V-",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "LP",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "BP",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "HP",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "N",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 10
+    }
+  ],
+  "keywords": [
+    "state variable",
+    "UAF42",
+    "multi-mode",
+    "filter"
+  ]
+}

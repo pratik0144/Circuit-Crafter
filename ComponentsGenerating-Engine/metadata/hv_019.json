@@ -1,0 +1,41 @@
+{
+  "id": "hv_019",
+  "displayName": "Generator (AC)",
+  "category": "High Voltage & Electrical Power",
+  "family": "DipIc",
+  "pinCount": 5,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "L1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "L2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "L3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "PE",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "EXCIT",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "AC generator",
+    "alternator",
+    "synchronous",
+    "power"
+  ]
+}

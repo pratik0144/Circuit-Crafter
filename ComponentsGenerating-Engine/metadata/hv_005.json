@@ -1,0 +1,36 @@
+{
+  "id": "hv_005",
+  "displayName": "PT (Potential Transformer)",
+  "category": "High Voltage & Electrical Power",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "P1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "P2",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "S1",
+      "side": "right",
+      "number": 3
+    },
+    {
+      "name": "S2",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "PT",
+    "potential transformer",
+    "voltage measurement",
+    "HV"
+  ]
+}

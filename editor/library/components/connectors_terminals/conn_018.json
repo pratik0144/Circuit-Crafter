@@ -1,0 +1,65 @@
+{
+  "id": "conn_018",
+  "category": "Connectors & Terminals",
+  "displayName": "DIP IC Socket",
+  "dimensions": {
+    "width": 40,
+    "height": 60
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 60,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 20,
+      "y": 30,
+      "content": "DIP IC Socket",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "A1-A4",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "B1-B4",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ]
+}

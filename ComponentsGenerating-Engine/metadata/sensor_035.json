@@ -1,0 +1,46 @@
+{
+  "id": "sensor_035",
+  "displayName": "Soil Moisture Sensor",
+  "category": "Sensors & Transducers",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "INT",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "soil moisture",
+    "agriculture",
+    "capacitive",
+    "resistive"
+  ]
+}

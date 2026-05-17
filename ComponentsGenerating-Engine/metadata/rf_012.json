@@ -1,0 +1,27 @@
+{
+  "id": "rf_012",
+  "displayName": "Bandpass Filter (RF)",
+  "category": "RF Antenna & Wireless",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "RFin",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RFout",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "bandpass filter",
+    "RF",
+    "BPF",
+    "frequency select"
+  ],
+  "symbolStyle": "zigzag"
+}

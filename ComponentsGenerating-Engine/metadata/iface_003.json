@@ -1,0 +1,56 @@
+{
+  "id": "iface_003",
+  "displayName": "I2C Interface Block",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "SCL",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "SDA",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "INT",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "ALERT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "I2C",
+    "two wire",
+    "interface",
+    "TWI"
+  ]
+}

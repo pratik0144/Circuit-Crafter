@@ -1,0 +1,47 @@
+{
+  "id": "hv_002",
+  "displayName": "Transformer (3-Phase)",
+  "category": "High Voltage & Electrical Power",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "C1",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "A2",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "B2",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "C2",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "transformer",
+    "3-phase",
+    "delta",
+    "wye",
+    "power"
+  ]
+}

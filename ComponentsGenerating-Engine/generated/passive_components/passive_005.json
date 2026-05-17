@@ -1,0 +1,85 @@
+{
+  "id": "passive_005",
+  "category": "Passive Components",
+  "displayName": "Potentiometer",
+  "dimensions": {
+    "width": 80,
+    "height": 80
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 80,
+      "height": 80,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 40,
+      "y": 40,
+      "content": "Potentiometer",
+      "fontSize": 10,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "A",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "W",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 60
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "B",
+      "number": 3,
+      "side": "right",
+      "position": {
+        "x": 80,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ],
+  "_engineMeta": {
+    "generatedAt": "2026-05-15T22:05:39.012Z",
+    "engineVersion": "1.0.0",
+    "generatorFamily": "ThreePin",
+    "sourceMetadataPath": "/Users/pratikpotadar/Developer/ckt ee/ComponentsGenerating-Engine/metadata/passive_005.json"
+  }
+}

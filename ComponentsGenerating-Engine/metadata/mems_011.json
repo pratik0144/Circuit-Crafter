@@ -1,0 +1,31 @@
+{
+  "id": "mems_011",
+  "displayName": "CNT FET",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "SMD",
+  "pins": [
+    {
+      "name": "G",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "D",
+      "side": "right",
+      "number": 2
+    },
+    {
+      "name": "S",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "CNT",
+    "carbon nanotube",
+    "FET",
+    "nanotechnology"
+  ]
+}

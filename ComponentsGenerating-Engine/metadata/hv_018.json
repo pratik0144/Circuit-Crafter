@@ -1,0 +1,46 @@
+{
+  "id": "hv_018",
+  "displayName": "Distribution Transformer",
+  "category": "High Voltage & Electrical Power",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "HV_A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "HV_B",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "HV_C",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "LV_A",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "LV_B",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "LV_C",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "distribution transformer",
+    "pole mounted",
+    "utility",
+    "power"
+  ]
+}

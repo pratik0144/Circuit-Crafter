@@ -1,0 +1,56 @@
+{
+  "id": "gate_018",
+  "displayName": "Decoder (3-to-8)",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "A0",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "A2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "Y0-Y7",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "decoder",
+    "3 to 8",
+    "74138",
+    "combinational"
+  ]
+}

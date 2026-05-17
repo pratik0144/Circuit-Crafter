@@ -1,0 +1,27 @@
+{
+  "id": "prot_015",
+  "displayName": "Resettable Fuse (PPTC)",
+  "category": "Protection & Conditioning",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "PPTC",
+    "polyfuse",
+    "resettable",
+    "overcurrent"
+  ],
+  "symbolStyle": "fuse"
+}

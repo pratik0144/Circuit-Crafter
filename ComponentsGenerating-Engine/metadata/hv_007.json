@@ -1,0 +1,27 @@
+{
+  "id": "hv_007",
+  "displayName": "Isolator Switch (Disconnect)",
+  "category": "High Voltage & Electrical Power",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "isolator",
+    "disconnect switch",
+    "HV",
+    "safety"
+  ],
+  "symbolStyle": "zigzag"
+}

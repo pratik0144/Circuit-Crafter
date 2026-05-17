@@ -1,0 +1,55 @@
+{
+  "id": "seq_004",
+  "displayName": "JK Flip-Flop",
+  "category": "Sequential Logic & Flip-Flops",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP16",
+  "pins": [
+    {
+      "name": "J",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "K",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "CLR",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "Q",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "QB",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 5
+    }
+  ],
+  "keywords": [
+    "JK flip-flop",
+    "sequential",
+    "74HC107"
+  ]
+}

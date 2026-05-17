@@ -1,0 +1,29 @@
+{
+  "id": "SENSOR_LM35",
+  "family": "ThreePin",
+  "category": "Sensors & Transducers",
+  "displayName": "LM35",
+  "symbolStyle": "sensor_rect",
+  "defaultRotation": 0,
+  "pins": [
+    {
+      "number": 1,
+      "name": "VCC",
+      "side": "left",
+      "electricalType": "power"
+    },
+    {
+      "number": 2,
+      "name": "VOUT",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 3,
+      "name": "GND",
+      "side": "left",
+      "electricalType": "ground"
+    }
+  ],
+  "pinCount": 3
+}

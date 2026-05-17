@@ -1,0 +1,27 @@
+{
+  "id": "audio_001",
+  "displayName": "Microphone (Dynamic)",
+  "category": "Electroacoustic & Audio",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "microphone",
+    "dynamic",
+    "XLR",
+    "audio input"
+  ],
+  "symbolStyle": "zigzag"
+}

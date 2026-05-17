@@ -1,0 +1,250 @@
+{
+  "id": "IC_8051",
+  "family": "DipIc",
+  "category": "Microcontrollers & Processors",
+  "displayName": "8051",
+  "defaultRotation": 0,
+  "pins": [
+    {
+      "number": 1,
+      "name": "P1.0",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 2,
+      "name": "P1.1",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 3,
+      "name": "P1.2",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 4,
+      "name": "P1.3",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 5,
+      "name": "P1.4",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 6,
+      "name": "P1.5",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 7,
+      "name": "P1.6",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 8,
+      "name": "P1.7",
+      "side": "left",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 9,
+      "name": "RST",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 10,
+      "name": "RXD",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 11,
+      "name": "TXD",
+      "side": "left",
+      "electricalType": "output"
+    },
+    {
+      "number": 12,
+      "name": "INT0/",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 13,
+      "name": "INT1/",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 14,
+      "name": "T0",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 15,
+      "name": "T1",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 16,
+      "name": "WR/",
+      "side": "left",
+      "electricalType": "output"
+    },
+    {
+      "number": 17,
+      "name": "RD/",
+      "side": "left",
+      "electricalType": "output"
+    },
+    {
+      "number": 18,
+      "name": "XTAL2",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 19,
+      "name": "XTAL1",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 20,
+      "name": "GND",
+      "side": "left",
+      "electricalType": "ground"
+    },
+    {
+      "number": 40,
+      "name": "VCC",
+      "side": "right",
+      "electricalType": "power"
+    },
+    {
+      "number": 39,
+      "name": "P0.0/AD0",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 38,
+      "name": "P0.1/AD1",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 37,
+      "name": "P0.2/AD2",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 36,
+      "name": "P0.3/AD3",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 35,
+      "name": "P0.4/AD4",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 34,
+      "name": "P0.5/AD5",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 33,
+      "name": "P0.6/AD6",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 32,
+      "name": "P0.7/AD7",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 31,
+      "name": "EA/",
+      "side": "right",
+      "electricalType": "input"
+    },
+    {
+      "number": 30,
+      "name": "ALE/PROG",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 29,
+      "name": "PSEN/",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 28,
+      "name": "P2.7/A15",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 27,
+      "name": "P2.6/A14",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 26,
+      "name": "P2.5/A13",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 25,
+      "name": "P2.4/A12",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 24,
+      "name": "P2.3/A11",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 23,
+      "name": "P2.2/A10",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 22,
+      "name": "P2.1/A9",
+      "side": "right",
+      "electricalType": "bidirectional"
+    },
+    {
+      "number": 21,
+      "name": "P2.0/A8",
+      "side": "right",
+      "electricalType": "bidirectional"
+    }
+  ],
+  "pinCount": 40
+}

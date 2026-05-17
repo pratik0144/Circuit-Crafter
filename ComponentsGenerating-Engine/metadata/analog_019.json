@@ -1,0 +1,46 @@
+{
+  "id": "analog_019",
+  "displayName": "RMS-to-DC Converter",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "CAV",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC_2",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "RMS",
+    "true RMS",
+    "AC measurement",
+    "AD637"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "analog_020",
+  "displayName": "Isolation Amplifier",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "NC_2",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "GND2",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "isolation amplifier",
+    "galvanic",
+    "isolated",
+    "ISO124"
+  ]
+}

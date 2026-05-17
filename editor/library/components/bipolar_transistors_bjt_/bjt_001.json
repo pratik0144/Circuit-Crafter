@@ -1,0 +1,79 @@
+{
+  "id": "bjt_001",
+  "category": "Bipolar Transistors (BJT)",
+  "displayName": "NPN BJT",
+  "dimensions": {
+    "width": 80,
+    "height": 80
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 80,
+      "height": 80,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 40,
+      "y": 40,
+      "content": "NPN BJT",
+      "fontSize": 10,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "B",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "C",
+      "number": 2,
+      "side": "right",
+      "position": {
+        "x": 80,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "E",
+      "number": 3,
+      "side": "right",
+      "position": {
+        "x": 80,
+        "y": 80
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ]
+}

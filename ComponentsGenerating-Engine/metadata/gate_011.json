@@ -1,0 +1,56 @@
+{
+  "id": "gate_011",
+  "displayName": "Full Adder",
+  "category": "Logic Gates & Combinational ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CIN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "NC_3",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SUM",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "COUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "full adder",
+    "arithmetic",
+    "combinational",
+    "digital"
+  ]
+}

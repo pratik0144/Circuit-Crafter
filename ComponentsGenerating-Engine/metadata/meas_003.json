@@ -1,0 +1,26 @@
+{
+  "id": "meas_003",
+  "displayName": "Ohmmeter",
+  "category": "Measurement & Test Instruments",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "ohmmeter",
+    "resistance",
+    "measurement"
+  ],
+  "symbolStyle": "zigzag"
+}

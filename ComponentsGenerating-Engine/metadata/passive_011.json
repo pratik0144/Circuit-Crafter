@@ -1,0 +1,27 @@
+{
+  "id": "passive_011",
+  "displayName": "Electrolytic Capacitor",
+  "category": "Passive Components",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "RADIAL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "electrolytic",
+    "capacitor",
+    "polarized",
+    "filter"
+  ],
+  "symbolStyle": "capacitor"
+}

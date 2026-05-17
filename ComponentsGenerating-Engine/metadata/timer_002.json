@@ -1,0 +1,85 @@
+{
+  "id": "timer_002",
+  "displayName": "556 Dual Timer",
+  "category": "Timers & Oscillators",
+  "family": "DipIc",
+  "pinCount": 14,
+  "packageType": "DIP14",
+  "pins": [
+    {
+      "name": "DIS1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "THR1",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CTRL1",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RESET1",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "OUT1",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "TRIG1",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "DIS2",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "THR2",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "CTRL2",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "RESET2",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "OUT2",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "TRIG2",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "556",
+    "dual timer",
+    "555x2"
+  ]
+}

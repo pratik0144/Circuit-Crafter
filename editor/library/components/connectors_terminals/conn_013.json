@@ -1,0 +1,205 @@
+{
+  "id": "conn_013",
+  "category": "Connectors & Terminals",
+  "displayName": "USB Type-C Connector",
+  "dimensions": {
+    "width": 40,
+    "height": 260
+  },
+  "defaultRotation": 0,
+  "primitives": [
+    {
+      "id": "body",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 260,
+      "stroke": "currentColor",
+      "fill": "none",
+      "strokeWidth": 2
+    },
+    {
+      "id": "label",
+      "type": "text",
+      "x": 20,
+      "y": 130,
+      "content": "USB Type-C Connector",
+      "fontSize": 9,
+      "fontFamily": "sans-serif",
+      "align": "center",
+      "baseline": "middle",
+      "fill": "currentColor"
+    }
+  ],
+  "pins": [
+    {
+      "id": "p1",
+      "type": "pin",
+      "name": "TX+",
+      "number": 1,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p2",
+      "type": "pin",
+      "name": "TX-",
+      "number": 2,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 40
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p3",
+      "type": "pin",
+      "name": "VBUS",
+      "number": 3,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 60
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p4",
+      "type": "pin",
+      "name": "GND",
+      "number": 4,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 80
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p5",
+      "type": "pin",
+      "name": "CC1",
+      "number": 5,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 100
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p6",
+      "type": "pin",
+      "name": "RX+",
+      "number": 6,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 120
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p7",
+      "type": "pin",
+      "name": "RX-",
+      "number": 7,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 140
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p8",
+      "type": "pin",
+      "name": "D+",
+      "number": 8,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 160
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p9",
+      "type": "pin",
+      "name": "D-",
+      "number": 9,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 180
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p10",
+      "type": "pin",
+      "name": "CC2",
+      "number": 10,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 200
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p11",
+      "type": "pin",
+      "name": "SBU1",
+      "number": 11,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 220
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    },
+    {
+      "id": "p12",
+      "type": "pin",
+      "name": "SBU2",
+      "number": 12,
+      "side": "left",
+      "position": {
+        "x": 0,
+        "y": 240
+      },
+      "electricalType": "passive",
+      "length": 15,
+      "invert": false
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "disp_002",
+  "displayName": "7-Segment Display (Single)",
+  "category": "Displays & Indicators",
+  "family": "DipIc",
+  "pinCount": 10,
+  "packageType": "DIP10",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "C",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "D",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "E",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "F",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "G",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "DP",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "COM_A",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "COM_K",
+      "side": "right",
+      "number": 6
+    }
+  ],
+  "keywords": [
+    "7-segment",
+    "single digit",
+    "LED",
+    "display"
+  ]
+}

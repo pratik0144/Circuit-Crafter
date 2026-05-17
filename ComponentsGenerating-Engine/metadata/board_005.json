@@ -1,0 +1,82 @@
+{
+  "id": "board_005",
+  "displayName": "Arduino Leonardo",
+  "category": "Development Boards",
+  "family": "DipIc",
+  "pinCount": 13,
+  "packageType": "HEADER",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "5V",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "D0/RX",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "D1/TX",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "D2-D13",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "A0-A5",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "MOSI",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "MISO",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "SS",
+      "side": "right",
+      "number": 13
+    }
+  ],
+  "keywords": [
+    "Arduino Leonardo",
+    "ATmega32U4",
+    "USB HID",
+    "keyboard",
+    "mouse"
+  ]
+}

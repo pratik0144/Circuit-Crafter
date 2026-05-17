@@ -1,0 +1,96 @@
+{
+  "id": "iface_011",
+  "displayName": "Ethernet MAC",
+  "category": "Interface & Communication ICs",
+  "family": "DipIc",
+  "pinCount": 16,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "TXD",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RXD",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "TXEN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "RXDV",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "MDIO",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "MDC",
+      "side": "left",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 7
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 8
+    },
+    {
+      "name": "MII",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "CLK",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "INT",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "NC_4",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "NC_5",
+      "side": "right",
+      "number": 14
+    },
+    {
+      "name": "NC_6",
+      "side": "right",
+      "number": 15
+    },
+    {
+      "name": "NC_7",
+      "side": "right",
+      "number": 16
+    }
+  ],
+  "keywords": [
+    "Ethernet MAC",
+    "network",
+    "controller",
+    "10/100"
+  ]
+}

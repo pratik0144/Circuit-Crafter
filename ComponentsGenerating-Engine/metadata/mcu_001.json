@@ -1,0 +1,56 @@
+{
+  "id": "mcu_001",
+  "displayName": "Microcontroller (Generic Block)",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "RESET",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "GPIO",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "TX",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "RX",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "MCU",
+    "microcontroller",
+    "generic",
+    "embedded"
+  ]
+}

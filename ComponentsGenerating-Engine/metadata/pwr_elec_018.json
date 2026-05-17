@@ -1,0 +1,31 @@
+{
+  "id": "pwr_elec_018",
+  "displayName": "AC Voltage Controller (TRIAC-Based)",
+  "category": "Power Electronics & Drives",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "AC controller",
+    "TRIAC",
+    "phase control",
+    "dimmer"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "sensor_019",
+  "displayName": "Infrared Sensor (IR Receiver)",
+  "category": "Sensors & Transducers",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "TO92",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "IR receiver",
+    "infrared",
+    "remote control",
+    "TSOP1738"
+  ]
+}

@@ -7,23 +7,15 @@ A professional, browser-based circuit diagram editor built for EEE teachers and 
 ## ✨ Features
 
 ### Components & Drawing
-- **12 Standard Components** — Resistor, Capacitor, Inductor, Voltage Source, Current Source, Switch, Lamp, Ground, plus 4 Dependent Sources (VCVS, CCCVS, VCCS, CCCS) with proper engineering subscript labels
-- **Multi-Segment Wires** — Click-to-add-bends polyline routing with 90° orthogonal mode
-- **Wire Jump Visualization** — Automatic bridge/arc rendering at wire crossings (no jump at actual junctions)
-- **Smart Snap System** — Snaps to ports → wire nodes → grid intersections (priority-based)
-- **Free Grid Routing** — Draw wires anywhere on canvas, not limited to component ports
-- **Junction Dots** — Auto-drawn at wire connection points (3+ connections)
-- **Wire Editing** — Drag bend points, double-click segment to insert bend, Backspace to undo last point
-- **Text Annotations** — Labels with adjustable size, bold styling, and engineering symbol support
-- **Single-Placement Mode** — Place one component per click, automatically returns to Select tool
-
-### UI & Interaction
-- **Excalidraw-Inspired UI** — Floating toolbar, component picker grid, context panel
-- **Value Editing** — Custom themed popup with SI unit guidance and quick chip suggestions
-- **Symbol Toolbar** — Engineering symbols (°, ∠, →, ±, Ω, µ, Δ, π) and vectors (î, ĵ, k̂) with cursor-aware insertion
-- **Quick Templates** — One-click insert for ∠(30°), ∠(45°), r∠θ, 3î + 4ĵ
-- **Trackpad Support** — 2-finger pan, pinch-to-zoom, auto-switches to Select mode
-- **Component Rotation** — 90° step rotation via context panel
+- **Massive Component Library:** Access 588+ dynamically generated components, including DIP ICs, Logic Gates, Sensors, Transistors, Switches, and Passives, all cleanly organized into an accordion-style modal.
+- **Dynamic Component Generation:** Built-in offline pipeline parses metadata to generate perfectly scaled, editable components with standard US/India schematic symbol conventions.
+- **Customizable Schematics:** Double-click components to edit their labels or use toggle switches to cleanly hide component names or pin details.
+- **Excalidraw-inspired UI:** Floating toolbars, a left context panel, and a minimal bottom bar keep the canvas uncluttered.
+- **Smart Wire Routing:** Point-to-point wiring with 90° ortho routing, manual bends, and automatic junction detection.
+- **Professional Export:** Export to PNG, JPG, or PDF. Configurable A4 printing with transparent backgrounds for seamless inclusion in research papers and exams.
+- **Interactive Modals:** Insert engineering symbols (Ω, µ, ∠, î) directly from the text tool or inline value editors.
+- **Infinite Canvas:** Middle-mouse pan, trackpad gesture support, and scroll-wheel zoom for complex, large-scale schematics.
+- **Local Persistence:** Auto-saves your work to `localStorage`, with unlimited Undo/Redo tracking.
 - **Keyboard Shortcuts** — Select All (Cmd/Ctrl+A), Delete/Backspace, Undo/Redo (Cmd/Ctrl+Z)
 - **Undo/Redo** — Up to 50 history snapshots
 
@@ -132,18 +124,30 @@ ckt ee/
 │   ├── js/
 │   │   ├── state.js        ← State management, undo/redo, persistence
 │   │   ├── canvas.js       ← Canvas rendering, grid, coordinate transforms
-│   │   ├── components.js   ← 12 component types, drawing, subscript labels
+│   │   ├── components.js   ← Component renderer for the dynamic 588+ library
 │   │   ├── wire.js         ← Multi-segment wires, smart snap, junctions, jump visualization
 │   │   ├── tools.js        ← Tool handlers (Select, Wire, Eraser, Text, Place)
 │   │   ├── export.js       ← PNG/JPG/PDF/A4/Transparent export, JSON import
-│   │   ├── ui.js           ← Floating UI, modals, symbols, context panel
+│   │   ├── ui.js           ← Floating UI, modals, symbols, context panel, accordion library
+│   │   ├── library-loader.js ← Dynamically loads `library_bundle.json`
 │   │   └── app.js          ← Bootstrap, event routing, trackpad detection
+│   ├── library/            ← Compiled runtime component catalog
+│   │   └── library_bundle.json
 │   └── assets/
+├── ComponentsGenerating-Engine/ ← Offline Component Builder
+│   ├── README.md           ← Engine documentation
+│   ├── src/                ← Core generation logic (primitives, validation, exporters)
+│   ├── scripts/            ← Data import pipelines (bulk-importer, ai-healer)
+│   ├── metadata/           ← Source truth JSONs for 588+ components
+│   └── generated/          ← Master copies of generated canonical JSONs
 ├── landing/                ← React/Vite landing page
 │   ├── vite.config.js      ← Dev middleware + build plugin (serves /editor/)
 │   ├── src/                ← Landing page React components
 │   └── public/             ← Static assets (favicon, icons)
+├── CircuitCrafter_Component_Library.pdf ← Official component category specification index
+├── *.md                    ← Technical documentation, audit reports, and health checks
 ├── vercel.json             ← Vercel deployment config
+├── package.json            ← Root package references
 ├── CHANGELOG.md
 └── README.md
 ```

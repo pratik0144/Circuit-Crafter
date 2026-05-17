@@ -1,0 +1,31 @@
+{
+  "id": "passive_004",
+  "displayName": "Variable Resistor (Rheostat)",
+  "category": "Passive Components",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "AXIAL",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "W",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "B",
+      "side": "bottom",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "rheostat",
+    "variable",
+    "resistor",
+    "current control"
+  ]
+}

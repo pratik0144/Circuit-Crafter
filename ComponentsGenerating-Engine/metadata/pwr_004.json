@@ -1,0 +1,27 @@
+{
+  "id": "pwr_004",
+  "displayName": "Battery (Single Cell)",
+  "category": "Power Sources & Batteries",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "CELL",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "battery",
+    "single cell",
+    "1.5V",
+    "alkaline"
+  ],
+  "symbolStyle": "zigzag"
+}

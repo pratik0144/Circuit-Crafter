@@ -1,0 +1,16 @@
+{
+  "name": "circuit-crafter-component-engine",
+  "version": "1.0.0",
+  "description": "Offline component generation engine for Circuit Crafter",
+  "type": "module",
+  "scripts": {
+    "generate": "node src/index.js",
+    "validate": "node src/index.js --validate-only",
+    "generate:all": "node src/index.js --all",
+    "test": "node --test tests/test-generators.js"
+  },
+  "private": true,
+  "dependencies": {
+    "pdf-parse": "^2.4.5"
+  }
+}

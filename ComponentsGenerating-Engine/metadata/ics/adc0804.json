@@ -1,0 +1,130 @@
+{
+  "id": "IC_ADC0804",
+  "family": "DipIc",
+  "category": "Microcontrollers & Processors",
+  "displayName": "ADC0804",
+  "defaultRotation": 0,
+  "pins": [
+    {
+      "number": 1,
+      "name": "CS/",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 2,
+      "name": "RD/",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 3,
+      "name": "WR/",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 4,
+      "name": "CLK IN",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 5,
+      "name": "INTR/",
+      "side": "left",
+      "electricalType": "output"
+    },
+    {
+      "number": 6,
+      "name": "VIN+",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 7,
+      "name": "VIN-",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 8,
+      "name": "A GND",
+      "side": "left",
+      "electricalType": "ground"
+    },
+    {
+      "number": 9,
+      "name": "VREF/2",
+      "side": "left",
+      "electricalType": "input"
+    },
+    {
+      "number": 10,
+      "name": "D GND",
+      "side": "left",
+      "electricalType": "ground"
+    },
+    {
+      "number": 20,
+      "name": "VCC",
+      "side": "right",
+      "electricalType": "power"
+    },
+    {
+      "number": 19,
+      "name": "CLK R",
+      "side": "right",
+      "electricalType": "input"
+    },
+    {
+      "number": 18,
+      "name": "DB0",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 17,
+      "name": "DB1",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 16,
+      "name": "DB2",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 15,
+      "name": "DB3",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 14,
+      "name": "DB4",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 13,
+      "name": "DB5",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 12,
+      "name": "DB6",
+      "side": "right",
+      "electricalType": "output"
+    },
+    {
+      "number": 11,
+      "name": "DB7",
+      "side": "right",
+      "electricalType": "output"
+    }
+  ],
+  "pinCount": 20
+}

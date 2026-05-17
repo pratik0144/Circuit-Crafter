@@ -1,0 +1,27 @@
+{
+  "id": "audio_008",
+  "displayName": "Ultrasonic Transducer",
+  "category": "Electroacoustic & Audio",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "ultrasonic transducer",
+    "40kHz",
+    "distance",
+    "sonar"
+  ],
+  "symbolStyle": "zigzag"
+}

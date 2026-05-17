@@ -1,0 +1,31 @@
+{
+  "id": "disp_015",
+  "displayName": "Laser Pointer / Laser Module",
+  "category": "Displays & Indicators",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "laser",
+    "pointer",
+    "module",
+    "red laser"
+  ]
+}

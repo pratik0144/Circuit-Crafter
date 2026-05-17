@@ -1,0 +1,27 @@
+{
+  "id": "mems_005",
+  "displayName": "MEMS Resonator",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "MEMS",
+    "resonator",
+    "oscillator",
+    "clock"
+  ],
+  "symbolStyle": "zigzag"
+}

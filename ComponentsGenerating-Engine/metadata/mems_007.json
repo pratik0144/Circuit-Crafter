@@ -1,0 +1,27 @@
+{
+  "id": "mems_007",
+  "displayName": "Micro-Fuel Cell",
+  "category": "MEMS Emerging & Nanotechnology",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "micro fuel cell",
+    "MEMS",
+    "energy",
+    "hydrogen"
+  ],
+  "symbolStyle": "zigzag"
+}

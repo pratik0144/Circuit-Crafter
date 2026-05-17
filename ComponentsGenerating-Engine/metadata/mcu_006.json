@@ -1,0 +1,87 @@
+{
+  "id": "mcu_006",
+  "displayName": "ESP32",
+  "category": "Microcontrollers & Processors",
+  "family": "DipIc",
+  "pinCount": 14,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "3V3",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "BOOT",
+      "side": "left",
+      "number": 5
+    },
+    {
+      "name": "GPIO0-GPIO39",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "TXD",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "RXD",
+      "side": "right",
+      "number": 8
+    },
+    {
+      "name": "SDA",
+      "side": "right",
+      "number": 9
+    },
+    {
+      "name": "SCL",
+      "side": "right",
+      "number": 10
+    },
+    {
+      "name": "SCK",
+      "side": "right",
+      "number": 11
+    },
+    {
+      "name": "MISO",
+      "side": "right",
+      "number": 12
+    },
+    {
+      "name": "MOSI",
+      "side": "right",
+      "number": 13
+    },
+    {
+      "name": "SS",
+      "side": "right",
+      "number": 14
+    }
+  ],
+  "keywords": [
+    "ESP32",
+    "WiFi",
+    "Bluetooth",
+    "IoT",
+    "dual-core"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "conn_014",
+  "displayName": "BNC Connector",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 2,
+  "packageType": "BNC",
+  "pins": [
+    {
+      "name": "CENTER",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "SHIELD",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "BNC",
+    "coaxial",
+    "RF",
+    "oscilloscope"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "prot_016",
+  "displayName": "Gas Discharge Tube (GDT)",
+  "category": "Protection & Conditioning",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "GDT",
+    "gas discharge",
+    "surge",
+    "lightning"
+  ],
+  "symbolStyle": "zigzag"
+}

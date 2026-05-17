@@ -1,0 +1,46 @@
+{
+  "id": "prot_013",
+  "displayName": "Overvoltage Protection IC",
+  "category": "Protection & Conditioning",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "SOP6",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "FLAG",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "overvoltage protection",
+    "OVP",
+    "clamp",
+    "IC"
+  ]
+}

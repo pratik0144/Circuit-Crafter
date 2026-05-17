@@ -1,0 +1,47 @@
+{
+  "id": "rf_020",
+  "displayName": "RF Modulator / Demodulator",
+  "category": "RF Antenna & Wireless",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "CTRL",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "RF modulator",
+    "demodulator",
+    "AM",
+    "FM",
+    "IF"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "sw_021",
+  "displayName": "Capacitive Touch Switch",
+  "category": "Switches Relays & Push-buttons",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "VCC",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "capacitive touch",
+    "switch",
+    "TTP223",
+    "finger detection"
+  ]
+}

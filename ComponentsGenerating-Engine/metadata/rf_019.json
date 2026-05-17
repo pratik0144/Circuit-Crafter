@@ -1,0 +1,45 @@
+{
+  "id": "rf_019",
+  "displayName": "RF Mixer",
+  "category": "RF Antenna & Wireless",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "TX",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "RX",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "ANT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "EN",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "RF mixer",
+    "down conversion",
+    "up conversion"
+  ]
+}

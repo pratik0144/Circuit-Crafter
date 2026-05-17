@@ -1,0 +1,56 @@
+{
+  "id": "analog_021",
+  "displayName": "Audio Power Amplifier IC",
+  "category": "Analog ICs & Regulators",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "BYP",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VS",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "VOUT+",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VOUT-",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "VC",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "audio amplifier",
+    "LM386",
+    "power",
+    "speaker"
+  ]
+}

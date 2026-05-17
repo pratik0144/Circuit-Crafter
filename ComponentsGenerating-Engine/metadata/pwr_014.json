@@ -1,0 +1,46 @@
+{
+  "id": "pwr_014",
+  "displayName": "3-Phase Supply Terminal",
+  "category": "Power Sources & Batteries",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "TERMINAL",
+  "pins": [
+    {
+      "name": "VIN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "VOUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "PG",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "3-phase",
+    "supply",
+    "AC",
+    "terminal"
+  ]
+}

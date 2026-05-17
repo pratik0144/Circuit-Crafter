@@ -1,0 +1,46 @@
+{
+  "id": "pwr_elec_008",
+  "displayName": "Inverter (DC-AC)",
+  "category": "Power Electronics & Drives",
+  "family": "DipIc",
+  "pinCount": 6,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "EN",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "FB",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "NC",
+      "side": "right",
+      "number": 4
+    }
+  ],
+  "keywords": [
+    "inverter",
+    "DC-AC",
+    "sine wave",
+    "SPWM"
+  ]
+}

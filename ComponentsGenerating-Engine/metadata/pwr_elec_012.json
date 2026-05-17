@@ -1,0 +1,37 @@
+{
+  "id": "pwr_elec_012",
+  "displayName": "Gate Driver IC",
+  "category": "Power Electronics & Drives",
+  "family": "DipIc",
+  "pinCount": 4,
+  "packageType": "DIP8",
+  "pins": [
+    {
+      "name": "IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "OUT",
+      "side": "right",
+      "number": 4
+    },
+    {
+      "name": "ADJ",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "gate driver",
+    "IGBT",
+    "MOSFET",
+    "IR2110",
+    "bootstrap"
+  ]
+}

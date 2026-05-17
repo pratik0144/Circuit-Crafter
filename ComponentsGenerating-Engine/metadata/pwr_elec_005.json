@@ -1,0 +1,31 @@
+{
+  "id": "pwr_elec_005",
+  "displayName": "Voltage Doubler",
+  "category": "Power Electronics & Drives",
+  "family": "ThreePin",
+  "pinCount": 3,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "AC_IN",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "GND",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "DC_OUT",
+      "side": "right",
+      "number": 3
+    }
+  ],
+  "keywords": [
+    "voltage doubler",
+    "Villard",
+    "Greinacher",
+    "capacitor diode"
+  ]
+}

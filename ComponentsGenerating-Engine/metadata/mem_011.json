@@ -1,0 +1,57 @@
+{
+  "id": "mem_011",
+  "displayName": "FRAM (Ferroelectric RAM)",
+  "category": "Memory ICs",
+  "family": "DipIc",
+  "pinCount": 8,
+  "packageType": "SOP8",
+  "pins": [
+    {
+      "name": "CS",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "CLK",
+      "side": "left",
+      "number": 2
+    },
+    {
+      "name": "SI",
+      "side": "left",
+      "number": 3
+    },
+    {
+      "name": "WP",
+      "side": "left",
+      "number": 4
+    },
+    {
+      "name": "SO",
+      "side": "right",
+      "number": 5
+    },
+    {
+      "name": "VCC",
+      "side": "right",
+      "number": 6
+    },
+    {
+      "name": "GND",
+      "side": "right",
+      "number": 7
+    },
+    {
+      "name": "NC_3",
+      "side": "right",
+      "number": 8
+    }
+  ],
+  "keywords": [
+    "FRAM",
+    "ferroelectric",
+    "non-volatile",
+    "low power",
+    "memory"
+  ]
+}

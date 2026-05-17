@@ -1,0 +1,27 @@
+{
+  "id": "prot_003",
+  "displayName": "Circuit Breaker (Symbol)",
+  "category": "Protection & Conditioning",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "A",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "B",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "circuit breaker",
+    "MCB",
+    "protection",
+    "overload"
+  ],
+  "symbolStyle": "fuse"
+}

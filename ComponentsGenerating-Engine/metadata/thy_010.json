@@ -1,0 +1,27 @@
+{
+  "id": "thy_010",
+  "displayName": "SIDAC",
+  "category": "Thyristors & Power Semiconductors",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "DO214",
+  "pins": [
+    {
+      "name": "A1",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "A2",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "SIDAC",
+    "bilateral",
+    "trigger",
+    "thyristor"
+  ],
+  "symbolStyle": "zigzag"
+}

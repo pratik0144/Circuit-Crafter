@@ -1,0 +1,27 @@
+{
+  "id": "act_016",
+  "displayName": "Electromagnetic Lock",
+  "category": "Actuators & Electromechanical",
+  "family": "TwoPin",
+  "pinCount": 2,
+  "packageType": "MODULE",
+  "pins": [
+    {
+      "name": "+",
+      "side": "left",
+      "number": 1
+    },
+    {
+      "name": "-",
+      "side": "right",
+      "number": 2
+    }
+  ],
+  "keywords": [
+    "electromagnetic lock",
+    "maglock",
+    "access control",
+    "security"
+  ],
+  "symbolStyle": "zigzag"
+}

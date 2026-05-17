@@ -1,0 +1,21 @@
+{
+  "id": "conn_016",
+  "displayName": "Banana Jack / Binding Post",
+  "category": "Connectors & Terminals",
+  "family": "Connector",
+  "pinCount": 1,
+  "packageType": "BANANA",
+  "pins": [
+    {
+      "name": "POST",
+      "side": "left",
+      "number": 1
+    }
+  ],
+  "keywords": [
+    "banana jack",
+    "binding post",
+    "test",
+    "lab"
+  ]
+}
